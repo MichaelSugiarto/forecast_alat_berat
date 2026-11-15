@@ -1,0 +1,1171 @@
+{
+  "KODE_TO_KRITERIA": {
+    "K01": {
+      "KRITERIA_ID": "TRAILER|PK260|40.0|265",
+      "JENIS": "TRAILER",
+      "TYPE_MERK": "PK260",
+      "CAP": 40.0,
+      "HP": 265.0,
+      "JUMLAH_UNIT": 50,
+      "DAFTAR_UNIT": [
+        "K01_UNIT_004",
+        "K01_UNIT_005",
+        "K01_UNIT_006",
+        "K01_UNIT_007",
+        "K01_UNIT_008",
+        "K01_UNIT_010",
+        "K01_UNIT_012",
+        "K01_UNIT_013",
+        "K01_UNIT_127",
+        "K01_UNIT_134",
+        "K01_UNIT_138",
+        "K01_UNIT_139",
+        "K01_UNIT_142",
+        "K01_UNIT_144",
+        "K01_UNIT_147",
+        "K01_UNIT_148",
+        "K01_UNIT_156",
+        "K01_UNIT_160",
+        "K01_UNIT_162",
+        "K01_UNIT_165",
+        "K01_UNIT_166",
+        "K01_UNIT_167",
+        "K01_UNIT_169",
+        "K01_UNIT_178",
+        "K01_UNIT_179",
+        "K01_UNIT_182",
+        "K01_UNIT_186",
+        "K01_UNIT_193",
+        "K01_UNIT_196",
+        "K01_UNIT_211",
+        "K01_UNIT_212",
+        "K01_UNIT_213",
+        "K01_UNIT_214",
+        "K01_UNIT_215",
+        "K01_UNIT_216",
+        "K01_UNIT_217",
+        "K01_UNIT_218",
+        "K01_UNIT_219",
+        "K01_UNIT_220",
+        "K01_UNIT_229",
+        "K01_UNIT_230",
+        "K01_UNIT_233",
+        "K01_UNIT_238",
+        "K01_UNIT_250",
+        "K01_UNIT_258",
+        "K01_UNIT_264",
+        "K01_UNIT_267",
+        "K01_UNIT_268",
+        "K01_UNIT_272",
+        "K01_UNIT_273"
+      ]
+    },
+    "K02": {
+      "KRITERIA_ID": "TRAILER|QUESTER|40.0|280",
+      "JENIS": "TRAILER",
+      "TYPE_MERK": "QUESTER",
+      "CAP": 40.0,
+      "HP": 280.0,
+      "JUMLAH_UNIT": 35,
+      "DAFTAR_UNIT": [
+        "K02_UNIT_123",
+        "K02_UNIT_124",
+        "K02_UNIT_125",
+        "K02_UNIT_126",
+        "K02_UNIT_128",
+        "K02_UNIT_129",
+        "K02_UNIT_133",
+        "K02_UNIT_135",
+        "K02_UNIT_136",
+        "K02_UNIT_137",
+        "K02_UNIT_140",
+        "K02_UNIT_141",
+        "K02_UNIT_143",
+        "K02_UNIT_145",
+        "K02_UNIT_146",
+        "K02_UNIT_149",
+        "K02_UNIT_150",
+        "K02_UNIT_151",
+        "K02_UNIT_152",
+        "K02_UNIT_153",
+        "K02_UNIT_154",
+        "K02_UNIT_155",
+        "K02_UNIT_159",
+        "K02_UNIT_161",
+        "K02_UNIT_163",
+        "K02_UNIT_187",
+        "K02_UNIT_188",
+        "K02_UNIT_189",
+        "K02_UNIT_190",
+        "K02_UNIT_191",
+        "K02_UNIT_192",
+        "K02_UNIT_194",
+        "K02_UNIT_195",
+        "K02_UNIT_199",
+        "K02_UNIT_263"
+      ]
+    },
+    "K03": {
+      "KRITERIA_ID": "REACH STACKER|KALMAR DRF 450|45.0|422",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KALMAR DRF 450",
+      "CAP": 45.0,
+      "HP": 422.0,
+      "JUMLAH_UNIT": 13,
+      "DAFTAR_UNIT": [
+        "K03_UNIT_070",
+        "K03_UNIT_072",
+        "K03_UNIT_073",
+        "K03_UNIT_074",
+        "K03_UNIT_075",
+        "K03_UNIT_078",
+        "K03_UNIT_079",
+        "K03_UNIT_080",
+        "K03_UNIT_082",
+        "K03_UNIT_083",
+        "K03_UNIT_085",
+        "K03_UNIT_086",
+        "K03_UNIT_087"
+      ]
+    },
+    "K04": {
+      "KRITERIA_ID": "TRONTON|PK215|40.0|220",
+      "JENIS": "TRONTON",
+      "TYPE_MERK": "PK215",
+      "CAP": 40.0,
+      "HP": 220.0,
+      "JUMLAH_UNIT": 9,
+      "DAFTAR_UNIT": [
+        "K04_UNIT_164",
+        "K04_UNIT_168",
+        "K04_UNIT_170",
+        "K04_UNIT_174",
+        "K04_UNIT_177",
+        "K04_UNIT_183",
+        "K04_UNIT_184",
+        "K04_UNIT_251",
+        "K04_UNIT_298"
+      ]
+    },
+    "K05": {
+      "KRITERIA_ID": "TRAILER|PKC311|40.0|311",
+      "JENIS": "TRAILER",
+      "TYPE_MERK": "PKC311",
+      "CAP": 40.0,
+      "HP": 311.0,
+      "JUMLAH_UNIT": 9,
+      "DAFTAR_UNIT": [
+        "K05_UNIT_014",
+        "K05_UNIT_015",
+        "K05_UNIT_204",
+        "K05_UNIT_205",
+        "K05_UNIT_206",
+        "K05_UNIT_207",
+        "K05_UNIT_208",
+        "K05_UNIT_209",
+        "K05_UNIT_247"
+      ]
+    },
+    "K06": {
+      "KRITERIA_ID": "FORKLIFT|MITSUBISHI|2.5|55",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "MITSUBISHI",
+      "CAP": 2.5,
+      "HP": 55.0,
+      "JUMLAH_UNIT": 5,
+      "DAFTAR_UNIT": [
+        "K06_UNIT_018",
+        "K06_UNIT_019",
+        "K06_UNIT_063",
+        "K06_UNIT_278",
+        "K06_UNIT_279"
+      ]
+    },
+    "K07": {
+      "KRITERIA_ID": "FORKLIFT|MITSUBISHI|4.0|85",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "MITSUBISHI",
+      "CAP": 4.0,
+      "HP": 85.0,
+      "JUMLAH_UNIT": 5,
+      "DAFTAR_UNIT": [
+        "K07_UNIT_065",
+        "K07_UNIT_068",
+        "K07_UNIT_097",
+        "K07_UNIT_098",
+        "K07_UNIT_340"
+      ]
+    },
+    "K08": {
+      "KRITERIA_ID": "FORKLIFT|TCM|4.5|85",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TCM",
+      "CAP": 4.5,
+      "HP": 85.0,
+      "JUMLAH_UNIT": 5,
+      "DAFTAR_UNIT": [
+        "K08_UNIT_038",
+        "K08_UNIT_066",
+        "K08_UNIT_096",
+        "K08_UNIT_281",
+        "K08_UNIT_318"
+      ]
+    },
+    "K09": {
+      "KRITERIA_ID": "CRANE|RTG|40.6|268",
+      "JENIS": "CRANE",
+      "TYPE_MERK": "RTG",
+      "CAP": 40.6,
+      "HP": 268.0,
+      "JUMLAH_UNIT": 3,
+      "DAFTAR_UNIT": [
+        "K09_UNIT_308",
+        "K09_UNIT_309",
+        "K09_UNIT_310"
+      ]
+    },
+    "K10": {
+      "KRITERIA_ID": "TRONTON|FV416|40.0|330",
+      "JENIS": "TRONTON",
+      "TYPE_MERK": "FV416",
+      "CAP": 40.0,
+      "HP": 330.0,
+      "JUMLAH_UNIT": 3,
+      "DAFTAR_UNIT": [
+        "K10_UNIT_172",
+        "K10_UNIT_176",
+        "K10_UNIT_181"
+      ]
+    },
+    "K11": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|3.5|60",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 3.5,
+      "HP": 60.0,
+      "JUMLAH_UNIT": 3,
+      "DAFTAR_UNIT": [
+        "K11_UNIT_306",
+        "K11_UNIT_319",
+        "K11_UNIT_342"
+      ]
+    },
+    "K12": {
+      "KRITERIA_ID": "REACH STACKER|KONE 450|45.0|346",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KONE 450",
+      "CAP": 45.0,
+      "HP": 346.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K12_UNIT_119",
+        "K12_UNIT_120"
+      ]
+    },
+    "K13": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|3.0|55",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 3.0,
+      "HP": 55.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K13_UNIT_021",
+        "K13_UNIT_122"
+      ]
+    },
+    "K14": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|10.0|170",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 10.0,
+      "HP": 170.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K14_UNIT_016",
+        "K14_UNIT_093"
+      ]
+    },
+    "K15": {
+      "KRITERIA_ID": "REACH STACKER|SANY 450|45.0|348",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "SANY 450",
+      "CAP": 45.0,
+      "HP": 348.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K15_UNIT_315",
+        "K15_UNIT_316"
+      ]
+    },
+    "K16": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|5.0|70",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 5.0,
+      "HP": 70.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K16_UNIT_023",
+        "K16_UNIT_335"
+      ]
+    },
+    "K17": {
+      "KRITERIA_ID": "REACH STACKER|KALMAR DC 410|42.0|346",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KALMAR DC 410",
+      "CAP": 42.0,
+      "HP": 346.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K17_UNIT_076",
+        "K17_UNIT_092"
+      ]
+    },
+    "K18": {
+      "KRITERIA_ID": "REACH STACKER|KALMAR DRD 420|42.0|346",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KALMAR DRD 420",
+      "CAP": 42.0,
+      "HP": 346.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K18_UNIT_069",
+        "K18_UNIT_090"
+      ]
+    },
+    "K19": {
+      "KRITERIA_ID": "FORKLIFT|MITSUBISHI|7.0|85",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "MITSUBISHI",
+      "CAP": 7.0,
+      "HP": 85.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K19_UNIT_032",
+        "K19_UNIT_344"
+      ]
+    },
+    "K20": {
+      "KRITERIA_ID": "REACH STACKER|KALMAR DRF 450|45.0|346",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KALMAR DRF 450",
+      "CAP": 45.0,
+      "HP": 346.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K20_UNIT_077",
+        "K20_UNIT_091"
+      ]
+    },
+    "K21": {
+      "KRITERIA_ID": "TRAILER|PKD211|40.0|220",
+      "JENIS": "TRAILER",
+      "TYPE_MERK": "PKD211",
+      "CAP": 40.0,
+      "HP": 220.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K21_UNIT_197",
+        "K21_UNIT_198"
+      ]
+    },
+    "K22": {
+      "KRITERIA_ID": "FORKLIFT|FL KONE|32.0|255",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "FL KONE",
+      "CAP": 32.0,
+      "HP": 255.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K22_UNIT_277",
+        "K22_UNIT_345"
+      ]
+    },
+    "K23": {
+      "KRITERIA_ID": "FORKLIFT|KOMATSU|2.5|55",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "KOMATSU",
+      "CAP": 2.5,
+      "HP": 55.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K23_UNIT_095",
+        "K23_UNIT_305"
+      ]
+    },
+    "K24": {
+      "KRITERIA_ID": "FORKLIFT|FL KALMAR|28.0|280",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "FL KALMAR",
+      "CAP": 28.0,
+      "HP": 280.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K24_UNIT_304",
+        "K24_UNIT_341"
+      ]
+    },
+    "K25": {
+      "KRITERIA_ID": "FORKLIFT|KOMATSU|0.0|55",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "KOMATSU",
+      "CAP": 0.0,
+      "HP": 55.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K25_UNIT_020",
+        "K25_UNIT_313"
+      ]
+    },
+    "K26": {
+      "KRITERIA_ID": "TRONTON|CD12|40.0|185",
+      "JENIS": "TRONTON",
+      "TYPE_MERK": "CD12",
+      "CAP": 40.0,
+      "HP": 185.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K26_UNIT_132",
+        "K26_UNIT_271"
+      ]
+    },
+    "K27": {
+      "KRITERIA_ID": "FORKLIFT|FL KALMAR|32.0|280",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "FL KALMAR",
+      "CAP": 32.0,
+      "HP": 280.0,
+      "JUMLAH_UNIT": 2,
+      "DAFTAR_UNIT": [
+        "K27_UNIT_317",
+        "K27_UNIT_329"
+      ]
+    },
+    "K28": {
+      "KRITERIA_ID": "TRONTON|FU417|40.0|240",
+      "JENIS": "TRONTON",
+      "TYPE_MERK": "FU417",
+      "CAP": 40.0,
+      "HP": 240.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K28_UNIT_266"
+      ]
+    },
+    "K29": {
+      "KRITERIA_ID": "TRONTON|FU416|40.0|330",
+      "JENIS": "TRONTON",
+      "TYPE_MERK": "FU416",
+      "CAP": 40.0,
+      "HP": 330.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K29_UNIT_175"
+      ]
+    },
+    "K30": {
+      "KRITERIA_ID": "TRONTON|FL176|40.0|220",
+      "JENIS": "TRONTON",
+      "TYPE_MERK": "FL176",
+      "CAP": 40.0,
+      "HP": 220.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K30_UNIT_228"
+      ]
+    },
+    "K31": {
+      "KRITERIA_ID": "REACH STACKER|KALMAR DRT 450|45.0|290",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KALMAR DRT 450",
+      "CAP": 45.0,
+      "HP": 290.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K31_UNIT_089"
+      ]
+    },
+    "K32": {
+      "KRITERIA_ID": "REACH STACKER|KALMAR DRT 450|45.0|346",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KALMAR DRT 450",
+      "CAP": 45.0,
+      "HP": 346.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K32_UNIT_088"
+      ]
+    },
+    "K33": {
+      "KRITERIA_ID": "TRONTON|CW12|40.0|185",
+      "JENIS": "TRONTON",
+      "TYPE_MERK": "CW12",
+      "CAP": 40.0,
+      "HP": 185.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K33_UNIT_130"
+      ]
+    },
+    "K34": {
+      "KRITERIA_ID": "TRONTON|CK12|40.0|185",
+      "JENIS": "TRONTON",
+      "TYPE_MERK": "CK12",
+      "CAP": 40.0,
+      "HP": 185.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K34_UNIT_009"
+      ]
+    },
+    "K35": {
+      "KRITERIA_ID": "REACH STACKER|KONE 450|45.0|375",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KONE 450",
+      "CAP": 45.0,
+      "HP": 375.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K35_UNIT_118"
+      ]
+    },
+    "K36": {
+      "KRITERIA_ID": "REACH STACKER|LINDE 450|45.0|346",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "LINDE 450",
+      "CAP": 45.0,
+      "HP": 346.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K36_UNIT_276"
+      ]
+    },
+    "K37": {
+      "KRITERIA_ID": "TRAILER|CK12|0.0|180",
+      "JENIS": "TRAILER",
+      "TYPE_MERK": "CK12",
+      "CAP": 0.0,
+      "HP": 180.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K37_UNIT_203"
+      ]
+    },
+    "K38": {
+      "KRITERIA_ID": "TOP LOADER|TL TCM|37.0|520",
+      "JENIS": "TOP LOADER",
+      "TYPE_MERK": "TL TCM",
+      "CAP": 37.0,
+      "HP": 520.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K38_UNIT_327"
+      ]
+    },
+    "K39": {
+      "KRITERIA_ID": "REACH STACKER|SMV 450|45.0|346",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "SMV 450",
+      "CAP": 45.0,
+      "HP": 346.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K39_UNIT_325"
+      ]
+    },
+    "K40": {
+      "KRITERIA_ID": "SIDE LOADER|SL BOSS|5.0|180",
+      "JENIS": "SIDE LOADER",
+      "TYPE_MERK": "SL BOSS",
+      "CAP": 5.0,
+      "HP": 180.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K40_UNIT_322"
+      ]
+    },
+    "K41": {
+      "KRITERIA_ID": "TRAILER|PKC311|4.2|311",
+      "JENIS": "TRAILER",
+      "TYPE_MERK": "PKC311",
+      "CAP": 4.2,
+      "HP": 311.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K41_UNIT_185"
+      ]
+    },
+    "K42": {
+      "KRITERIA_ID": "SIDE LOADER|SL BOSS|5.0|190",
+      "JENIS": "SIDE LOADER",
+      "TYPE_MERK": "SL BOSS",
+      "CAP": 5.0,
+      "HP": 190.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K42_UNIT_323"
+      ]
+    },
+    "K43": {
+      "KRITERIA_ID": "SIDE LOADER|SL KALMAR|8.0|218",
+      "JENIS": "SIDE LOADER",
+      "TYPE_MERK": "SL KALMAR",
+      "CAP": 8.0,
+      "HP": 218.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K43_UNIT_320"
+      ]
+    },
+    "K44": {
+      "KRITERIA_ID": "SIDE LOADER|SL KALMAR|8.0|237",
+      "JENIS": "SIDE LOADER",
+      "TYPE_MERK": "SL KALMAR",
+      "CAP": 8.0,
+      "HP": 237.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K44_UNIT_324"
+      ]
+    },
+    "K45": {
+      "KRITERIA_ID": "SIDE LOADER|SL KALMAR|8.0|238",
+      "JENIS": "SIDE LOADER",
+      "TYPE_MERK": "SL KALMAR",
+      "CAP": 8.0,
+      "HP": 238.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K45_UNIT_321"
+      ]
+    },
+    "K46": {
+      "KRITERIA_ID": "REACH STACKER|KALMAR DRF 450|45.0|336",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KALMAR DRF 450",
+      "CAP": 45.0,
+      "HP": 336.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K46_UNIT_084"
+      ]
+    },
+    "K47": {
+      "KRITERIA_ID": "TOP LOADER|TL KOMATSU|42.0|235",
+      "JENIS": "TOP LOADER",
+      "TYPE_MERK": "TL KOMATSU",
+      "CAP": 42.0,
+      "HP": 235.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K47_UNIT_338"
+      ]
+    },
+    "K48": {
+      "KRITERIA_ID": "TOP LOADER|TL MITS|40.0|304",
+      "JENIS": "TOP LOADER",
+      "TYPE_MERK": "TL MITS",
+      "CAP": 40.0,
+      "HP": 304.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K48_UNIT_333"
+      ]
+    },
+    "K49": {
+      "KRITERIA_ID": "TOP LOADER|TL MITS|42.0|304",
+      "JENIS": "TOP LOADER",
+      "TYPE_MERK": "TL MITS",
+      "CAP": 42.0,
+      "HP": 304.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K49_UNIT_332"
+      ]
+    },
+    "K50": {
+      "KRITERIA_ID": "TOP LOADER|TL BOSS|42.0|304",
+      "JENIS": "TOP LOADER",
+      "TYPE_MERK": "TL BOSS",
+      "CAP": 42.0,
+      "HP": 304.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K50_UNIT_343"
+      ]
+    },
+    "K51": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|3.5|70",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 3.5,
+      "HP": 70.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K51_UNIT_003"
+      ]
+    },
+    "K52": {
+      "KRITERIA_ID": "REACH STACKER|KALMAR DRD 450|45.0|346",
+      "JENIS": "REACH STACKER",
+      "TYPE_MERK": "KALMAR DRD 450",
+      "CAP": 45.0,
+      "HP": 346.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K52_UNIT_081"
+      ]
+    },
+    "K53": {
+      "KRITERIA_ID": "FORKLIFT|FL KALMAR|32.0|275",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "FL KALMAR",
+      "CAP": 32.0,
+      "HP": 275.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K53_UNIT_037"
+      ]
+    },
+    "K54": {
+      "KRITERIA_ID": "FORKLIFT|KOMATSU|3.0|140",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "KOMATSU",
+      "CAP": 3.0,
+      "HP": 140.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K54_UNIT_303"
+      ]
+    },
+    "K55": {
+      "KRITERIA_ID": "FORKLIFT|KOMATSU|10.0|170",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "KOMATSU",
+      "CAP": 10.0,
+      "HP": 170.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K55_UNIT_297"
+      ]
+    },
+    "K56": {
+      "KRITERIA_ID": "FORKLIFT|ITSUBISHI|3.0|55",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "ITSUBISHI",
+      "CAP": 3.0,
+      "HP": 55.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K56_UNIT_017"
+      ]
+    },
+    "K57": {
+      "KRITERIA_ID": "FORKLIFT|HELI|7.0|125",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "HELI",
+      "CAP": 7.0,
+      "HP": 125.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K57_UNIT_002"
+      ]
+    },
+    "K58": {
+      "KRITERIA_ID": "FORKLIFT|HECHA|7.0|70",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "HECHA",
+      "CAP": 7.0,
+      "HP": 70.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K58_UNIT_036"
+      ]
+    },
+    "K59": {
+      "KRITERIA_ID": "FORKLIFT|HECHA|5.0|70",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "HECHA",
+      "CAP": 5.0,
+      "HP": 70.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K59_UNIT_022"
+      ]
+    },
+    "K60": {
+      "KRITERIA_ID": "FORKLIFT|FL KALMAR|32.0|238",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "FL KALMAR",
+      "CAP": 32.0,
+      "HP": 238.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K60_UNIT_071"
+      ]
+    },
+    "K61": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|6.0|85",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 6.0,
+      "HP": 85.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K61_UNIT_302"
+      ]
+    },
+    "K62": {
+      "KRITERIA_ID": "FORKLIFT|DAEWO|5.0|125",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "DAEWO",
+      "CAP": 5.0,
+      "HP": 125.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K62_UNIT_094"
+      ]
+    },
+    "K63": {
+      "KRITERIA_ID": "FORKLIFT|DAEWO|5.0|110",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "DAEWO",
+      "CAP": 5.0,
+      "HP": 110.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K63_UNIT_339"
+      ]
+    },
+    "K64": {
+      "KRITERIA_ID": "FORKLIFT|DAEWO|2.5|45",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "DAEWO",
+      "CAP": 2.5,
+      "HP": 45.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K64_UNIT_326"
+      ]
+    },
+    "K65": {
+      "KRITERIA_ID": "FORKLIFT|BOMAC|5.0|70",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "BOMAC",
+      "CAP": 5.0,
+      "HP": 70.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K65_UNIT_311"
+      ]
+    },
+    "K66": {
+      "KRITERIA_ID": "CRANE|SHORE CRANE|80.0|240",
+      "JENIS": "CRANE",
+      "TYPE_MERK": "SHORE CRANE",
+      "CAP": 80.0,
+      "HP": 240.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K66_UNIT_027"
+      ]
+    },
+    "K67": {
+      "KRITERIA_ID": "CRANE|SHORE CRANE|75.0|240",
+      "JENIS": "CRANE",
+      "TYPE_MERK": "SHORE CRANE",
+      "CAP": 75.0,
+      "HP": 240.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K67_UNIT_026"
+      ]
+    },
+    "K68": {
+      "KRITERIA_ID": "FORKLIFT|KOMATSU|5.0|125",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "KOMATSU",
+      "CAP": 5.0,
+      "HP": 125.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K68_UNIT_314"
+      ]
+    },
+    "K69": {
+      "KRITERIA_ID": "FORKLIFT|KOMATSU|7.0|120",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "KOMATSU",
+      "CAP": 7.0,
+      "HP": 120.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K69_UNIT_062"
+      ]
+    },
+    "K70": {
+      "KRITERIA_ID": "FORKLIFT|KOMATSU|7.0|140",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "KOMATSU",
+      "CAP": 7.0,
+      "HP": 140.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K70_UNIT_296"
+      ]
+    },
+    "K71": {
+      "KRITERIA_ID": "FORKLIFT|KOMATSU|7.0|170",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "KOMATSU",
+      "CAP": 7.0,
+      "HP": 170.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K71_UNIT_300"
+      ]
+    },
+    "K72": {
+      "KRITERIA_ID": "FORKLIFT|KOMATSU|7.5|170",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "KOMATSU",
+      "CAP": 7.5,
+      "HP": 170.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K72_UNIT_337"
+      ]
+    },
+    "K73": {
+      "KRITERIA_ID": "FORKLIFT|MANITO|3.5|65",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "MANITO",
+      "CAP": 3.5,
+      "HP": 65.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K73_UNIT_299"
+      ]
+    },
+    "K74": {
+      "KRITERIA_ID": "FORKLIFT|MITSUBHISI|5.0|85",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "MITSUBHISI",
+      "CAP": 5.0,
+      "HP": 85.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K74_UNIT_282"
+      ]
+    },
+    "K75": {
+      "KRITERIA_ID": "FORKLIFT|MITSUBISHI|3.0|52",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "MITSUBISHI",
+      "CAP": 3.0,
+      "HP": 52.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K75_UNIT_280"
+      ]
+    },
+    "K76": {
+      "KRITERIA_ID": "FORKLIFT|MITSUBISHI|3.0|55",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "MITSUBISHI",
+      "CAP": 3.0,
+      "HP": 55.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K76_UNIT_301"
+      ]
+    },
+    "K77": {
+      "KRITERIA_ID": "FORKLIFT|TCM|10.0|125",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TCM",
+      "CAP": 10.0,
+      "HP": 125.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K77_UNIT_307"
+      ]
+    },
+    "K78": {
+      "KRITERIA_ID": "FORKLIFT|TCM|3.0|55",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TCM",
+      "CAP": 3.0,
+      "HP": 55.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K78_UNIT_024"
+      ]
+    },
+    "K79": {
+      "KRITERIA_ID": "FORKLIFT|TCM|5.0|85",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TCM",
+      "CAP": 5.0,
+      "HP": 85.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K79_UNIT_064"
+      ]
+    },
+    "K80": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|3.5|125",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 3.5,
+      "HP": 125.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K80_UNIT_121"
+      ]
+    },
+    "K81": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|3.5|50",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 3.5,
+      "HP": 50.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K81_UNIT_067"
+      ]
+    },
+    "K82": {
+      "KRITERIA_ID": "CRANE|SHORE CRANE|127.0|330",
+      "JENIS": "CRANE",
+      "TYPE_MERK": "SHORE CRANE",
+      "CAP": 127.0,
+      "HP": 330.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K82_UNIT_028"
+      ]
+    },
+    "K83": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|5.0|85",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 5.0,
+      "HP": 85.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K83_UNIT_039"
+      ]
+    },
+    "K84": {
+      "KRITERIA_ID": "FORKLIFT|TOYOTA|6.0|70",
+      "JENIS": "FORKLIFT",
+      "TYPE_MERK": "TOYOTA",
+      "CAP": 6.0,
+      "HP": 70.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K84_UNIT_001"
+      ]
+    },
+    "K85": {
+      "KRITERIA_ID": "TRONTON|PW260|40.0|260",
+      "JENIS": "TRONTON",
+      "TYPE_MERK": "PW260",
+      "CAP": 40.0,
+      "HP": 260.0,
+      "JUMLAH_UNIT": 1,
+      "DAFTAR_UNIT": [
+        "K85_UNIT_158"
+      ]
+    }
+  },
+  "KRITERIA_ID_TO_KODE": {
+    "TRAILER|PK260|40.0|265": "K01",
+    "TRAILER|QUESTER|40.0|280": "K02",
+    "REACH STACKER|KALMAR DRF 450|45.0|422": "K03",
+    "TRONTON|PK215|40.0|220": "K04",
+    "TRAILER|PKC311|40.0|311": "K05",
+    "FORKLIFT|MITSUBISHI|2.5|55": "K06",
+    "FORKLIFT|MITSUBISHI|4.0|85": "K07",
+    "FORKLIFT|TCM|4.5|85": "K08",
+    "CRANE|RTG|40.6|268": "K09",
+    "TRONTON|FV416|40.0|330": "K10",
+    "FORKLIFT|TOYOTA|3.5|60": "K11",
+    "REACH STACKER|KONE 450|45.0|346": "K12",
+    "FORKLIFT|TOYOTA|3.0|55": "K13",
+    "FORKLIFT|TOYOTA|10.0|170": "K14",
+    "REACH STACKER|SANY 450|45.0|348": "K15",
+    "FORKLIFT|TOYOTA|5.0|70": "K16",
+    "REACH STACKER|KALMAR DC 410|42.0|346": "K17",
+    "REACH STACKER|KALMAR DRD 420|42.0|346": "K18",
+    "FORKLIFT|MITSUBISHI|7.0|85": "K19",
+    "REACH STACKER|KALMAR DRF 450|45.0|346": "K20",
+    "TRAILER|PKD211|40.0|220": "K21",
+    "FORKLIFT|FL KONE|32.0|255": "K22",
+    "FORKLIFT|KOMATSU|2.5|55": "K23",
+    "FORKLIFT|FL KALMAR|28.0|280": "K24",
+    "FORKLIFT|KOMATSU|0.0|55": "K25",
+    "TRONTON|CD12|40.0|185": "K26",
+    "FORKLIFT|FL KALMAR|32.0|280": "K27",
+    "TRONTON|FU417|40.0|240": "K28",
+    "TRONTON|FU416|40.0|330": "K29",
+    "TRONTON|FL176|40.0|220": "K30",
+    "REACH STACKER|KALMAR DRT 450|45.0|290": "K31",
+    "REACH STACKER|KALMAR DRT 450|45.0|346": "K32",
+    "TRONTON|CW12|40.0|185": "K33",
+    "TRONTON|CK12|40.0|185": "K34",
+    "REACH STACKER|KONE 450|45.0|375": "K35",
+    "REACH STACKER|LINDE 450|45.0|346": "K36",
+    "TRAILER|CK12|0.0|180": "K37",
+    "TOP LOADER|TL TCM|37.0|520": "K38",
+    "REACH STACKER|SMV 450|45.0|346": "K39",
+    "SIDE LOADER|SL BOSS|5.0|180": "K40",
+    "TRAILER|PKC311|4.2|311": "K41",
+    "SIDE LOADER|SL BOSS|5.0|190": "K42",
+    "SIDE LOADER|SL KALMAR|8.0|218": "K43",
+    "SIDE LOADER|SL KALMAR|8.0|237": "K44",
+    "SIDE LOADER|SL KALMAR|8.0|238": "K45",
+    "REACH STACKER|KALMAR DRF 450|45.0|336": "K46",
+    "TOP LOADER|TL KOMATSU|42.0|235": "K47",
+    "TOP LOADER|TL MITS|40.0|304": "K48",
+    "TOP LOADER|TL MITS|42.0|304": "K49",
+    "TOP LOADER|TL BOSS|42.0|304": "K50",
+    "FORKLIFT|TOYOTA|3.5|70": "K51",
+    "REACH STACKER|KALMAR DRD 450|45.0|346": "K52",
+    "FORKLIFT|FL KALMAR|32.0|275": "K53",
+    "FORKLIFT|KOMATSU|3.0|140": "K54",
+    "FORKLIFT|KOMATSU|10.0|170": "K55",
+    "FORKLIFT|ITSUBISHI|3.0|55": "K56",
+    "FORKLIFT|HELI|7.0|125": "K57",
+    "FORKLIFT|HECHA|7.0|70": "K58",
+    "FORKLIFT|HECHA|5.0|70": "K59",
+    "FORKLIFT|FL KALMAR|32.0|238": "K60",
+    "FORKLIFT|TOYOTA|6.0|85": "K61",
+    "FORKLIFT|DAEWO|5.0|125": "K62",
+    "FORKLIFT|DAEWO|5.0|110": "K63",
+    "FORKLIFT|DAEWO|2.5|45": "K64",
+    "FORKLIFT|BOMAC|5.0|70": "K65",
+    "CRANE|SHORE CRANE|80.0|240": "K66",
+    "CRANE|SHORE CRANE|75.0|240": "K67",
+    "FORKLIFT|KOMATSU|5.0|125": "K68",
+    "FORKLIFT|KOMATSU|7.0|120": "K69",
+    "FORKLIFT|KOMATSU|7.0|140": "K70",
+    "FORKLIFT|KOMATSU|7.0|170": "K71",
+    "FORKLIFT|KOMATSU|7.5|170": "K72",
+    "FORKLIFT|MANITO|3.5|65": "K73",
+    "FORKLIFT|MITSUBHISI|5.0|85": "K74",
+    "FORKLIFT|MITSUBISHI|3.0|52": "K75",
+    "FORKLIFT|MITSUBISHI|3.0|55": "K76",
+    "FORKLIFT|TCM|10.0|125": "K77",
+    "FORKLIFT|TCM|3.0|55": "K78",
+    "FORKLIFT|TCM|5.0|85": "K79",
+    "FORKLIFT|TOYOTA|3.5|125": "K80",
+    "FORKLIFT|TOYOTA|3.5|50": "K81",
+    "CRANE|SHORE CRANE|127.0|330": "K82",
+    "FORKLIFT|TOYOTA|5.0|85": "K83",
+    "FORKLIFT|TOYOTA|6.0|70": "K84",
+    "TRONTON|PW260|40.0|260": "K85"
+  }
+}

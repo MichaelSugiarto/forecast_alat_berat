@@ -1,0 +1,25 @@
+VARIAN,MODEL,PENDEKATAN,PARAMETER,RMSE_GLOBAL,BIAS_GLOBAL,MAPE_GLOBAL
+baseline,ARIMAX,per-unit,"p=0,d=0,q=6",85.76390979384439,15.812399878621235,50.56731917519954
+baseline,ARIMAX,per-kriteria,"p=1,d=0,q=5,agg=median",99.6312253825092,7.752390412040892,64.74344036405874
+baseline,Gradient Boosting,per-unit,"learning_rate=0.01, max_iter=100.0, max_depth=nan, min_samples_leaf=5.0",80.17279961160654,-0.3927858061980104,47.480447878882245
+baseline,Gradient Boosting,per-kriteria,"learning_rate=0.01, max_iter=300.0, max_depth=3.0, min_samples_leaf=10.0",72.43044815321669,0.7297811464337475,45.265243821178494
+baseline,LSTM,per-unit,"seq_len=6,units=16,epochs=30",89.31491582391509,0.0162957351820443,53.26045463843858
+baseline,LSTM,per-kriteria,"seq_len=6,units=16,epochs=30",91.62619384386552,2.1146736824043497,59.584649114275614
+savgol,ARIMAX,per-unit,"p=6,d=0,q=3",84.55580361723398,10.549953891511889,49.57991383774043
+savgol,ARIMAX,per-kriteria,"p=3,d=0,q=1,agg=median",99.8903558166636,7.635968961392489,64.40128869476398
+savgol,Gradient Boosting,per-unit,"learning_rate=0.01, max_iter=200.0, max_depth=nan, min_samples_leaf=5.0",75.35816811970115,-1.0607450678171872,45.523011720988464
+savgol,Gradient Boosting,per-kriteria,"learning_rate=0.01, max_iter=300.0, max_depth=7.0, min_samples_leaf=5.0",59.11062217961439,-2.438131772760664,41.017332117347785
+savgol,LSTM,per-unit,"seq_len=3,units=16,epochs=30",91.43548956227647,5.095890407321849,51.96341133519186
+savgol,LSTM,per-kriteria,"seq_len=3,units=32,epochs=50",91.70364712071698,7.513933782462956,53.30087548205571
+robust,ARIMAX,per-unit,"p=1,d=0,q=0",83.76980857192633,-0.7574578161823318,50.95887252403058
+robust,ARIMAX,per-kriteria,"p=4,d=0,q=5,agg=mean",67.25916269071712,9.210470028205926,61.52094164014975
+robust,Gradient Boosting,per-unit,"learning_rate=0.01, max_iter=100.0, max_depth=nan, min_samples_leaf=5.0",82.82809109005642,2.235421817899916,47.25368417368052
+robust,Gradient Boosting,per-kriteria,"learning_rate=0.01, max_iter=100.0, max_depth=3.0, min_samples_leaf=5.0",81.01225160576773,4.995709757885233,46.04089331185012
+robust,LSTM,per-unit,"seq_len=3,units=16,epochs=50",91.28592801164903,8.703083234361173,52.455175644276544
+robust,LSTM,per-kriteria,"seq_len=3,units=16,epochs=30",90.13850061538264,3.903726060265729,51.18943790441888
+yeojohnson,ARIMAX,per-unit,"p=1,d=0,q=0",85.07699529166898,-1.0840770949541902,49.40648735295259
+yeojohnson,ARIMAX,per-kriteria,"p=4,d=0,q=5,agg=mean",71.6077263779648,4.422885855468079,50.42362514639439
+yeojohnson,Gradient Boosting,per-unit,"learning_rate=0.01, max_iter=100.0, max_depth=nan, min_samples_leaf=5.0",84.03320090922544,1.644024040153485,45.65411478966708
+yeojohnson,Gradient Boosting,per-kriteria,"learning_rate=0.01, max_iter=300.0, max_depth=3.0, min_samples_leaf=10.0",80.90761965441735,5.9973181935146265,45.17592712346474
+yeojohnson,LSTM,per-unit,"seq_len=3,units=16,epochs=30",92.68164127417988,6.355077367984891,52.29829266094356
+yeojohnson,LSTM,per-kriteria,"seq_len=6,units=16,epochs=30",90.91848430109069,-4.141673005108424,51.75860699583556

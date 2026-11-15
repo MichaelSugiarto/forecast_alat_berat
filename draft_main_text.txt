@@ -1,0 +1,918 @@
+1: **NO. xxyyzzzz/INF/2026**
+2: 
+3: # **PREDIKSI JAM OPERASI ALAT BERAT PT X MENGGUNAKAN ARIMAX, GRADIENT BOOSTING, DAN LSTM** {#prediksi-jam-operasi-alat-berat-pt-x-menggunakan-arimax,-gradient-boosting,-dan-lstm}
+4: 
+5: **SKRIPSI**
+6: 
+7: Diajukan untuk memenuhi persyaratan penyelesaian program Strata 1  
+8: Program Studi Informatika, Fakultas Teknologi Industri  
+9: Universitas Kristen Petra
+10: 
+11: Oleh:  
+12: Michael Sugiarto  
+13: NRP: C14230035
+14: 
+15: Pembimbing:  
+16: Adi Wibowo, S.T, M.T, Ph.D.  
+17: Henry Novianus Palit, S.Kom., M.Kom., Ph.D.
+18: 
+19: PROGRAM STUDI INFORMATIKA
+20: 
+21: **FAKULTAS TEKNOLOGI INDUSTRI**  
+22: **UNIVERSITAS KRISTEN PETRA**  
+23: **SURABAYA**  
+24: **2026**
+25: 
+26: # **LEMBAR PENGESAHAN** {#lembar-pengesahan}
+27: 
+28: **SKRIPSI**
+29: 
+30: **PREDIKSI JAM OPERASI ALAT BERAT PT X MENGGUNAKAN ARIMAX, GRADIENT BOOSTING, DAN LSTM**
+31: 
+32: Oleh:  
+33: Michael Sugiarto	NRP: C14230035
+34: 
+35: Diterima oleh:
+36: 
+37: Program Studi Informatika  
+38: Fakultas Teknologi Industri  
+39: Universitas Kristen Petra
+40: 
+41: Surabaya, 13 November 2026
+42: 
+43: | Pembimbing 1 Adi Wibowo, S.T, M.T, Ph.D. NIP: 00003 | Pembimbing 2 Henry Novianus Palit, S.Kom., M.Kom., Ph.D. NIP: 14001 |
+44: | :---: | :---: |
+45: 
+46: Ketua Tim Penguji:
+47: 
+48: Silvia Rostianingsih, S.Kom., M.MT.  
+49: NIP: 01043 
+50: 
+51: Ketua Program Studi:
+52: 
+53: Adi Wibowo S.T., M.T., Ph.D.  
+54: NIP: 00003
+55: 
+56: # **LEMBARAN PERNYATAAN PERSETUJUAN PUBLIKASI** **KARYA ILMIAH UNTUK KEPENTINGAN AKADEMIS** {#lembaran-pernyataan-persetujuan-publikasi-karya-ilmiah-untuk-kepentingan-akademis}
+57: 
+58: Sebagai mahasiswa Universitas Kristen Petra, yang bertanda tangan dibawah ini, saya :   
+59: Nama		: Michael Sugiarto  
+60: NRP		: C14230035
+61: 
+62: Demi pengembangan ilmu pengetahuan, menyetujui untuk memberikan kepada Universitas Kristen Petra Hak Bebas Royalti Non-Eksklusif (*Non-Exclusive Royalty-Free Right*) atas karya ilmiah saya yang berjudul “Prediksi Jam Operasi Alat Berat PT X Menggunakan ARIMAX, *Gradient Boosting*, dan LSTM”. Dengan Hak Bebas Royalti Non-Eksklusif ini Universitas Kristen Petra berhak menyimpan, mengalih-mediakan/formatkan, mengelolanya dalam bentuk pangkalan data (*database*), mendistribusikannya dan menampilkan/mempublikasinya di internet atau media lain untuk kepentingan akademik tanpa perlu meminta izin dari saya selama tetap mencantumkan saya sebagai penulisnya.  
+63: Saya bersedia untuk menanggung secara pribadi, tanpa melibatkan pihak Universitas Kristen Petra, segala bentuk tuntutan hukum yang timbul atas pelanggaran Hak Cipta dalam karya ilmiah saya ini.   
+64: Demikian pernyataan ini yang saya buat dengan sebenarnya.  
+65: 						
+66: 
+67: Surabaya, 13 November 2026  
+68: Yang menyatakan,  
+69: 							
+70: 
+71: Michael Sugiarto
+72: 
+73: # **KATA PENGANTAR** {#kata-pengantar}
+74: 
+75: Puji syukur kepada Tuhan Yang Maha Esa atas berkat dan penyertaan-Nya, sehingga penulis dapat menyelesaikan skripsi yang berjudul “Prediksi Jam Operasi Alat Berat PT X Menggunakan ARIMAX, *Gradient Boosting*, dan LSTM” ini. Skripsi ini diajukan untuk memenuhi salah satu persyaratan guna meraih gelar Sarjana Strata-1 pada Program Studi Informatika, Fakultas Teknologi Industri, Universitas Kristen Petra, Surabaya.  
+76: Rasa terima kasih yang tak terhingga penulis sampaikan kepada berbagai pihak yang telah membantu penulis selama ini, khususnya:
+77: 
+78: 1. Bapak Adi Wibowo S.T., M.T., Ph.D., selaku Kepala Program Studi Informatika Universitas Kristen Petra dan  dosen pembimbing I yang telah meluangkan waktu, tenaga, serta pikiran dalam memberikan bimbingan dan pengarahan selama penyusunan skripsi ini.  
+79: 2. Bapak Henry Novianus Palit, S.Kom., M.Kom., Ph.D., selaku dosen pembimbing II yang telah meluangkan waktu, tenaga, dan pikiran dalam memberikan bimbingan dan pengarahan selama penyusunan skripsi ini.  
+80: 3. PT X selaku mitra yang telah memberikan data operasional, waktu, dan kesempatan kepada penulis, serta seluruh pengguna di PT X yang telah memberikan penilaian dan masukan terhadap hasil prediksi dan aplikasi yang dikembangkan.  
+81: 4. Keluarga yang telah memberikan dukungan secara moral dan material kepada penulis sehingga penulis mampu menyelesaikan skripsi ini.  
+82: 5. Sahabat dan teman-teman yang telah banyak memberikan dukungan, doa, dan semangat selama proses penyusunan skripsi ini.  
+83: 6. Segenap dosen dan staf pengajar di Program Studi Informatika Universitas Kristen Petra Surabaya.  
+84: 7. Pihak-pihak lain yang telah membantu secara langsung maupun tidak langsung dalam pembuatan skripsi ini yang tidak dapat disebutkan satu per satu.
+85: 
+86: Penulis menyadari bahwa penulisan skripsi ini masih jauh dari sempurna. Oleh karena itu, penulis mengharapkan segala petunjuk, kritik, dan saran yang membangun dari pembaca agar dapat menunjang pengembangan dan perbaikan penulisan selanjutnya.  
+87: Akhir kata, penulis mohon maaf apabila ada kekurangan dalam penulisan skripsi ini dan dengan senang hati menerima kritik dan saran yang membangun dari pembaca. Semoga skripsi ini dapat memberikan manfaat bagi berbagai pihak. Amin  
+88: Surabaya, 13 November 2026  
+89: Penulis,
+90: 
+91: Michael Sugiarto
+92: 
+93: # **ABSTRAK** {#abstrak}
+94: 
+95: Michael Sugiarto  
+96: 	Skripsi  
+97: Prediksi Jam Operasi Alat Berat PT X Menggunakan ARIMAX, Gradient Boosting, dan LSTM
+98: 
+99: 	PT X merupakan perusahaan pelayaran dan logistik yang mengoperasikan armada alat berat, seperti *trailer*, tronton, *crane*, *forklift*, *reach stacker*, *side loader*, dan *top loader* di berbagai lokasi operasional. Perusahaan belum memiliki sistem yang memproyeksikan *operating hours* setiap unit, sehingga keputusan distribusi dan relokasi unit, perencanaan perawatan, serta penambahan unit masih bergantung pada kondisi yang telah terjadi. Penelitian ini bertujuan untuk membangun sistem prediksi *operating hours* per unit agar perencanaan armada dapat dilakukan lebih awal dan berbasis data.  
+100: Data yang digunakan berupa catatan *operating hours* harian, spesifikasi alat, volume *container*, dan curah hujan periode Januari 2023 sampai Desember 2025 yang diagregasikan menjadi bulanan. Dari 215 unit yang terdata, 190 unit dimodelkan, sedangkan 25 unit dikecualikan karena data bernilai nol. Data dibagi secara kronologis, yaitu Januari 2023 sampai September 2025 sebagai data *training* dan Oktober sampai Desember 2025 sebagai data *test*. Setiap unit dimodelkan secara terpisah dengan empat varian penyesuaian data (*baseline*, *Savitzky-Golay filter*, *RobustScaler*, dan *Yeo-Johnson*) pada tiga model, yaitu ARIMAX, *Gradient Boosting*, dan LSTM, dengan curah hujan dan volume *container* sebagai variabel eksogen, serta dibandingkan dengan pendekatan per kriteria. Parameter dipilih melalui *grid search*, dan kinerja diukur menggunakan *Root Mean Square Error* (RMSE) dan *Mean Absolute Percentage Error* (MAPE).  
+101: Hasil penelitian menunjukkan bahwa *Gradient Boosting* memberikan kinerja terbaik, dengan rata-rata MAPE per unit terendah (18,93%) dibandingkan LSTM (19,24%) dan ARIMAX (20,38%). Setelah penyesuaian varian data dan *hyperparameter* pada setiap unit, *Gradient Boosting* mencapai rata-rata MAPE 11,48% dan rata-rata RMSE 33,66 jam pada 190 unit dengan horizon *test* 3 bulan. Sistem dikembangkan dalam bentuk aplikasi web berbasis Streamlit yang memungkinkan pengguna mengunggah data, memilih unit, melihat peramalan hingga 12 bulan, dan mengunduh hasilnya dalam berkas Excel, sehingga dapat membantu PT X dalam merencanakan distribusi dan relokasi unit armada.
+102: 
+103: Kata kunci: operating hours, forecasting, Gradient Boosting, ARIMAX, LSTM, Streamlit
+104: 
+105: # **ABSTRACT**
+106: 
+107: Michael Sugiarto  
+108: 	Undergraduate Thesis  
+109: Operating Hours Prediction of Heavy Equipment at PT X Using ARIMAX, Gradient Boosting, and LSTM 
+110: 
+111: 	PT X is a shipping and logistics company that operates a fleet of heavy equipment, such as trailers, tronton trucks, cranes, forklifts, reach stackers, side loaders, and top loaders, across several operational locations. The company does not yet have a system that projects the operating hours of each unit, so decisions on unit distribution and relocation, maintenance planning, and the addition of new units still depend on conditions that have already occurred. This study aims to build a system that predicts operating hours for each unit so that fleet planning can be done earlier and based on data.  
+112: The data consist of daily operating hours records, equipment specifications, container volume, and rainfall from January 2023 to December 2025, aggregated to a monthly level. Of the 215 recorded units, 190 units were modeled, and 25 units were excluded because their data were zero. The data were split chronologically, with January 2023 to September 2025 as training data and October to December 2025 as test data. Each unit was modeled separately using four data preparation variants (baseline, Savitzky-Golay filter, RobustScaler, and Yeo-Johnson) on three models, namely ARIMAX, Gradient Boosting, and LSTM, with rainfall and container volume as exogenous variables, and compared with a per-criteria approach. Parameters were selected through grid search, and performance was measured using Root Mean Square Error (RMSE) and Mean Absolute Percentage Error (MAPE).  
+113: The results show that Gradient Boosting performed best, with the lowest average MAPE per unit (18.93%) compared with LSTM (19.24%) and ARIMAX (20.38%). After tuning the data variant and hyperparameters for each unit, Gradient Boosting reached an average MAPE of 11.48% and an average RMSE of 33.66 hours across 190 units with a 3-month test horizon. The system was developed as a Streamlit-based web application that lets users upload data, select units, view forecasts up to 12 months ahead, and download the results as an Excel file, so it can help PT X plan the distribution and relocation of its fleet.
+114: 
+115: Keywords: operating hours, forecasting, Gradient Boosting, ARIMAX, LSTM, Streamlit
+116: 
+117: # **DAFTAR ISI** {#daftar-isi}
+118: 
+119: [HALAMAN JUDUL.	i](#prediksi-jam-operasi-alat-berat-pt-x-menggunakan-arimax,-gradient-boosting,-dan-lstm)  
+120: [LEMBAR PENGESAHAN..	ii](#lembar-pengesahan)  
+121: [LEMBAR PERSETUJUAN PUBLIKASI.	iii](#lembaran-pernyataan-persetujuan-publikasi-karya-ilmiah-untuk-kepentingan-akademis)  
+122: [KATA PENGANTAR.	iv](#kata-pengantar)  
+123: [ABSTRAK.	vi](#abstrak)  
+124: [DAFTAR ISI.	viii](#daftar-isi)  
+125: [DAFTAR TABEL..	x](#daftar-tabel)  
+126: [DAFTAR GAMBAR..	xi](#daftar-gambar)  
+127: [DAFTAR LAMPIRAN..	xii](#daftar-lampiran)
+128: 
+129: 1. [PENDAHULUAN	1](#pendahuluan)  
+130:    1. [Latar Belakang Masalah.	1](#latar-belakang-masalah)  
+131:    2. [Rumusan Masalah.	3](#rumusan-masalah)  
+132:    3. [Tujuan Proyek.	3](#tujuan-proyek)  
+133:    4. [Ruang Lingkup.	3](#ruang-lingkup)  
+134:    5. [Manfaat Solusi.	4](#manfaat-solusi)  
+135:    6. [Sistematika Penulisan.	5](#sistematika-penulisan)  
+136: 2. [STUDI LITERATUR DAN KERANGKA KERJA	6](#studi-literatur-dan-kerangka-kerja)  
+137:    1. [Studi Literatur.	6](#studi-literatur)  
+138:       1. [Landasan Teori.	6](#landasan-teori)  
+139:          1. [Savitzky-Golay Filter.	6](#savitzky-golay-filter)  
+140:          2. [RobustScaler.	6](#robustscaler)  
+141:          3. [Yeo-Johnson Transformation.	6](#yeo-johnson-transformation)  
+142:       2. [Penelitian Terdahulu.](#penelitian-terdahulu)	7  
+143:    2. [Kerangka Kerja.	9](#kerangka-kerja)  
+144:       1. [Tahapan Proyek.	9](#tahapan-proyek)  
+145:       2. [Hipotesis Solusi.	9](#hipotesis-solusi)  
+146:       3. [Pengumpulan dan Pemahaman Data.	10](#pengumpulan-dan-pemahaman-data)  
+147:       4. [Penyiapan Data.	11](#penyiapan-data)  
+148:       5. [Pemodelan.	11](#pemodelan)  
+149:       6. [Pengujian dan Pembahasan.	14](#pengujian-dan-pembahasan)
+150: 
+151: 3. [ANALISIS DAN PERANCANGAN.	16](#analisis-dan-perancangan)  
+152:    1. [Analisis Masalah.	16](#analisis-masalah)  
+153:    2. [Analisis Kebutuhan.	16](#analisis-kebutuhan)  
+154:    3. [Analisis Data.	17](#analisis-data)  
+155:    4. [Desain Solusi.	23](#desain-solusi)  
+156: 4. IMPLEMENTASI DAN PENGUJIAN.	  
+157:    1. Implementasi Solusi.	  
+158:    2. Lingkungan Pengujian.	  
+159:    3. Pengujian 1: Perbandingan Model dan Varian Data pada Unit dan Kriteria.	  
+160:    4. Pengujian 2: Perbandingan Model, Varian Data, dan Pendekatan.	  
+161:    5. Pengujian 3: Penentuan Model Tunggal dan Penyesuaian Konfigurasi.	  
+162:    6. Pengujian 4: Horizon Test 3 dan 4 Bulan.	  
+163:    7. Pengujian 5: Peramalan Direct dan Rolling.	  
+164:    8. Pengujian 6: Peran Variabel Eksogen.	  
+165:    9. Pengujian 7: Peramalan ke Depan pada Dashboard.	  
+166: 5. PEMBAHASAN.	  
+167:    1. Ringkasan Temuan.	  
+168:    2. Perbandingan Model dan Hipotesis.	  
+169:    3. Varian Penyesuaian Data dan Pendekatan Per Unit atau Per Kriteria.	  
+170:    4. Penyesuaian Konfigurasi dan Model Tunggal.	  
+171:    5. Peran Variabel Eksogen.	  
+172:    6. Horizon dan Peramalan Rekursif	  
+173:    7. Implikasi bagi PT X.	  
+174:    8. Keterbatasan.	  
+175: 6. KESIMPULAN DAN SARAN.	  
+176:    1. Kesimpulan.	  
+177:    2. Saran.	
+178: 
+179: DAFTAR REFERENSI.	  
+180: LAMPIRAN.	
+181: 
+182: # **DAFTAR TABEL** {#daftar-tabel}
+183: 
+184: Tabel 3.1 Statistik Deskriptif Variabel Operating Hours, Curah Hujan, dan Volume Container.	  
+185: Tabel 3.2 Ringkasan Identifikasi Outlier Berbasis IQR.	  
+186: Tabel 4.1 Spesifikasi Perangkat Keras.	  
+187: Tabel 4.2 Spesifikasi Perangkat Lunak.	  
+188: Tabel 4.3 Waktu Eksekusi.	  
+189: Tabel 4.4 Skenario Pengujian.	  
+190: Tabel 4.5 MAPE Tiga Model pada Empat Varian Data untuk Sepuluh Unit Contoh.	  
+191: Tabel 4.6 Kombinasi Terbaik pada Sepuluh Unit Contoh.	  
+192: Tabel 4.7 Kombinasi Terbaik pada Lima Kriteria Contoh.	  
+193: Tabel 4.8 Hasil Pencarian Parameter, Pendekatan Per Unit.	  
+194: Tabel 4.9 Rata-rata MAPE Per Unit untuk 12 Kombinasi (190 Unit).	  
+195: Tabel 4.10 Jumlah Unit dan Kriteria Berdasarkan Model Terbaik.	  
+196: Tabel 4.11 Rata-rata MAPE Per Kriteria untuk 12 Kombinasi (63 Kriteria).	  
+197: Tabel 4.12 Hasil Model Akhir Dibandingkan Model Terbaik Per Unit (190 Unit).	  
+198: Tabel 4.13 Hasil Model Akhir Dibandingkan Model Terbaik Per Kriteria (63 Kriteria).	  
+199: Tabel 4.14 Perbandingan Horizon Test 3 dan 4 Bulan.	  
+200: Tabel 4.15 Perbandingan Peramalan Direct dan Rolling.	  
+201: Tabel 4.16 Perbandingan Enam Skenario Eksogen (190 Unit).	
+202: 
+203: # 
+204: 
+205: # **DAFTAR GAMBAR** {#daftar-gambar}
+206: 
+207: [Gambar 2.1 Tahapan Proyek.](#gambar-2.1-tahapan-proyek)	  
+208: [G](https://docs.google.com/document/d/1FWkyCBF8ppIuLb1bwgx0xVfWnghrS-F1VK2XKXJ_BdA/edit?tab=t.0#heading=h.sqlnatu66sdj)ambar 3.1 Tren Rata-rata Operating Hours per Bulan.	  
+209: Gambar 3.2 Tren Curah Hujan per Bulan.	  
+210: Gambar 3.3 Tren Volume Container per Bulan.	  
+211: Gambar 3.4 Distribusi Data Operating Hours.	  
+212: Gambar 3.5 Distribusi Data Curah Hujan.	  
+213: Gambar 3.6 Distribusi Data Volume Container.	  
+214: Gambar 3.7 Boxplot Data Operating Hours.	  
+215: Gambar 3.8 Boxplot Data Curah Hujan.	  
+216: Gambar 3.9 Boxplot Data Volume Container	.  
+217: Gambar 3.10 Korelasi Antar Variabel.	  
+218: Gambar 4.1 Halaman Unggah Data pada Dashboard.	  
+219: Gambar 4.2 Grafik Aktual dan Peramalan Operating Hours per Unit.	  
+220: Gambar 4.3 Daftar Unit yang Tidak Tercakup.	  
+221: Gambar 4.4 Perbandingan Nilai Aktual dan Prediksi pada Periode Test untuk Unit K01\_UNIT\_008.	  
+222: Gambar 4.5 Perbandingan Nilai Aktual dan Prediksi pada Periode Test untuk Unit K02\_UNIT\_155.	  
+223: Gambar 4.6 Perbandingan Nilai Aktual dan Prediksi pada Periode Test untuk Kriteria K09.	  
+224: Gambar 4.7 Hasil Peramalan Operating Hours Tahun 2026 untuk Unit K01\_UNIT\_008.	  
+225: Gambar 4.8 Hasil Peramalan Operating Hours Tahun 2026 untuk Unit K02\_UNIT\_155.	
+226: 
+227: # **DAFTAR LAMPIRAN** {#daftar-lampiran}
+228: 
+229: [Lampiran 1 Log Book Aktivitas Selama LEAP](https://docs.google.com/document/d/1FWkyCBF8ppIuLb1bwgx0xVfWnghrS-F1VK2XKXJ_BdA/edit?tab=t.0#heading=h.qbqu1eqn6uzb).	  
+230: [Lampiran 2 Kegiatan Bimbingan Dosen Selama LEAP](https://docs.google.com/document/d/1FWkyCBF8ppIuLb1bwgx0xVfWnghrS-F1VK2XKXJ_BdA/edit?tab=t.0#heading=h.zezdttaz0u13).	
+231: 
+232: 1. # **PENDAHULUAN** {#pendahuluan}
+233: 
+234:      
+235:    
+236: 
+237:    1. ## **Latar Belakang Masalah** {#latar-belakang-masalah}
+238: 
+239: 	Setiap harinya, industri logistik terus berkembang dengan aktivitas operasional yang semakin tinggi. Dalam menjalankan kegiatan usahanya, perusahaan logistik sangat bergantung pada ketersediaan dan mobilitas alat berat. Dengan pesatnya pergerakan logistik saat ini, pengelolaan utilisasi armada alat berat yang baik menjadi hal yang sangat krusial untuk menjaga kelangsungan bisnis.
+240: 
+241: 	PT X merupakan salah satu perusahaan pelayaran dan logistik terkemuka yang memiliki skala operasional yang sangat masif, dengan armada alat berat *Trucking* (Trailer, Tronton) dan *Non-Trucking* (*Crane*, *Forklift*, *Reach Stacker*, *Side Loader*, *Top Loader*) yang tersebar di berbagai lokasi operasional. Pengelolaan utilisasi armada yang baik menjadi hal krusial agar distribusi dan penugasan unit dapat dilakukan secara optimal di setiap lokasi.
+242: 
+243: 	Permasalahan utama yang dihadapi oleh PT X adalah ketiadaan sistem yang dapat memberikan gambaran menyeluruh mengenai pola *operating hours* setiap unit armada alat berat. Selama ini, manajemen tidak memiliki alat bantu berbasis data untuk memproyeksikan seberapa intensif setiap unit akan beroperasi pada periode mendatang. Hal ini menyulitkan pengambilan keputusan terkait distribusi dan penugasan unit armada secara optimal di berbagai lokasi operasional.
+244: 
+245: 	Dampak lanjutan dari ketiadaan sistem proyeksi *operating hours* ini adalah pihak manajemen yang kesulitan dalam memperoleh gambaran prediktif mengenai beban operasional di setiap lokasi. Tanpa proyeksi *operating hours* yang akurat, manajemen tidak dapat mengidentifikasi secara dini lokasi mana yang sedang mengalami kelebihan beban operasional dan berpotensi membutuhkan tambahan unit armada, maupun lokasi mana yang tingkat utilisasinya rendah sehingga unit-unitnya berpotensi direlokasi ke lokasi lain yang lebih membutuhkan.
+246: 
+247: 	Setiap unit alat berat yang beroperasi dilengkapi dengan instrumen pencatat yang merekam nilai *operating hours* alat berat secara akumulatif. Nilai *operating hours* ini akan terus bertambah selama mesin dalam keadaan menyala dan berhenti bertambah ketika mesin dimatikan, sehingga nilai ini secara langsung mencerminkan seberapa intensif suatu unit alat berat benar-benar digunakan dalam periode tertentu.
+248: 
+249: 	Dalam proyek ini, prediksi *operating hours* alat berat dilakukan secara langsung melalui peramalan nilai *operating hours* setiap unit. Pendekatan ini dipilih karena nilai *operating hours* merupakan representasi paling akurat dan langsung dari intensitas operasional suatu unit alat berat. Sifat kumulatif dari nilai *operating hours* ini menjadikannya dasar yang ideal untuk keperluan analisis utilisasi tiap unit alat berat antar lokasi. Untuk memperkaya pemodelan, proyek ini juga mengintegrasikan data eksternal yang relevan, yaitu data curah hujan bulanan serta data volume *container* yang ditangani. Curah hujan dipilih sebagai variabel eksogen karena secara langsung mempengaruhi intensitas operasional unit alat berat yang beroperasi di lapangan, sementara data volume *container* dipilih karena mencerminkan permintaan operasional aktual yang harus dipenuhi oleh armada alat berat yang ada.
+250: 
+251: 	Peramalan atau *forecasting* merupakan teknik analisis yang memanfaatkan data historis untuk memprediksi kondisi di masa depan guna mendukung pengambilan keputusan yang strategis (Petropoulos et al., 2022). Proyek ini menggunakan tiga model *forecasting* untuk memprediksi *operating hours* alat berat, yaitu ARIMAX (*Autoregressive Integrated Moving Average with Exogenous Variables*), *Gradient Boosting*, dan LSTM (*Long Short-Term Memory*). ARIMAX dipilih karena kemampuannya mengintegrasikan variabel eksogen secara eksplisit ke dalam kerangka model statistik deret waktu, sehingga pengaruh curah hujan dan volume *container* terhadap pola *operating hours* dapat diperhitungkan secara langsung dalam model (Kontopoulou et al., 2023). *Gradient Boosting* dipilih karena keunggulannya dalam menangani hubungan non-linear antara variabel prediktor dan target, serta tingkat toleransinya yang baik terhadap *noise* yang sering terjadi pada data operasional alat berat (Cortez et al., 2023). LSTM dipilih sebagai representasi pendekatan *deep learning* yang terbukti mampu menangkap dependensi jangka panjang pada data deret waktu multivariat (Cortez et al., 2023). Dengan membandingkan performa ketiga model tersebut, diperoleh model yang mampu menghasilkan prediksi *operating hours* paling akurat untuk mendukung operasional PT X.
+252: 
+253: 	Berdasarkan permasalahan yang dihadapi, proyek ini membangun sebuah sistem prediksi *operating hours* alat berat di PT X dengan menggunakan data *operating hours* historis yang diperkaya oleh variabel eksternal, yaitu curah hujan bulanan dan volume *container* yang ditangani. Pemodelan dilakukan menggunakan tiga pendekatan, yaitu ARIMAX, *Gradient Boosting*, dan LSTM, yang kemudian dibandingkan performanya. Melalui implementasi sistem ini, PT X dapat memperoleh gambaran prediktif mengenai *operating hours* setiap unit armada pada periode mendatang, yang selanjutnya dapat dimanfaatkan sebagai alat bantu identifikasi kebutuhan penambahan atau redistribusi unit armada antar lokasi operasional.
+254: 
+255: 2. ## **Rumusan Masalah** {#rumusan-masalah}
+256: 
+257: 	Berdasarkan latar belakang di atas, maka rumusan masalah dari proyek ini adalah sebagai berikut:
+258: 
+259: 1. Bagaimana sistem prediksi *operating hours* alat berat yang memanfaatkan variabel eksogen curah hujan dan volume *container* dapat diterapkan untuk menghasilkan proyeksi *operating hours* per unit armada alat berat di PT X?  
+260: 2. Diantara model ARIMAX, *Gradient Boosting*, dan LSTM, model manakah yang memiliki nilai RMSE dan MAPE terbaik dalam meramalkan *operating hours* alat berat di PT X?
+261: 
+262:    3. ## **Tujuan Proyek** {#tujuan-proyek}
+263: 
+264: 	Tujuan dari proyek ini adalah membangun sistem prediksi *operating hours* alat berat pada PT X menggunakan model ARIMAX, *Gradient Boosting*, dan LSTM dengan memanfaatkan data *operating hours* historis yang ditambah dengan variabel eksogen berupa data curah hujan bulanan dan volume *container* yang ditangani, serta menentukan model dengan akurasi terbaik berdasarkan nilai RMSE dan MAPE.
+265: 
+266: 4. ## **Ruang Lingkup** {#ruang-lingkup}
+267: 
+268: 	Ruang lingkup pada proyek ini dibatasi pada hal-hal berikut:
+269: 
+270: 1. Objek penelitian difokuskan pada armada operasional alat berat, seperti Trailer, Tronton, *Crane*, *Forklift*, *Reach Stacker*, *Side Loader*, dan *Top Loader* yang dikelola oleh PT X.  
+271: 2. *Dataset* yang digunakan dalam proyek ini mencakup beberapa data operasional, yaitu:  
+272:    1. BBM\_AAB\_2023.xlsx, BBM\_AAB\_2024.xlsx, dan BBM\_AAB\_2025.xlsx: masing-masing memuat data *operating hours* harian seluruh unit alat berat untuk satu tahun kalender, tersebar dalam 12 *sheet* per bulan. Setiap sheet memiliki format *wide* dengan blok kolom berulang per unit alat berat, di mana setiap blok terdiri atas kolom nilai *operating hours*, konsumsi bahan bakar, dan keterangan kegiatan. Selain blok unit alat berat, sheet yang sama juga memuat blok data pergerakan stok tangki BBM untuk sejumlah depo/tangki penyimpanan, tetapi blok ini tidak digunakan dalam proyek karena fokus proyek adalah pada *operating hours* alat berat, sehingga akan dikecualikan pada tahap *preprocessing*.  
+273:    2. cost\_&\_bbm\_2022\_sd\_2025\_HP\_&\_Type.xlsx: memuat spesifikasi teknis setiap unit yang terdiri dari jenis, tipe/merek, *horse power* (HP), dan kapasitas.  
+274:    3. Container\_2023.xlsx, Container\_2024.xlsx, dan Container\_2025.xlsx: memuat data volume *container* yang ditangani dalam format *pivot table*.  
+275:    4. Curah\_Hujan\_2023-2025.xlsx: memuat data cuaca per hari periode Januari 2023 hingga Desember 2025, yang bersumber dari Open-Meteo Historical Weather API.  
+276: 3. *Dataset* akan dibagi ke dalam dua bagian secara kronologis (*time-based split*), yaitu *Training Set* yang menggunakan data Januari 2023 hingga September 2025 dan *Test Set* yang menggunakan data Oktober hingga Desember 2025 (3 bulan).  
+277: 4. Tahap *preprocessing* data meliputi ekstraksi dan transformasi data dari format Excel, sinkronisasi data, pembersihan nilai *operating hours*, agregasi ke dalam periode bulanan, serta penerapan dan perbandingan empat varian teknik penyesuaian data (*data preparation*), yaitu *outlier capping* pada persentil ke-95 yang dilanjutkan dengan *rolling mean smoothing* (varian *baseline*), *Savitzky-Golay filter*, *RobustScaler*, dan *PowerTransformer* Yeo-Johnson.  
+278: 5. Pemodelan dibatasi pada peramalan (*forecasting*) variabel *operating hours* alat berat dengan membandingkan tiga model, yaitu ARIMAX, *Gradient Boosting*, dan LSTM. Variabel eksogen yang digunakan dalam pemodelan adalah data curah hujan bulanan dan volume *container* yang ditangani.  
+279: 6. Evaluasi untuk perbandingan model peramalan akan diukur menggunakan metrik *Root Mean Square Error* (RMSE) dan *Mean Absolute Percentage Error* (MAPE).  
+280: 7. Bahasa pemrograman yang digunakan adalah bahasa pemrograman Python.  
+281: 8. *Library* yang digunakan dalam proyek ini, yaitu Pandas, NumPy, Scikit-Learn, pmdarima, statsmodels, TensorFlow, dan Keras.  
+282: 9. Sistem informasi dibuat berbasis aplikasi *website* menggunakan *framework* Streamlit.  
+283: 10. Fitur utama pada *website* adalah prediksi *operating hours* alat berat. Pengguna dapat mengunggah *dataset* operasional dan melihat hasil prediksi *operating hours* setiap unit.  
+284:     
+285: 
+286:     5. ## **Manfaat Solusi** {#manfaat-solusi}
+287: 
+288: 	Proyek ini bermanfaat bagi PT X untuk memahami pola *operating hours* setiap unit alat berat berdasarkan data historis yang ditambah juga dengan variabel eksternal, yaitu curah hujan dan volume *container* yang ditangani. Dengan sistem prediksi *operating hours* ini, perusahaan dapat memproyeksikan intensitas operasional setiap unit pada periode mendatang secara lebih akurat dan berbasis data. Informasi prediktif ini selanjutnya dapat dimanfaatkan oleh pihak manajemen sebagai dasar pengambilan keputusan terkait distribusi unit armada, termasuk mengidentifikasi lokasi yang mengalami kelebihan beban operasional dan membutuhkan tambahan unit, serta mengidentifikasi unit-unit yang utilisasinya rendah sebagai kandidat relokasi ke lokasi lain yang lebih membutuhkan. Dengan demikian, proyek ini diharapkan mampu mendukung peningkatan efisiensi operasional armada dan kelancaran aktivitas logistik perusahaan secara keseluruhan.
+289: 
+290: 6. ## **Sistematika Penulisan** {#sistematika-penulisan}
+291: 
+292: 	Laporan Tugas Akhir ini disusun dalam enam bab dengan sistematika sebagai berikut. Bab 1 Pendahuluan menguraikan latar belakang masalah, rumusan masalah, tujuan proyek, ruang lingkup, serta manfaat solusi yang diusulkan. Bab 2 Studi Literatur dan Kerangka Kerja membahas landasan teori dari setiap model dan teknik yang digunakan, ulasan penelitian terdahulu yang relevan, serta kerangka kerja proyek yang mencakup tahapan proyek, hipotesis solusi, pengumpulan dan pemahaman data, penyiapan data, pemodelan, dan rencana pengujian. Bab 3 Analisis dan Perancangan menguraikan analisis masalah secara lebih teknis, analisis data hasil *exploratory data analysis*, serta desain solusi sistem prediksi yang dirancang. Bab 4 Implementasi dan Pengujian menjelaskan implementasi solusi yang telah dirancang beserta lingkungan dan skenario pengujian yang dilakukan. Bab 5 Pembahasan membahas secara menyeluruh hasil-hasil pengujian yang telah dilakukan. Bab 6 Kesimpulan dan Saran memuat kesimpulan dari keseluruhan proyek serta saran pengembangan untuk penelitian selanjutnya.
+293: 
+294: 2. # **STUDI LITERATUR DAN KERANGKA KERJA** {#studi-literatur-dan-kerangka-kerja}
+295: 
+296:      
+297:    
+298: 
+299:    1. ## **Studi Literatur** {#studi-literatur}
+300: 
+301:       2. ### **Landasan Teori** {#landasan-teori}
+302: 
+303:       2. #### **Savitzky-Golay Filter** {#savitzky-golay-filter}
+304: 
+305: 	*Savitzky-Golay filter* adalah salah satu teknik *smoothing* deret waktu yang bekerja dengan cara menyesuaikan (*fitting*) polinomial berderajat rendah terhadap sejumlah titik data dalam suatu jendela (*window*) yang bergeser sepanjang deret waktu, menggunakan metode *least squares*. Berbeda dengan *moving average* biasa yang cenderung meratakan puncak dan lembah data secara berlebihan, *Savitzky-Golay filter* mampu mempertahankan bentuk puncak dan lembah data yang lebih tajam sekaligus tetap meredam *noise* jangka pendek, sehingga cocok digunakan pada data *operating hours* alat berat yang memiliki fluktuasi bulanan tetapi tetap perlu mempertahankan pola tren yang signifikan. 
+306: 
+307: 2. #### **RobustScaler** {#robustscaler}
+308: 
+309: 	*RobustScaler* merupakan salah satu teknik *scaling* data yang menggunakan median dan *Interquartile Range* (IQR) sebagai dasar transformasi, berbeda dengan *StandardScaler* yang menggunakan rata-rata dan simpangan baku. Karena median dan IQR bersifat lebih tahan (*robust*) terhadap nilai-nilai ekstrim (*outlier*), teknik ini lebih sesuai digunakan pada data operasional alat berat yang berpotensi memiliki nilai-nilai anomali akibat pencatatan yang tidak konsisten di lapangan.
+310: 
+311: 2. #### **Yeo-Johnson Transformation** {#yeo-johnson-transformation}
+312: 
+313: 	Yeo-Johnson *Transformation* adalah teknik transformasi data yang bertujuan untuk membuat distribusi data menjadi lebih mendekati distribusi normal. Berbeda dengan transformasi Box-Cox yang hanya dapat diterapkan pada data bernilai positif, metode Yeo-Johnson dapat menangani data yang mengandung nilai nol, sehingga lebih fleksibel digunakan pada data *operating hours* alat berat yang dapat bernilai nol pada bulan-bulan unit tidak beroperasi. Teknik ini merupakan salah satu alternatif dari pendekatan penyesuaian distribusi berbasis *skewness* yang sebelumnya digunakan secara manual (mean/median *switching*). 
+314: 
+315: 2. ### **Penelitian Terdahulu** {#penelitian-terdahulu}
+316: 
+317: 1. *Comparative Analysis of ARIMA, LSTM, and XGBoost for Very Short-Term Photovoltaic Forecasting* (Cortez et al., 2023\)   
+318: * Masalah: Permasalahan utama dalam penelitian ini adalah tingginya tingkat kesulitan dalam memprediksi keluaran energi harian secara sangat singkat akibat fluktuasi perubahan alam yang ekstrem. Model prediksi konvensional sering kali gagal menangkap variasi volatilitas yang terjadi secara tiba-tiba.  
+319: * Metode: Penelitian ini melakukan analisis komparatif yang sangat terstruktur untuk mengevaluasi kompleksitas, performa, dan akurasi dari tiga model prediksi: ARIMA sebagai perwakilan model statistik linier, XGBoost sebagai perwakilan algoritma *Machine Learning ensemble*, dan LSTM dari *Deep Learning*. Model-model ini dievaluasi melalui optimasi *hyperparameter* dan tingkat akurasinya diukur menggunakan metrik RMSE serta MAE.  
+320: * Hasil: Hasil penelitian secara meyakinkan menunjukkan bahwa implementasi dari *Gradient Boosting* memiliki metrik peramalan yang paling akurat di antara ketiga model univariat yang diuji pada kedua *dataset* riil yang digunakan.  
+321: * Kelebihan dan Kekurangan: Kelebihan dari penelitian ini terletak pada pengujian komparatif model univariat yang sangat ketat yang membuktikan kehebatan konsep algoritma *Gradient Boosting*. Namun, kekurangannya adalah penelitian ini difokuskan pada pembangkit listrik tenaga surya yang memiliki siklus harian yang sangat jelas, berbeda dengan operasional alat berat yang lebih acak. Proyek ini mengadopsi struktur komparasi tiga model (statistik, *ensemble*, dan *deep learning*) ini, tetapi menerapkannya pada data *operating hours* alat berat menggunakan ARIMAX dan LSTM yang ditambah dengan data eksogen curah hujan dan volume *container*.  
+322: 2. *Temporal Forecasting of Distributed Temperature Sensing in a Thermal Hydraulic System With Machine Learning and Statistical Models* (Pantopoulou et al., 2025\)  
+323: * Masalah: Permasalahan utama dalam penelitian ini adalah kesulitan mendeteksi perubahan anomali operasional secara temporal pada sistem termal hidrolik yang fluktuatif.  
+324: * Metode: Penelitian ini melakukan *benchmarking* secara ketat untuk mengevaluasi akurasi dari dua paradigma peramalan temporal: LSTM dan ARIMA. Performa kedua model dievaluasi menggunakan metrik RMSPE dan MaxAPE.  
+325: * Hasil: Hasil penelitian membuktikan bahwa model statistik ARIMA memiliki performa yang jauh lebih superior dibandingkan algoritma LSTM pada data fisik ber-*noise* tinggi.  
+326: * Kelebihan dan Kekurangan: Kelebihan dari penelitian ini terletak pada komparasi langsung dan pembuktian empiris yang mematahkan asumsi bahwa algoritma kecerdasan buatan selalu lebih baik dari model statistik klasik. Namun, kekurangannya adalah pengukuran terfokus pada fluktuasi *sensing* suhu per sekon, yang memiliki profil penyebaran berbeda dengan data operasional logistik bulanan. Proyek ini mengadopsi rasionalitas dari penelitian tersebut dengan tetap mengikutsertakan model keluarga ARIMA (dalam bentuk ARIMAX dengan variabel eksogen) sebagai pembanding statistik, dikomparasikan dengan *Gradient Boosting* dan LSTM.  
+327: 3. *Profit Prediction Using ARIMA, SARIMA and LSTM Models in Time Series Forecasting: A Comparison* (Sirisha et al., 2022\)   
+328: * Masalah: Permasalahan utama dalam penelitian ini adalah kesulitan memilih model peramalan yang tepat untuk data finansial (*profit*) perusahaan yang bersifat musiman dan fluktuatif.  
+329: * Metode: Penelitian ini membandingkan tiga model peramalan *time series*, yaitu ARIMA, SARIMA, dan LSTM pada data historis *profit* perusahaan. Performa ketiga model dievaluasi menggunakan metrik RMSE dan MAPE.  
+330: * Hasil: Hasil penelitian menunjukkan bahwa performa masing-masing model bergantung pada karakteristik pola data, menunjukkan bahwa tidak ada satu model yang secara mutlak terbaik untuk semua kondisi data.  
+331: * Kelebihan dan Kekurangan: Kelebihan penelitian ini adalah perbandingan langsung antara model statistik klasik dan *deep learning* pada data bisnis nyata dengan kesimpulan yang tidak bias ke satu model. Namun, kekurangannya adalah tidak ada variabel eksogen yang disertakan dalam pemodelan (murni univariat). Proyek ini mengadopsi perbandingan keluarga model ARIMA dengan LSTM, tetapi memperluas kedua model menjadi ARIMAX dan LSTM multivariat dengan penambahan variabel eksogen curah hujan dan volume *container*, serta menambahkan *Gradient Boosting* sebagai model pembanding ketiga.
+332: 
+333:   2. ## **Kerangka Kerja** {#kerangka-kerja}
+334: 
+335:      2. ### **Tahapan Proyek** {#tahapan-proyek}
+336: 
+337: ![][image1]
+338: 
+339: ##### **Gambar 2.1 Tahapan Proyek** {#gambar-2.1-tahapan-proyek}
+340: 
+341: Secara umum, tahapan proyek ini mencakup empat tahap utama yang dilakukan secara berurutan, yaitu: (1) Pengumpulan dan Pemahaman Data, (2) Penyiapan Data, (3) Pemodelan, dan (4) Pengujian dan Pembahasan. Keempat tahapan ini didahului oleh perumusan Hipotesis Solusi sebagai dugaan awal terhadap hasil yang akan diperoleh. 
+342: 
+343: 2. ### **Hipotesis Solusi** {#hipotesis-solusi}
+344: 
+345: Sebelum dilakukan pemodelan dan pengujian, ditetapkan hipotesis solusi sebagai dugaan awal terhadap hasil yang akan diperoleh dari proyek ini.
+346: 
+347: * Hipotesis Kerja (H1): Model *Gradient Boosting* menghasilkan tingkat error prediksi *operating hours* alat berat yang lebih rendah dibandingkan model ARIMAX dan LSTM pada data operasional alat berat PT X, dibuktikan dengan nilai MAPE global *Gradient Boosting* yang lebih rendah.  
+348: * Hipotesis Nol (H0): Tidak terdapat perbedaan signifikan dalam tingkat error prediksi *operating hours* alat berat antara model ARIMAX, *Gradient Boosting*, dan LSTM pada data operasional alat berat PT X berdasarkan nilai MAPE global.
+349: 
+350:   2. ### **Pengumpulan dan Pemahaman Data** {#pengumpulan-dan-pemahaman-data}
+351: 
+352: 	Tahap pertama dalam kerangka kerja ini adalah pengumpulan dan pemahaman data. Data yang digunakan dalam proyek ini terdiri dari dua jenis, yaitu data internal yang diperoleh langsung dari PT X dalam format Microsoft Excel, serta data eksternal yang bersumber dari sumber publik yang relevan. Data internal mencakup rekaman *operating hours* operasional armada alat berat, data spesifikasi teknis setiap unit, dan data volume *container*. Data eksternal mencakup data cuaca per hari yang diperoleh dari Open-Meteo Historical Weather API.  
+353: 	*Dataset* utama terdiri dari tiga berkas, yaitu BBM\_AAB\_2023.xlsx, BBM\_AAB\_2024.xlsx, dan BBM\_AAB\_2025.xlsx, yang masing-masing memuat data operasional satu tahun kalender dalam 12 *sheet* (Januari hingga Desember). Setiap sheet memiliki format *wide* (*pivot table*) di mana baris mewakili tanggal operasional harian, sedangkan kolom mewakili blok data per unit alat berat. Blok kolom untuk setiap unit alat berat terdiri atas nilai *operating hours* kumulatif, konsumsi BBM, dan keterangan aktivitas, yang menjadi fokus utama proyek ini. Selain blok unit alat berat, sheet yang sama juga memuat blok data pergerakan stok tangki/depo BBM, tetapi blok ini tidak digunakan dalam proyek sehingga akan dipisahkan dan dikecualikan pada tahap *preprocessing*. Setiap *sheet* juga diakhiri dengan baris ringkasan (AVG) yang perlu dikecualikan agar tidak tercampur sebagai data observasi harian.  
+354: 	*Dataset* kedua adalah cost\_&\_bbm\_2022\_sd\_2025\_HP\_&\_Type.xlsx, yang memuat informasi spesifikasi teknis setiap unit armada, meliputi jenis alat, tipe atau merek, *horse power* (HP), dan kapasitas kemampuan mesin. Data spesifikasi ini digunakan sebagai referensi kontekstual untuk memahami karakteristik masing-masing unit, sekaligus sebagai dasar pengelompokan pada pendekatan pemodelan per kriteria.  
+355: *Dataset* ketiga adalah Container\_2023.xlsx, Container\_2024.xlsx, dan Container\_2025.xlsx, yang memuat volume *container* yang ditangani dalam format *pivot table*. Baris pada *dataset* ini mewakili kode lokasi/cabang, sedangkan kolom merupakan kombinasi bertingkat dari bulan, status kepemilikan container, dan tipe ukuran container. Data ini akan diagregasikan menjadi total volume *container* bulanan yang akan digunakan sebagai salah satu variabel eksogen.  
+356: 	*Dataset* keempat adalah Curah\_Hujan\_2023-2025.xlsx, yang memuat data cuaca per hari sepanjang Januari 2023 hingga Desember 2025, bersumber dari Open-Meteo Historical Weather API. Dari beberapa kolom yang tersedia, kolom *precipitation\_sum* yang akan digunakan sebagai dasar perhitungan variabel eksogen curah hujan bulanan, melalui agregasi penjumlahan (*sum*) per bulan.  
+357: 	Setelah data berhasil dikumpulkan, dilakukan proses *Exploratory Data Analysis* (EDA) untuk mendapatkan gambaran menyeluruh mengenai karakteristik dan kualitas data sebelum masuk ke tahap *preprocessing*. EDA yang dilakukan mencakup identifikasi jumlah total unit alat berat yang tercatat dalam data, pemisahan blok unit alat berat pada setiap *sheet*, analisis rentang periode waktu yang tersedia untuk setiap unit, identifikasi unit-unit yang memiliki data tidak lengkap atau bermasalah, pengecekan konsistensi jumlah dan urutan kolom antar *sheet* dan antar *file*, serta pengecekan kesesuaian rentang waktu antara data *operating hours*, data *container*, dan data cuaca.
+358: 
+359: 2. ### **Penyiapan Data** {#penyiapan-data}
+360: 
+361: 	Penyiapan data merupakan tahapan yang paling krusial dan kompleks dalam proyek ini, karena data mentah dari *file* Excel tidak dapat langsung digunakan untuk pemodelan. Secara umum, tahap ini mencakup: (1) ekstraksi data dari seluruh *file* dan *sheet* Excel; (2) pemisahan blok data unit alat berat dari blok data tangki/depo BBM; (3) transformasi format data dari *wide* menjadi *long* agar sesuai untuk analisis *time series*; (4) konversi dan sinkronisasi format tanggal; (5) penghitungan nilai *operating hours* harian (*delta* HM) dari nilai kumulatif yang tercatat; (6) agregasi data ke level bulanan; (7) penyiapan dan sinkronisasi variabel eksogen curah hujan dan volume *container* ke level bulanan; (8) identifikasi kondisi kelengkapan data setiap unit; dan (9) pemisahan data menjadi *Training Set* dan *Test Set* beserta proses filter unit yang cocok.  
+362: 	Pada tahap filter unit, setiap unit akan melewati serangkaian pengecekan untuk menentukan kecocokan data sebelum dilakukan pemodelan, dengan kriteria pengecualian: tidak adanya data aktual pada periode *test*, data *train* yang kurang dari 12 bulan atau data *test* yang kurang dari 3 bulan, data historis bernilai nol seluruhnya pada salah satu tahun data *train*, dan data *test* yang bernilai nol seluruhnya. Unit yang tidak memenuhi kriteria dikecualikan dan dicatat dalam daftar tersendiri beserta alasan pengecualiannya.
+363: 
+364: 2. ### **Pemodelan** {#pemodelan}
+365: 
+366: 	Setelah data bersih dan valid tersedia, tahap pemodelan dilakukan dengan menjalankan tiga model *forecasting* yang dibandingkan performanya, dengan tahapan sebagai berikut.
+367: 
+368: 1. Perbandingan Varian Penyesuaian Data (*Data Preparation*) 
+369: 
+370: 	Sebelum setiap model dilatih, dilakukan perbandingan empat varian teknik penyesuaian data pada deret waktu *operating hours* alat berat per unit, yaitu:
+371: 
+372: * *Baseline*: nilai *operating hours* bulanan yang melebihi persentil ke-95 dari distribusi data unit tersebut dipotong (*capped*) menjadi tepat sebesar nilai persentil ke-95, dilanjutkan dengan *rolling mean smoothing* menggunakan *window* 2 bulan.  
+373: * *Savgol*: penerapan *Savitzky-Golay filter* untuk meredam *noise* jangka pendek sekaligus mempertahankan bentuk puncak dan lembah data.  
+374: * *Robust*: penerapan *RobustScaler* per unit yang menggunakan median dan IQR sebagai dasar penskalaan.  
+375: * *Yeojohnson*: penerapan *PowerTransformer* Yeo-Johnson per unit untuk menormalkan distribusi data.
+376: 
+377: 	Keempat varian ini dilatih dan dievaluasi secara terpisah pada ketiga model (ARIMAX, *Gradient Boosting*, LSTM). Prediksi pada varian *robust* dan *yeojohnson* terlebih dahulu dikonversi kembali ke satuan jam sebelum RMSE dan MAPE dihitung, sehingga keempat varian dapat dibandingkan dengan ukuran yang sama.
+378: 
+379: 2. Pendekatan Pemodelan: Per Unit vs Per Kriteria
+380: 
+381: 	Pemodelan dilakukan dengan dua pendekatan yang akan dibandingkan untuk menentukan pendekatan mana yang menghasilkan nilai RMSE dan MAPE terbaik. Pendekatan pertama adalah pemodelan per unit, di mana model ARIMAX, *Gradient Boosting*, dan LSTM masing-masing dilatih untuk setiap unit alat berat menggunakan data historis *operating hours* unit tersebut beserta variabel eksogennya.  
+382: 	Pendekatan kedua adalah pemodelan per kriteria, di mana unit-unit alat berat yang memiliki spesifikasi teknis identik (jenis alat, tipe/merek, kapasitas, dan HP) dikelompokkan menjadi satu kriteria. Untuk model *Gradient Boosting* dan LSTM, data historis *operating hours* dari seluruh unit dalam satu kriteria digabungkan menjadi satu *dataset train*, sehingga kedua model mempelajari pola bersama dari seluruh unit dalam kriteria yang sama, dengan prediksi tetap dihasilkan secara per unit menggunakan nilai *lag* terakhir masing-masing unit.   
+383: 	Untuk model ARIMAX, karena sifatnya yang hanya dapat memodelkan satu deret waktu tunggal, pendekatan yang diterapkan adalah melatih ARIMAX pada satu deret waktu representatif yang mewakili seluruh unit dalam satu kriteria, dengan dua cara pembentukan deret waktu representatif yang akan dibandingkan, yaitu menggunakan rata-rata (*mean*) dan penjumlahan (*sum*) *operating hours* bulanan dari seluruh unit dalam kriteria yang sama. Hasil prediksi dari deret waktu representatif yang terpilih (berdasarkan RMSE dan MAPE terendah) kemudian diterapkan secara langsung ke setiap unit anggota kriteria tersebut.  
+384: 	Perbandingan antara kedua pendekatan (per unit dan per kriteria) dilakukan berdasarkan nilai RMSE dan MAPE yang dihasilkan oleh ketiga model. Pendekatan yang menghasilkan nilai *error* lebih rendah akan dipilih sebagai pendekatan final untuk menghasilkan prediksi *operating hours* alat berat.
+385: 
+386: 3. Pemodelan ARIMAX
+387: 
+388: 	Model pertama yang dilatih adalah ARIMAX menggunakan *library* pmdarima. Untuk memperoleh kombinasi parameter $(p,\ d,\ q)$ yang paling optimal bagi setiap unit maupun setiap kriteria, dilakukan pencarian menyeluruh (*grid search*) terhadap kombinasi parameter tersebut, sementara koefisien untuk variabel eksogen (curah hujan dan volume *container*) diestimasi secara bersamaan dalam proses *fitting* model. Parameter *seasonal* tidak diaktifkan karena data *operating hours* bulanan untuk operasional alat berat tidak memiliki pola musiman yang teratur.  
+389: 	Setelah ARIMAX berhasil dilatih pada deret waktu *operating hours* data *train* beserta variabel eksogennya, dilakukan prediksi *multi-step* menggunakan metode *predict* dengan variabel eksogen pada periode uji sebagai masukan tambahan. Seluruh proses ini dibuat di dalam blok *try-except* untuk penanganan *error* yang aman.
+390: 
+391: 4. Pemodelan Gradient Boosting dengan Lag Features
+392: 
+393: 	Model kedua yang dilatih adalah *Gradient Boosting* menggunakan *HistGradientBoostingRegressor* dari *library* scikit-learn. Fitur yang digunakan terdiri dari fitur historis berupa *lag features* (lag\_1, lag\_2, lag\_3) dan fitur eksogen berupa nilai curah hujan bulanan serta volume *container* bulanan, sehingga total terdapat lima fitur input.  
+394: 	Untuk memperoleh konfigurasi *hyperparameter* yang optimal, dilakukan *grid search* terhadap kombinasi *learning rate*, jumlah iterasi (*max\_iter*), kedalaman maksimum pohon (*max\_depth*), dan jumlah minimum sampel per daun (*min\_samples\_leaf*), dengan kombinasi terbaik dipilih berdasarkan nilai MAPE global terendah. Prediksi *multi-step* ke depan dilakukan secara rekursif, di mana hasil prediksi pada satu bulan dimasukkan kembali sebagai fitur *lag* untuk memprediksi bulan berikutnya, sementara nilai curah hujan dan volume *container* pada bulan yang diprediksi turut disertakan sebagai fitur eksogen pada setiap langkah.
+395: 
+396: 5. Pemodelan LSTM dengan Input Multivariat
+397: 
+398: 	Model ketiga yang dilatih adalah LSTM menggunakan *library* TensorFlow dan Keras. Sebelum data dimasukkan ke dalam model, seluruh fitur (nilai *operating hours* historis, curah hujan, dan volume *container*) dinormalisasi menggunakan *MinMaxScaler*. Data deret waktu kemudian disusun ke dalam bentuk *sliding window* 3 *timestep*.  
+399: 	Arsitektur LSTM yang digunakan terdiri dari satu lapisan LSTM diikuti oleh *Dense layer* dengan satu neuron *output*. Untuk memperoleh konfigurasi yang optimal, dilakukan *grid search* terhadap kombinasi panjang *sequence*, jumlah unit tersembunyi pada lapisan LSTM, serta jumlah *epoch* pelatihan, dengan kombinasi terbaik dipilih berdasarkan nilai MAPE global terendah. Prediksi *multi-step* ke depan dilakukan secara rekursif, mirip dengan pendekatan pada *Gradient Boosting*.
+400: 
+401: 6. Penentuan Model Tunggal dan Penyesuaian Konfigurasi
+402: 
+403: 	Setelah ketiga model dibandingkan pada keempat varian *data preparation* untuk kedua pendekatan (per unit dan per kriteria), model dengan performa terbaik pada mayoritas unit dan kriteria ditetapkan sebagai model tunggal yang digunakan untuk seluruh armada, agar rekomendasi yang dihasilkan konsisten dan dapat diimplementasikan secara praktis oleh PT X. Untuk unit maupun kriteria yang belum memperoleh hasil optimal menggunakan konfigurasi varian *data preparation* dan *hyperparameter* yang berlaku secara umum, dilakukan penyesuaian kombinasi varian *data preparation* dan *hyperparameter* secara khusus pada unit atau kriteria tersebut, agar performa model tunggal terpilih tetap optimal di seluruh armada. 
+404: 
+405: 7. Penyajian Hasil Prediksi pada Dashboard
+406: 
+407: 	Setelah nilai prediksi *operating hours* berhasil diperoleh dan model terbaik telah ditentukan, hasil prediksi akan disajikan melalui *dashboard* berbasis Streamlit. *Dashboard* ini menampilkan proyeksi *operating hours* per unit untuk periode mendatang, yang dapat dimanfaatkan pengguna sebagai informasi pendukung terhadap armada alat berat PT X.
+408: 
+409: 2. ### **Pengujian dan Pembahasan** {#pengujian-dan-pembahasan}
+410: 
+411: 	Tahap pengujian dan pembahasan bertujuan untuk mengukur secara kuantitatif seberapa akurat prediksi yang dihasilkan oleh masing-masing model, serta untuk menentukan model mana yang lebih baik secara keseluruhan. Evaluasi dilakukan pada dua level yang berbeda.
+412: 
+413: 1. Evaluasi Per Unit: Untuk setiap unit alat berat yang berhasil dimodelkan, dihitung metrik evaluasi RMSE dan MAPE untuk masing-masing dari tiga model. Perhitungan MAPE dirancang untuk menangani kasus pembagian oleh nol secara aman, yaitu bulan-bulan dengan nilai aktual sama dengan nol dilewati dalam perhitungan.  
+414: 2. Evaluasi Global dan Penentuan Model Terbaik: Selain evaluasi per unit, dilakukan evaluasi global untuk menentukan model mana di antara ARIMAX, *Gradient Boosting*, dan LSTM yang secara keseluruhan lebih akurat. MAPE global dihitung dengan mengumpulkan seluruh nilai aktual dan prediksi *operating hours* dari semua unit yang berhasil dimodelkan menjadi dua *array* besar, kemudian menghitung MAPE dari kedua *array* tersebut sekaligus. Model dengan nilai MAPE global terendah ditetapkan sebagai model terpilih untuk seluruh armada.  
+415: 3. Pencatatan Unit yang Dikecualikan: Setiap unit yang tidak berhasil dimodelkan, baik karena tidak lolos proses filter maupun karena mengalami *error* teknis selama proses pemodelan, dicatat dalam daftar tersendiri (*excluded\_units\_list*) beserta alasan spesifik pengecualiannya, agar manajemen PT X mengetahui unit-unit mana yang tidak tercakup dalam sistem prediksi.
+416: 
+417: 3. # **ANALISIS DAN PERANCANGAN** {#analisis-dan-perancangan}
+418: 
+419:      
+420:    
+421: 
+422:    1. ## **Analisis Masalah** {#analisis-masalah}
+423: 
+424: 	PT X merupakan salah satu perusahaan pelayaran dan logistik dengan skala operasional yang masif, memiliki armada alat berat *Trucking* (Trailer, Tronton) dan *Non-Trucking* (*Crane*, *Forklift*, *Reach Stacker*, *Side Loader*, *Top Loader*) yang tersebar di berbagai lokasi operasional. Permasalahan utama yang dihadapi PT X adalah ketiadaan sistem yang dapat memberikan gambaran menyeluruh mengenai pola *operating hours* setiap unit armada, termasuk memproyeksikan seberapa sering setiap unit akan beroperasi pada periode mendatang. Akibatnya, keputusan terkait penugasan unit antar lokasi masih dilakukan berdasarkan kondisi yang telah terjadi, bukan berdasarkan perencanaan dan proyeksi kebutuhan di masa mendatang. Tanpa proyeksi *operating hours* yang akurat, manajemen tidak dapat mengidentifikasi secara dini lokasi mana yang sedang mengalami kelebihan beban operasional dan berpotensi membutuhkan tambahan unit, maupun lokasi mana yang tingkat utilisasinya rendah sehingga unit-unitnya berpotensi direlokasi ke lokasi lain yang lebih membutuhkan.  
+425: 	Selain berdampak pada penugasan tiap unit, ketiadaan proyeksi *operating hours* ini juga membatasi beberapa aspek operasional lain. Tanpa adanya gambaran ke depan mengenai intensitas pemakaian tiap unit, perencanaan perawatan (*maintenance*) alat cenderung dilakukan setelah unit mengalami gangguan, dibandingkan dijadwalkan berdasarkan proyeksi beban kerja unit tersebut. Perencanaan penambahan unit baru juga menjadi sulit diantisipasi lebih awal, karena manajemen tidak memiliki indikasi dini mengenai lokasi mana yang proyeksi kebutuhannya akan melampaui kapasitas armada yang tersedia. Hal ini juga berpotensi mempengaruhi kemampuan dalam memenuhi permintaan operasional pelanggan, terutama pada periode dengan volume bongkar-muat tinggi namun ketersediaan unit tidak disesuaikan lebih awal. Selama ini, pendekatan dalam memperkirakan kebutuhan unit ke depan umumnya hanya berdasarkan pada pengalaman atau rata-rata historis, tanpa mempertimbangkan faktor eksternal seperti curah hujan dan volume *container* yang ternyata juga mempengaruhi intensitas operasional di lapangan, sehingga hasilnya menjadi kurang akurat.
+426: 
+427: 2. ## **Analisis Kebutuhan** {#analisis-kebutuhan}
+428: 
+429: 	Berdasarkan permasalahan di atas, PT X membutuhkan sebuah sistem prediksi yang dapat memproyeksikan nilai *operating hours* setiap unit alat berat ke depan berdasarkan data historis, sehingga tersedia gambaran terukur mengenai arah pergerakan utilisasi tiap unit di tiap lokasi dari waktu ke waktu, menggantikan pendekatan yang selama ini mengandalkan kondisi aktual yang telah terjadi. Proyeksi yang dihasilkan perlu memiliki tingkat akurasi yang memadai, yang dapat diukur melalui metrik RMSE dan MAPE, agar dapat dijadikan acuan untuk mengidentifikasi secara dini lokasi yang berpotensi mengalami kelebihan maupun kekurangan beban operasional. Dengan acuan tersebut, PT X dapat mengambil keputusan penempatan maupun pemindahan unit armada antar lokasi secara lebih terencana, dibanding menunggu kondisi tersebut benar-benar terjadi di lapangan.  
+430: 	PT X juga membutuhkan proyeksi yang dapat dipecah hingga ke tingkat unit, bukan hanya angka keseluruhan perusahaan, agar dapat dimanfaatkan sebagai dasar perencanaan perawatan (*maintenance*) per unit sesuai proyeksi beban kerjanya, perencanaan penambahan unit baru pada lokasi yang proyeksi kebutuhannya meningkat, serta memenuhi permintaan operasional pelanggan pada periode-periode penting. Selain itu, sistem yang dibangun perlu memperhitungkan faktor eksternal yang relevan, yaitu curah hujan dan volume container yang ditangani, sebagai variabel tambahan dalam proses prediksi, bukan hanya mengandalkan pola historis nilai *operating hours* itu sendiri. Dengan demikian, proyeksi yang dihasilkan dapat lebih mencerminkan kondisi operasional riil di lapangan, dibanding pendekatan yang selama ini hanya mengandalkan pengalaman atau rata-rata historis. 
+431: 
+432: 3. ## **Analisis Data** {#analisis-data}
+433: 
+434: 	Analisis data pada subbab ini difokuskan pada hasil analisis data eksploratif (*Exploratory Data Analysis*) yang dilakukan terhadap seluruh 215 unit alat berat yang terdata, mencakup variabel OPERATING\_HOURS sebagai target prediksi serta dua variabel eksogen, yaitu CURAH\_HUJAN dan VOLUME\_CONTAINER, pada rentang Januari 2023 hingga Desember 2025 atau 36 bulan, sehingga data *operating hours* terdiri dari 7.740 observasi unit-bulan. Analisis dilakukan dalam lima bagian, yaitu analisis tren, statistik deskriptif, distribusi data, identifikasi nilai *outlier*, dan analisis korelasi antar variabel.  
+435: 	Analisis tren dilakukan dengan mengagregasikan variabel OPERATING\_HOURS ke level bulanan, berupa rata-rata dari seluruh unit, agar sebanding dengan CURAH\_HUJAN dan VOLUME\_CONTAINER yang sudah berbentuk satu nilai per bulan. Hasil visualisasi tren ditunjukkan pada Gambar 3.1 hingga Gambar 3.3.
+436: 
+437: ##### **![][image2]Gambar 3.1 Tren Rata-rata Operating Hours per Bulan**
+438: 
+439: ![][image3]
+440: 
+441: ##### **Gambar 3.2 Tren Curah Hujan per Bulan**
+442: 
+443: ##### **![][image4]Gambar 3.3 Tren Volume Container per Bulan**
+444: 
+445: 	Gambar 3.1 dan Gambar 3.3 menunjukkan penurunan tajam yang berulang setiap bulan April pada tiga tahun berturut-turut, yaitu 2023, 2024, dan 2025\. Pada bulan-bulan tersebut, rata-rata OPERATING\_HOURS per unit turun dari kisaran sekitar 209 hingga 253 jam menjadi sekitar 182 hingga 185 jam, sedangkan Gambar 3.2 menunjukkan pola musiman curah hujan yang berulang setiap tahun. Pola penurunan pada bulan April ini diduga berkaitan dengan periode libur Hari Raya Idul Fitri, yang pada tahun 2023, 2024, dan 2025 berturut-turut jatuh pada akhir Maret hingga akhir April, sehingga ikut menurunkan aktivitas bongkar-muat pelabuhan dan secara tidak langsung mempengaruhi OPERATING\_HOURS alat berat yang mendukung operasional tersebut.
+446: 
+447: ##### **Tabel 3.1 Statistik Deskriptif Variabel Operating Hours, Curah Hujan, dan Volume Container**
+448: 
+449: | VARIABEL | N | MEAN | MEDIAN | STD | MIN | MAX | SKEWNESS |
+450: | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+451: | OPERATING\_HOURS (jam) | 7.740 | 228,34 | 210 | 178,99 | 0 | 744 | 0,51 |
+452: | CURAH\_HUJAN (mm) | 36 | 157,98 | 121,4 | 144,15 | 0,1 | 426 | 0,33 |
+453: | VOLUME\_CONTAINER (TEU) | 36 | 351.860 | 355.495 | 25.862,72 | 271.398 | 396.862 | \-1,06 |
+454: 
+455: 	Tabel 3.1 menunjukkan OPERATING\_HOURS memiliki rata-rata 228,34 jam, median 210,00 jam, simpangan baku 178,99 jam, rentang nilai 0 hingga 744 jam, dan *skewness* 0,51. CURAH\_HUJAN memiliki rata-rata 157,98 mm, median 121,40 mm, simpangan baku 144,15 mm, rentang nilai 0,10 hingga 426,00 mm, dan *skewness* 0,33. VOLUME\_CONTAINER memiliki rata-rata 351.860 TEUs, median 355.495 TEUs, simpangan baku 25.863 TEUs, rentang nilai 271.398 hingga 396.862 TEUs, dan *skewness* \-1,06. Distribusi ketiga variabel tersebut ditunjukkan pada Gambar 3.4 hingga Gambar 3.6.  
+456: ![][image5]
+457: 
+458: ##### **Gambar 3.4 Distribusi Data Operating Hours**
+459: 
+460: ![][image6]
+461: 
+462: ##### **Gambar 3.5 Distribusi Data Curah Hujan**
+463: 
+464: ![][image7]
+465: 
+466: ##### **Gambar 3.6 Distribusi Data Volume Container**
+467: 
+468: 	Nilai *skewness* *operating hours* sebesar 0,51 menunjukkan distribusi yang condong ke kanan (*right-skewed*) dengan tingkat sedang, seperti terlihat pada Gambar 3.4. Frekuensi tertinggi berada pada rentang 0 hingga 25 jam per bulan, yaitu unit yang hampir tidak beroperasi dalam satu bulan, kemudian menurun hingga sekitar 150 jam per bulan, relatif merata sampai sekitar 500 jam per bulan, lalu menurun lagi, dengan kelompok kecil observasi mendekati batas kalender 744 jam per bulan. Kondisi ini mencerminkan perbedaan karakteristik unit alat berat seperti yang telah dijelaskan pada bagian Analisis Masalah dan bukan menunjukkan adanya satu populasi yang memiliki karakteristik seragam. Variabel CURAH\_HUJAN juga menunjukkan *skewness* positif sebesar 0,33 dengan pola distribusi yang memiliki dua puncak pada Gambar 3.5, yang mencerminkan pergantian musim kemarau dan musim hujan di Indonesia. Sebaliknya, VOLUME\_CONTAINER menunjukkan *skewness* negatif sebesar \-1,06, menandakan distribusi yang condong ke kiri pada Gambar 3.6, sejalan dengan adanya dua bulan dengan volume *container* jauh di bawah rata-rata, yaitu April 2023 dan April 2025\.   
+469: 	Identifikasi nilai *outlier* dilakukan menggunakan metode *Interquartile Range* (IQR), dengan batas 1,5 kali IQR di atas kuartil ketiga dan di bawah kuartil pertama. Hasil identifikasi pada ketiga variabel ditunjukkan pada Gambar 3.7 hingga Gambar 3.9. Sedangkan untuk ringkasan hasil identifikasi *outlier* ditunjukkan pada Tabel 3.2.  
+470: ![][image8]  
+471: Gambar 3.7 Boxplot Data Operating Hours  
+472: ![][image9]
+473: 
+474: ##### **Gambar 3.8 Boxplot Data Curah Hujan**
+475: 
+476: ![][image10]
+477: 
+478: ##### **Gambar 3.9 Boxplot Data Volume Container**
+479: 
+480: ##### **Tabel 3.2 Ringkasan Identifikasi Outlier Berbasis IQR**
+481: 
+482: | VARIABEL | N | N\_OUTLIER\_IQR | PCT\_OUTLIER | BATAS\_BAWAH\_IQR | BATAS\_ATAS\_IQR |
+483: | ----- | ----- | ----- | ----- | ----- | ----- |
+484: | OPERATING\_HOURS (jam) | 7.740 | 0 | 0% | \-388,5 | 815,5 |
+485: | CURAH\_HUJAN (mm) | 36 | 0 | 0% | \-367,05 | 658,35 |
+486: | VOLUME\_CONTAINER (TEUs) | 36 | 2 | 5,56% | 299.914 | 409.533 |
+487: 
+488: 	Gambar 3.7 dan Gambar 3.8 menunjukkan bahwa variabel OPERATING\_HOURS dan CURAH\_HUJAN tidak memiliki nilai *outlier*, meskipun distribusi keduanya relatif lebar; hal ini terjadi karena rentang data yang luas, terutama pada OPERATING\_HOURS dengan jumlah data 7.740 dan simpangan baku 178,99, menyebabkan batas IQR ikut melebar sehingga seluruh nilai aktual masih berada dalam batas wajar tersebut. Sebaliknya, variabel VOLUME\_CONTAINER memiliki dua *outlier* atau 5,56 persen dari total data bulanan, yaitu pada bulan April 2023 sebesar 296.614 TEUs dan April 2025 sebesar 271.398 TEUs, sebagaimana ditunjukkan pada Gambar 3.9. Kedua bulan *outlier* ini bertepatan dengan periode penurunan tajam pada tren OPERATING\_HOURS yang telah dibahas sebelumnya, sehingga penurunan diduga terjadi bersamaan pada volume *container* dan *operating hours* alat berat pada bulan yang sama.   
+489: 	Analisis korelasi Pearson dilakukan antar variabel pada level agregat bulanan, untuk melihat keterkaitan linear antara rata-rata *operating hours* per unit dengan kedua variabel eksogen. Hasil korelasi ditunjukkan pada Gambar 3.10.  
+490: ![][image11]
+491: 
+492: ##### **Gambar 3.10 Korelasi Antar Variabel**
+493: 
+494: 	Gambar 3.10 menunjukkan bahwa rata-rata OPERATING\_HOURS memiliki korelasi positif kuat dengan VOLUME\_CONTAINER sebesar 0,70, yang berarti semakin tinggi volume *container* yang ditangani, maka semakin tinggi juga *operating hours* alat berat yang dibutuhkan untuk mendukung aktivitas bongkar-muat tersebut. Sebaliknya, rata-rata OPERATING\_HOURS memiliki korelasi negatif dengan CURAH\_HUJAN sebesar \-0,31, yang mengindikasikan bahwa curah hujan tinggi cenderung menurunkan *operating hours* alat berat, karena terganggunya aktivitas operasional saat kondisi hujan. Curah hujan dan volume *container* sendiri berkorelasi negatif lemah (-0,25).
+495: 
+496: 4. ## **Desain Solusi** {#desain-solusi}
+497: 
+498: 	Sistem prediksi *operating hours* alat berat yang dirancang dalam proyek ini terdiri dari empat komponen utama yang saling berhubungan secara berurutan, yaitu: (1) komponen *data preparation* yang menghasilkan empat varian data (*baseline*, *savgol*, *robust*, *yeojohnson*) dari data *train* dan *test* yang sama; (2) komponen pemodelan yang melatih tiga model (ARIMAX, *Gradient Boosting*, LSTM) pada dua pendekatan (per unit dan per kriteria) untuk setiap varian data, menghasilkan total dua belas kombinasi model dan varian data pada masing-masing pendekatan; (3) komponen evaluasi dan seleksi yang menghitung RMSE dan MAPE dari setiap kombinasi, kemudian menentukan pendekatan pemodelan (per unit atau per kriteria) dan model tunggal yang akan digunakan; dan (4) komponen penyesuaian konfigurasi yang secara khusus mencari ulang kombinasi varian *data preparation* dan *hyperparameter* dari model tunggal terpilih untuk unit maupun kriteria yang belum memperoleh hasil optimal dengan konfigurasi umum.  
+499: 	Alur hubungan antar komponen tersebut dapat digambarkan sebagai berikut: data mentah dari keempat sumber (BBM AAB, cost & bbm HP & Type, Container, dan Curah Hujan) \-\> tahap *preprocessing* dan penggabungan data (Sub Bab 2.2.4) \-\> percabangan menjadi empat varian *data preparation* \-\> pelatihan dan pencarian *hyperparameter* (*grid search*) untuk tiga model pada dua pendekatan pemodelan, menghasilkan dua belas kombinasi evaluasi \-\> pemilihan pendekatan dan model tunggal berdasarkan RMSE/MAPE terendah pada mayoritas unit dan kriteria \-\> penyesuaian kombinasi khusus pada unit/kriteria yang belum optimal \-\> hasil prediksi akhir per unit \-\> penyajian hasil pada *dashboard* Streamlit.	*Output* akhir adalah proyeksi nilai *operating hours* untuk setiap unit alat berat pada periode mendatang, beserta metrik evaluasi (RMSE dan MAPE) sebagai indikator keberhasilan dari prediksi, yang keduanya akan disajikan kepada pengguna melalui *dashboard* berbasis *website*.
+500: 
+501: 4. # **IMPLEMENTASI DAN PENGUJIAN**
+502: 
+503:      
+504:    
+505: 
+506:    1. ## **Implementasi Solusi**
+507: 
+508: 	Solusi yang dibangun pada proyek ini terdiri dari tiga komponen yang saling terhubung. Komponen pertama adalah notebook eksperimen yang memuat seluruh tahapan, mulai dari ekstraksi dan penyiapan data, perbandingan model, hingga pengujian. Komponen kedua adalah *shared library* (pipeline\_lib.py) yang menyimpan fungsi ekstraksi data, empat varian penyesuaian data, pembentukan fitur *lag*, pelatihan *Gradient Boosting*, dan peramalan ke depan, sehingga logika yang sama dipakai oleh notebook maupun *dashboard*. Komponen ketiga adalah aplikasi *dashboard* berbasis Streamlit yang digunakan oleh pihak PT X.  
+509: 	Implementasi diawali dengan pengolahan data mentah sesuai tahapan pada Sub Bab 2.2.4, yang menghasilkan data bulanan *operating hours* per unit beserta curah hujan dan volume *container*. Berdasarkan hasil pengujian pada sub bab 4.4 sampai 4.9, model yang diimplementasikan adalah *Gradient Boosting* dengan lima fitur masukan, yaitu lag\_1, lag\_2, lag\_3, curah hujan, dan volume *container* pada bulan yang sama. Varian penyesuaian data dan *hyperparameter* ditetapkan secara individual untuk setiap unit, dan konfigurasi tersebut disimpan agar dapat dipakai kembali tanpa mengulang pencarian.  
+510: 	Pada *dashboard*, pengguna mengunggah berkas BBM AAB, spesifikasi alat, data *container*, dan data curah hujan. Sistem kemudian menjalankan ekstraksi data, melatih ulang model setiap unit menggunakan seluruh riwayat data yang tersedia dengan konfigurasi yang sudah tersimpan, lalu menghasilkan peramalan hingga 12 bulan ke depan. Peramalan ke depan dilakukan secara rekursif, yaitu hasil prediksi satu bulan menjadi nilai *lag* pada bulan berikutnya, karena nilai aktual bulan mendatang belum tersedia. Nilai curah hujan dan volume *container* pada bulan mendatang juga belum diketahui, sehingga diestimasi menggunakan rata-rata historis pada bulan kalender yang sama. Hasil prediksi dibatasi pada rentang 0 sampai 744 jam per bulan, sesuai batas fisik jam kalender dalam satu bulan. Pengguna dapat memilih satu atau beberapa unit, melihat grafik *operating hours* aktual berlanjut ke hasil peramalan, mengatur horizon peramalan dari 3 hingga 12 bulan (*default* 3 bulan), serta mengunduh hasil dalam berkas Excel. Untuk horizon di atas 3 bulan, *dashboard* menampilkan catatan bahwa tingkat akurasinya lebih rendah. Tampilan antarmuka ditunjukkan pada Gambar 4.1 sampai Gambar 4.3.
+511: 
+512: ![][image12]
+513: 
+514: ##### **Gambar 4.1 Halaman Unggah Data pada Dashboard**
+515: 
+516: 	Gambar 4.1 menunjukkan halaman unggah data pada *dashboard*. Halaman ini memiliki empat kolom unggah, yaitu data BBM\_AAB (boleh lebih dari satu berkas per tahun), data *container* (boleh lebih dari satu berkas per tahun), data detail alat berat (berkas spesifikasi unit, satu berkas), dan data curah hujan (satu berkas). Setelah semua berkas dipilih, pengguna menekan tombol “Jalankan Proses Forecast” untuk memulai pemrosesan.  
+517: ![][image13]
+518: 
+519: ##### **Gambar 4.2 Grafik Aktual dan Peramalan *Operating Hours* per Unit**
+520: 
+521: 	Gambar 4.2 menunjukkan halaman hasil prediksi pada tab “Prediksi per Unit”. Pengguna memilih satu atau beberapa unit melalui kolom pilihan unit, lalu mengatur jumlah bulan peramalan yang ditampilkan melalui *slider* (*default* 3 bulan). Grafik menampilkan *operating hours* aktual (garis biru, Januari 2023 sampai Desember 2025\) yang berlanjut ke hasil peramalan (garis merah), dengan sumbu horizontal berupa bulan dan sumbu vertikal berupa *operating hours* dalam jam. Di bagian bawah terdapat tombol unduh untuk menyimpan hasil peramalan dan daftar unit yang tidak tercakup dalam berkas Excel.
+522: 
+523: ![][image14]
+524: 
+525: ##### **Gambar 4.3 Daftar Unit yang Tidak Tercakup**
+526: 
+527: 	Gambar 4.3 menunjukkan tab “Unit Diexclude” pada halaman hasil prediksi. Tab ini memuat daftar unit yang tidak diikutkan dalam sistem prediksi dalam dua kolom, yaitu nama unit dan alasannya. Alasan yang ditampilkan antara lain *operating hours* bernilai nol seluruhnya pada salah satu tahun periode data *train* atau pada periode data *test*. Dengan daftar ini, pengguna mengetahui unit mana yang proyeksinya tidak tersedia beserta penyebabnya.
+528: 
+529: 2. ## **Lingkungan Pengujian**
+530: 
+531: 	Seluruh eksperimen dan pengujian dijalankan pada satu laptop lokal dengan spesifikasi pada Tabel 4.1. Pelatihan ketiga model berjalan pada CPU, tanpa akselerasi GPU.
+532: 
+533: ##### **Tabel 4.1 Spesifikasi Perangkat Keras** 
+534: 
+535: | Komponen | Spesifikasi |
+536: | ----- | ----- |
+537: | Sistem Operasi | Microsoft Windows 11 Home Single Language 64-bit |
+538: | Prosesor | Intel Core i7-1165G7 @ 2,80 GHz (4 *core*, 8 *thread*)  |
+539: | Memori | 16 GB DDR4  |
+540: | Penyimpanan | SSD NVMe 512 GB  |
+541: | Kartu grafis | Intel Iris Xe Graphics |
+542: 
+543: 	Perangkat lunak yang digunakan ditunjukkan pada Tabel 4.2.
+544: 
+545: ##### **Tabel 4.2 Spesifikasi Perangkat Lunak**
+546: 
+547: | Perangkat Lunak / *Library* | Versi | Kegunaan |
+548: | ----- | ----- | ----- |
+549: | Python | 3.11.9 (64-bit) | Bahasa pemrograman utama |
+550: | pandas | 2.2.3 | Pengolahan data |
+551: | NumPy | 2.0.2 | Perhitungan numerik |
+552: | SciPy | 1.14.1 | Perhitungan statistik |
+553: | scikit-learn | 1.7.2 | HistGradientBoostingRegressor, RobustScaler, PowerTransformer |
+554: | statsmodels | 0.14.6 | ARIMA/ARIMAX dan PACF |
+555: | pmdarima | 2.0.4 | Eksplorasi awal *baseline* ARIMA |
+556: | TensorFlow | 2.15.0 | *Backend* pelatihan LSTM |
+557: | Keras | 3.15.1 | Antarmuka pembangunan LSTM |
+558: | Streamlit | 1.60.0 | *Dashboard* |
+559: | Plotly | 6.5.0 | Visualisasi |
+560: | openpyxl | 3.1.5 | Pembacaan dan penulisan Excel |
+561: 
+562: 	Proses komputasi memanfaatkan pemrosesan paralel dengan empat proses (joblib), disertai penyimpanan *checkpoint* pada setiap tahap agar proses yang terhenti dapat dilanjutkan. Waktu eksekusi tiap tahap ditunjukkan pada Tabel 4.3 dan merupakan kisaran yang dibaca dari catatan eksekusi *notebook*.
+563: 
+564: ##### **Tabel 4.3 Waktu Eksekusi** 
+565: 
+566: | Tahap | Waktu |
+567: | ----- | ----- |
+568: | Ekstraksi & pengolahan data mentah | 3-5 menit |
+569: | Pencarian parameter untuk 24 kombinasi model dan varian data (*grid search*) | 3-4 jam |
+570: | Pengujian 12 kombinasi model pada seluruh unit dan kriteria | 45-60 menit |
+571: | Pengaturan *hyperparameter* *Gradient Boosting* untuk setiap unit  | 1-1,5 jam |
+572: | Pelatihan model final dan *future forecast* | 10-15 menit |
+573: 
+574: 3. ## **Skenario Pengujian**
+575: 
+576: 	Pengujian dirancang untuk menjawab kedua rumusan masalah. Seluruh pengujian memakai pembagian data kronologis yang sama: *training set* Januari 2023 sampai September 2025 (33 bulan) dan *test set* Oktober sampai Desember 2025 (3 bulan). Metrik evaluasi adalah RMSE dan MAPE, dengan MAPE global sebagai dasar pemilihan *hyperparameter* dan penentuan model terbaik, dan RMSE sebagai pendamping.  
+577: 	Dari 215 unit yang terdata, 25 unit tidak diikutkan dalam pemodelan karena *operating hours* bernilai nol pada salah satu tahun periode *training* (18 unit) atau pada seluruh periode *test* (7 unit). Pengujian pada tingkat unit dilakukan pada 190 unit sisanya, yang menjadi cakupan sistem prediksi pada penerapan akhir. Pada tingkat kriteria, pengujian memakai 63 kriteria yang menaungi 190 unit tersebut. Ringkasan pengujian ditunjukkan pada Tabel 4.4.
+578: 
+579: ##### **Tabel 4.4 Skenario Pengujian**
+580: 
+581: | No | Pengujian | Tujuan |
+582: | ----- | ----- | ----- |
+583: | 1 | Perbandingan model, varian data, dan pendekatan | Menentukan model dan pendekatan dengan *error* terendah |
+584: | 2 | Penentuan model tunggal dan penyesuaian konfigurasi | Mengukur kinerja *Gradient Boosting* akhir |
+585: | 3 | Horizon *test* 3 vs 4 bulan | Menentukan horizon evaluasi |
+586: | 4 | Peramalan *direct* vs *rolling* | Mengukur dampak peramalan rekursif |
+587: | 5 | Peran variabel eksogen | Menguji nilai tambah curah hujan dan volume *container* |
+588: | 6 | Peramalan ke depan pada *dashboard* | Memastikan sistem menghasilkan proyeksi per unit |
+589: 
+590: ## 
+591: 
+592: 4. ## **Pengujian 1: Perbandingan Model dan Varian Data pada Unit dan Kriteria**
+593: 
+594: 	Sebelum membandingkan seluruh unit, pengujian ini menunjukkan contoh hasil pada sepuluh unit yang dipilih secara acak (*random seed* 42\) dari tiga kelompok menurut model terbaik pada 12 kombinasi. Untuk setiap unit, ketiga model dilatih pada keempat varian *data preparation* (*baseline*, *robust*, *savgol*, dan *yeojohnson*) dengan parameter pemenang global, lalu diukur MAPE pada periode *test* (Oktober sampai Desember 2025). Hasilnya ditunjukkan pada Tabel 4.5.
+595: 
+596: ##### **Tabel 4.5 MAPE Tiga Model pada Empat Varian Data untuk Sepuluh Unit Contoh**
+597: 
+598: | Unit | Model | *Baseline* | *Robust* | *Savgol* | *Yeojohnson* |
+599: | ----- | ----- | ----- | ----- | ----- | ----- |
+600: | K01\_UNIT\_008 | ARIMAX | 4,22% | 5,46% | 5,51% | 5,73% |
+601: |  | *Gradient Boosting* | 4,49% | 3,57% | 7,23% | 2,96% |
+602: |  | LSTM | 9,60% | 4,47% | 8,20% | 8,27% |
+603: | K01\_UNIT\_162 | ARIMAX | 17,83% | 15,26% | 16,12% | 15,35% |
+604: |  | *Gradient Boosting* | 6,56% | 8,62% | 10,73% | 9,21% |
+605: |  | LSTM | 11,94% | 19,85% | 8,72% | 8,16% |
+606: | K02\_UNIT\_135 | ARIMAX | 15,44% | 17,37% | 20,21% | 15,06% |
+607: |  | *Gradient Boosting* | 11,56% | 15,22% | 21,53% | 14,28% |
+608: |  | LSTM | 15,94% | 23,53% | 16,79% | 14,40% |
+609: | K02\_UNIT\_155 | ARIMAX | 5,50% | 5,62% | 5,20% | 6,23% |
+610: |  | *Gradient Boosting* | 5,00% | 5,32% | 5,49% | 6,30% |
+611: |  | LSTM | 6,03% | 5,73% | 3,30% | 3,86% |
+612: | K03\_UNIT\_070 | ARIMAX | 60,31% | 51,56% | 61,02% | 53,40% |
+613: |  | *Gradient Boosting* | 47,31% | 36,53% | 42,94% | 35,11% |
+614: |  | LSTM | 57,67% | 65,00% | 57,97% | 61,65% |
+615: | K04\_UNIT\_298 | ARIMAX | 10,40% | 6,41% | 4,88% | 6,98% |
+616: |  | *Gradient Boosting* | 5,68% | 5,74% | 8,62% | 6,67% |
+617: |  | LSTM | 9,29% | 12,21% | 5,71% | 7,94% |
+618: | K05\_UNIT\_208 | ARIMAX | 11,33% | 19,10% | 13,55% | 27,03% |
+619: |  | *Gradient Boosting* | 12,60% | 19,67% | 15,30% | 13,26% |
+620: |  | LSTM | 19,77% | 19,10% | 15,99% | 17,35% |
+621: | K12\_UNIT\_120 | ARIMAX | 8,94% | 37,36% | 28,85% | 34,86% |
+622: |  | *Gradient Boosting* | 27,70% | 29,45% | 22,54% | 26,06% |
+623: |  | LSTM | 22,00% | 37,52% | 22,74% | 21,68% |
+624: | K34\_UNIT\_009 | ARIMAX | 30,69% | 31,59% | 34,92% | 37,91% |
+625: |  | *Gradient Boosting* | 31,13% | 26,53% | 39,93% | 43,22% |
+626: |  | LSTM | 26,23% | 27,25% | 25,14% | 25,93% |
+627: | K49\_UNIT\_332 | ARIMAX | 32,47% | 29,40% | 25,89% | 28,94% |
+628: |  | *Gradient Boosting* | 32,06% | 31,55% | 23,68% | 30,81% |
+629: |  | LSTM | 35,96% | 41,09% | 35,48% | 37,90% |
+630: | **Rata-rata 10 unit** | ARIMAX | 19,71% | 21,91% | 21,62% | 23,15% |
+631: |  | *Gradient Boosting* | 18,41% | 18,22% | 19,80% | 18,79% |
+632: |  | LSTM | 21,44% | 25,58% | 20,00% | 20,71% |
+633: 
+634: 	Hasil pada sepuluh unit menunjukkan bahwa tingkat *error* sangat bergantung pada unit nya sendiri. Pada K01\_UNIT\_008, seluruh kombinasi menghasilkan MAPE rendah (2,96% sampai 9,60%), sedangkan pada K03\_UNIT\_070 seluruh kombinasi menghasilkan MAPE tinggi (35,11% sampai 65,00%). Pada unit yang sama, pemilihan varian data juga dapat mengubah hasil dengan selisih besar, misalnya ARIMAX pada K12\_UNIT\_120 menghasilkan 8,94% dengan varian *baseline* tetapi 37,36% dengan varian *robust*. Kombinasi terbaik pada setiap unit ditunjukkan pada Tabel 4.6. 
+635: 
+636: ##### **Tabel 4.6 Kombinasi Terbaik pada Sepuluh Unit Contoh** 
+637: 
+638: | Unit | Model Terbaik | Varian | MAPE |
+639: | ----- | ----- | ----- | ----- |
+640: | K01\_UNIT\_008 | *Gradient Boosting* | *yeojohnson* | 2,96% |
+641: | K01\_UNIT\_162 | *Gradient Boosting* | *baseline* | 6,56% |
+642: | K02\_UNIT\_135 | *Gradient Boosting* | *baseline* | 11,56% |
+643: | K02\_UNIT\_155 | LSTM | *savgol* | 3,30% |
+644: | K03\_UNIT\_070 | *Gradient Boosting* | *yeojohnson* | 35,11% |
+645: | K04\_UNIT\_298 | ARIMAX | *savgol* | 4,88% |
+646: | K05\_UNIT\_208 | ARIMAX | *baseline* | 11,33% |
+647: | K12\_UNIT\_120 | ARIMAX | *baseline* | 8,94% |
+648: | K34\_UNIT\_009 | LSTM | *savgol* | 25,14% |
+649: | K49\_UNIT\_332 | *Gradient Boosting* | *savgol* | 23,68% |
+650: 
+651: 	Contoh pada tingkat kriteria diambil dari lima kriteria yang dipilih secara acak (*random seed* 42\) dari 63 kriteria. Nama kriteria disusun berdasarkan jenis alat, tipe atau merek, kapasitas, dan HP. Kombinasi terbaik pada masing-masing kriteria ditunjukkan pada Tabel 4.7.
+652: 
+653: ##### **Tabel 4.7 Kombinasi Terbaik pada Lima Kriteria Contoh**
+654: 
+655: | Kriteria | Model Terbaik | Varian | MAPE |
+656: | ----- | ----- | ----- | ----- |
+657: | K04: Tronton, PK215, 40,0, 220 HP | *Gradient Boosting* | *baseline* | 16,64% |
+658: | K09: *Crane*, RTG, 40,6, 268 HP | *Gradient Boosting* | *robust* | 5,31% |
+659: | K15: *Reach Stacker*, SANY 450, 45,0, 348 HP | *Gradient Boosting* | *robust* | 16,10% |
+660: | K34: Tronton, CK12, 40,0, 185 HP | *Gradient Boosting* | *robust* | 26,53% |
+661: | K60: *Forklift*, FL Kalmar, 32,0, 238 HP | *Gradient Boosting* | *yeojohnson* | 9,95% |
+662: 
+663: 	*Gradient Boosting* menjadi model terbaik pada kelima kriteria contoh. Varian terbaiknya berbeda antar kriteria, yaitu *robust* pada tiga kriteria (K09, K15, dan K34), *baseline* pada K04, dan *yeojohnson* pada K60. MAPE terendah dicapai pada K09 (5,31%) dan tertinggi pada K34 (26,53%).
+664: 
+665: 5. ## **Pengujian 2: Perbandingan Model, Varian Data, dan Pendekatan**
+666: 
+667: 	Pengujian ini membandingkan tiga model, empat varian penyesuaian data, dan dua pendekatan (per unit dan per kriteria). Ruang pencarian parameter adalah: ARIMAX dengan p 0-8, d 0-4, dan q 0-8 (405 kombinasi); *Gradient Boosting* dengan *learning rate* {0,01; 0,05; 0,1; 0,2}, max\_iter {100, 200, 300}, max\_depth {tanpa batas, 3, 5, 7}, dan min\_samples\_leaf {5, 10, 20} (144 kombinasi); serta LSTM dengan panjang *sequence* {3, 6}, unit {16, 32}, dan *epoch* {30, 50} (8 kombinasi). Untuk setiap kombinasi model dan varian dipilih parameter dengan MAPE global terendah. Hasil pendekatan per unit ditunjukkan pada Tabel 4.8.
+668: 
+669: ##### **Tabel 4.8 Hasil Pencarian Parameter, Pendekatan Per Unit** 
+670: 
+671: | Model | Varian | Parameter Terpilih | MAPE Global | RMSE Global |
+672: | ----- | ----- | ----- | ----- | ----- |
+673: | ARIMAX | *baseline* | (2,1,0) | 23,36% | 69,03 |
+674: | ARIMAX | *robust* | (2,0,0) | 25,24% | 72,78 |
+675: | ARIMAX | *savgol* | (1,0,0) | 24,15% | 67,18 |
+676: | ARIMAX | *yeojohnson* | (2,0,0) | 25,05% | 75,20 |
+677: | *Gradient Boosting* | *baseline* | lr \= 0,01; iter \= 200; depth \= 7; leaf \= 10 | 22,76% | 70,94 |
+678: | *Gradient Boosting* | *robust* | lr \= 0,01; iter \= 200; depth \= 7; leaf \= 10 | 24,35% | 72,55 |
+679: | *Gradient Boosting* | *savgol* | lr \= 0,01; iter \= 200; depth \= 5; leaf \= 5 | 22,69% | 68,35 |
+680: | *Gradient Boosting* | *yeojohnson* | lr \= 0,01; iter \= 300; depth \= 3; leaf \= 10 | 24,15% | 73,91 |
+681: | LSTM | *baseline* | seq \= 3; unit \= 32; epoch \= 50 | 23,84% | 68,76 |
+682: | LSTM | *robust* | seq \= 6; unit \= 32; epoch \= 50 | 23,81% | 72,30 |
+683: | LSTM | *savgol* | seq \= 3; unit \= 32; epoch \= 50 | 23,92% | 68,49 |
+684: | LSTM | *yeojohnson* | seq \= 3; unit \= 32; epoch \= 50 | 23,81% | 69,72 |
+685: 
+686: 	Kombinasi dengan MAPE global terendah adalah *Gradient Boosting* dengan varian *savgol* (22,69%), disusul *Gradient Boosting baseline* (22,76%). Perbedaan antar kombinasi kecil, kurang dari 2,6 poin persentase antara yang terbaik dan terburuk. Berdasarkan RMSE global, nilai terendah dimiliki ARIMAX *savgol* (67,18), sedikit di bawah *Gradient Boosting savgol* (68,35), sehingga kedua metrik tidak sepenuhnya sejalan.  
+687: 	Pada pendekatan per kriteria, ARIMAX dilatih pada deret rata-rata unit dalam kriteria, sedangkan *Gradient Boosting* dan LSTM dilatih pada data gabungan seluruh unit anggota. MAPE global terbaik *Gradient Boosting* per kriteria adalah 23,19% (*baseline*) dan LSTM 24,42% (*yeojohnson*); ARIMAX per kriteria dengan deret rata-rata 22,14% (*robust*). Representasi penjumlahan (*sum*) menghasilkan MAPE global 50,34% sampai 138,39% pada tiga dari empat varian, sedangkan pada varian *savgol* tercatat 13,47%, angka yang berada di luar pola dan tidak dipakai sebagai pembanding. Untuk *Gradient Boosting* dan LSTM, pendekatan per unit lebih rendah *error*\-nya pada hampir seluruh varian: *Gradient Boosting* di dua dari empat varian, dan LSTM di keempat varian. Pendekatan per unit dipilih sebagai pendekatan final karena memberi MAPE global terendah secara keseluruhan.  
+688: 	Hasil pengujian ulang 12 kombinasi pada setiap unit dan kriteria dengan parameter pemenang global ditunjukkan pada Tabel 4.9 dan Tabel 4.10.
+689: 
+690: ##### **Tabel 4.9 Rata-rata MAPE Per Unit untuk 12 Kombinasi (190 Unit)** 
+691: 
+692: | Model | *Baseline* | *Robust* | *Savgol* | *Yeojohnson* |
+693: | ----- | ----- | ----- | ----- | ----- |
+694: | ARIMAX | 19,60% | 20,98% | 19,51% | 21,41% |
+695: | *Gradient Boosting* | 18,16% | 19,17% | 18,82% | 19,56% |
+696: | LSTM | 19,23% | 19,58% | 18,74% | 19,41% |
+697: 
+698: ##### **Tabel 4.10 Jumlah Unit dan Kriteria Berdasarkan Model Terbaik**
+699: 
+700: | Model | Unit (dari 190\) | Kriteria (dari 63\) |
+701: | ----- | ----- | ----- |
+702: | ARIMAX | 74 | 2 |
+703: | *Gradient Boosting* | 78 | 46 |
+704: | LSTM | 38 | 15 |
+705: 
+706: 	*Gradient Boosting* memiliki rata-rata MAPE per unit terendah pada varian *baseline* (18,16%) dan rata-rata terendah antar model (18,93%, dibanding LSTM 19,24% dan ARIMAX 20,38%). Pada tingkat kriteria, *Gradient Boosting* menjadi model terbaik pada 46 dari 63 kriteria (73,0%). Pada tingkat unit, *Gradient Boosting* juga menjadi model terbaik pada jumlah unit terbanyak yaitu 78 unit (41,1%), diikuti oleh ARIMAX sebanyak 74 unit (38,9%) dan LSTM sebanyak 38 unit (20,0%).  
+707: 	Pada pendekatan per kriteria, unit-unit alat berat dengan jenis alat, tipe atau merek, kapasitas, dan *horse power* (HP) yang sama dikelompokkan menjadi satu kriteria, sehingga dari 190 unit terbentuk 63 kriteria. Hasil pengujian ulang 12 kombinasi pada tingkat kriteria dengan parameter pemenang global ditunjukkan pada Tabel 4.11.
+708: 
+709: ##### **Tabel 4.11 Rata-rata MAPE Per Kriteria untuk 12 Kombinasi (63 Kriteria)** 
+710: 
+711: | Model | *Baseline* | *Robust* | *Savgol* | *Yeojohnson* |
+712: | ----- | ----- | ----- | ----- | ----- |
+713: | ARIMAX | 117,16% | 41,80% | 25,78% | 39,61% |
+714: | *Gradient Boosting* | 25,48% | 25,60% | 25,39% | 26,56% |
+715: | LSTM | 26,97% | 26,89% | 27,98% | 29,31% |
+716: 
+717: 	*Gradient Boosting* dan LSTM menghasilkan rata-rata MAPE per kriteria yang relatif seragam antar varian: 25,39% sampai 26,56% pada *Gradient Boosting*, dengan varian *savgol* terendah, dan 26,89% sampai 29,31% pada LSTM. Nilai ini lebih tinggi daripada rata-rata per unit untuk model dan varian yang sama, misalnya *Gradient Boosting baseline* 25,48% dibanding 18,16% pada Tabel 4.9. Pada tingkat kriteria, kombinasi yang paling sering menjadi yang terbaik adalah *Gradient Boosting savgol* (19 kriteria), *Gradient Boosting baseline* (13 kriteria), dan *Gradient Boosting yeojohnson* (8 kriteria).
+718: 
+719: 6. ## **Pengujian 3: Penentuan Model Tunggal dan Penyesuaian Konfigurasi**
+720: 
+721: 	*Gradient Boosting* ditetapkan sebagai model tunggal berdasarkan rata-rata MAPE global terendah, yang dapat dilihat pada keunggulannya yang dominan di tingkat kriteria (46 dari 63 kriteria), serta posisinya sebagai model terbaik pada tingkat unit (78 dari 190 unit). Untuk unit yang belum optimal dengan konfigurasi global, dilakukan penyesuaian varian dan *hyperparameter* secara individual, dengan menguji empat varian data dan 144 kombinasi *hyperparameter* (4 *learning rate* × 3 max\_iter × 4 max\_depth × 3 min\_samples\_leaf), sehingga terdapat 576 *model fit*. Hasil pada 190 unit ditunjukkan pada Tabel 4.12.
+722: 
+723: ##### **Tabel 4.12 Hasil Model Akhir Dibandingkan Model Terbaik Per Unit (190 Unit)**
+724: 
+725: | Ukuran | Model Terbaik per Unit (12 Kombinasi) | *Gradient Boosting* Akhir |
+726: | ----- | ----- | ----- |
+727: | Rata-rata MAPE | 11,74% | 11,48% |
+728: | Median MAPE | 9,65% | 9,59% |
+729: | Rata-rata RMSE | 33,33 | 33,66 |
+730: 
+731: 	Dari 190 unit, sebanyak 78 unit sudah memperoleh hasil terbaik dari *Gradient Boosting* pada konfigurasi global awal, sedangkan 112 unit sisanya (yang pada tahap konfigurasi global sebelumnya dimenangkan oleh ARIMAX sebanyak 74 unit dan LSTM sebanyak 38 unit) diberikan penyesuaian varian dan *hyperparameter* secara individual. Melalui penyesuaian tersebut, *Gradient Boosting* berhasil meningkatkan akurasinya pada unit-unit tersebut. Dibandingkan model terbaik per unit dari 12 kombinasi awal, MAPE *Gradient Boosting* model akhir bernilai sama atau lebih rendah pada 134 unit, termasuk 60 unit yang memperoleh penurunan *error* cukup signifikan.  
+732: 	 Rata-rata MAPE secara keseluruhan turun sebesar 0,26 poin persentase (dari 11,74% menjadi 11,48%), sementara rata-rata RMSE sedikit lebih tinggi (33,66 dibanding 33,33). Distribusi varian data akhir yang terpilih adalah *savgol* (56 unit), *yeojohnson* (52 unit), *baseline* (49 unit), dan *robust* (33 unit). Berdasarkan rentang tingkat *error*, 99 unit (52,1%) memiliki MAPE di bawah 10%, 65 unit di antara 10% dan 20%, 19 unit di antara 20% dan 30%, serta 7 unit bernilai 30% atau lebih.  
+733: 	Perbandingan nilai aktual dengan hasil prediksi *Gradient Boosting* akhir pada periode *test* untuk dua unit contoh, yaitu K01\_UNIT\_008 dan K02\_UNIT\_155, ditunjukkan pada Gambar 4.4 dan Gambar 4.5.  
+734: ![][image15]
+735: 
+736: ##### **Gambar 4.4 Perbandingan Nilai Aktual dan Prediksi pada Periode *Test* untuk Unit K01\_UNIT\_008** 
+737: 
+738: 	Gambar 4.4 menunjukkan K01\_UNIT\_008 dengan varian *yeojohnson*. Pada periode *test* (Oktober sampai Desember 2025), nilai prediksi mengikuti nilai aktual dengan selisih kecil, sehingga MAPE sebesar 2,96% dan RMSE sebesar 8,50 jam. Nilai aktual unit ini pada tahun 2025 berada pada kisaran sekitar 210 sampai 290 jam per bulan, dan prediksi tetap berada dalam kisaran tersebut.
+739: 
+740: ![][image16]
+741: 
+742: ##### **Gambar 4.5 Perbandingan Nilai Aktual dan Prediksi pada Periode *Test* untuk Unit K02\_UNIT\_155**
+743: 
+744: 	Gambar 4.5 menunjukkan K02\_UNIT\_155 dengan varian *robust*. Prediksi berada di sekitar 340 jam per bulan dan mendekati nilai aktual pada ketiga bulan *test*, dengan selisih terbesar pada bulan pertama ketika nilai aktual naik lebih tinggi dari prediksi. MAPE sebesar 2,35% dan RMSE sebesar 10,10 jam. Dibandingkan periode 2023 sampai awal 2024 yang berfluktuasi besar, nilai aktual unit ini pada tahun 2025 lebih stabil, yang sejalan dengan *error* prediksi yang rendah. Selanjutnya untuk hasil model akhir pada tingkat kriteria ditunjukkan pada Tabel 4.13.
+745: 
+746: ##### **Tabel 4.13 Hasil Model Akhir Dibandingkan Model Terbaik Per Kriteria (63 Kriteria)**
+747: 
+748: | Ukuran | Model Terbaik per Kriteria (12 Kombinasi) | *Gradient Boosting* Akhir |
+749: | ----- | ----: | ----: |
+750: | Rata-rata MAPE | 17,66% | 16,84% |
+751: | Median MAPE | 16,13% | 15,71% |
+752: | Rata-rata RMSE | 34,21 | 33,53 |
+753: 
+754: 	Dari 63 kriteria, 46 kriteria sudah memperoleh hasil terbaik dari *Gradient Boosting* pada konfigurasi global, sedangkan 17 kriteria memakai konfigurasi yang disesuaikan. Dibandingkan model terbaik per kriteria, MAPE model akhir sama atau lebih rendah pada 58 kriteria termasuk 12 kriteria yang jauh lebih rendah. Varian yang dipakai adalah *savgol* (23 kriteria), *baseline* (20), *yeojohnson* (12), dan *robust* (8). Berdasarkan tingkat *error*, 13 kriteria (20,6%) memiliki MAPE di bawah 10%, 28 kriteria (44,4%) di antara 10% dan 20%, 20 kriteria (31,7%) di antara 20% dan 30%, dan 2 kriteria (3,2%) 30% atau lebih.   
+755: 	Perbandingan nilai aktual dengan hasil prediksi pada periode *test* untuk satu kriteria contoh (K09) ditunjukkan pada Gambar 4.6.  
+756: ![][image17]
+757: 
+758: ##### **Gambar 4.6 Perbandingan Nilai Aktual dan Prediksi pada Periode *Test* untuk Kriteria K09**
+759: 
+760: 	Gambar 4.6 menunjukkan kriteria K09 (*Crane* RTG) dengan varian *robust*. Garis pada gambar adalah rata-rata *operating hours* seluruh unit dalam kriteria, sedangkan MAPE sebesar 5,31% dan RMSE sebesar 62,23 jam dihitung dari seluruh pasangan unit-bulan pada periode *test*. *Operating hours* kriteria ini berada pada kisaran sekitar 575 sampai 744 jam per bulan, yaitu mendekati batas kalender sepanjang periode pengamatan. Prediksi mengikuti tingkat tersebut dengan baik, dan selisih terbesar terjadi pada November 2025 ketika nilai aktual turun lebih rendah dari prediksi.
+761: 
+762: 7. ## **Pengujian 4: Horizon Test 3 dan 4 Bulan**
+763: 
+764: 	Dua panjang *test set* dibandingkan, yaitu 3 bulan (Oktober-Desember 2025\) dan 4 bulan (September-Desember 2025), dengan *Gradient Boosting* akhir. Hasilnya ditunjukkan pada Tabel 4.14.
+765: 
+766: ##### **Tabel 4.14 Perbandingan Horizon Test 3 dan 4 Bulan**
+767: 
+768: | Tingkat | Jumlah | MAPE 4 Bulan | MAPE 3 Bulan | Lebih Rendah di 3 Bulan | Lebih Rendah di 4 Bulan |
+769: | ----- | ----- | ----- | ----- | ----- | ----- |
+770: | Unit | 190 | 12,72% | 11,48% | 111 | 79 |
+771: | Kriteria | 63 | 18,01% | 16,84% | 31 | 32 |
+772: 
+773: 	Rata-rata MAPE horizon 3 bulan lebih rendah pada kedua tingkat, dengan selisih 1,24 poin persentase pada unit dan 1,17 pada kriteria. Pada tingkat unit, horizon 3 bulan lebih rendah di 111 dari 190 unit, sedangkan pada tingkat kriteria jumlahnya hampir sama (31 berbanding 32). Horizon 3 bulan dipilih sebagai skenario evaluasi utama karena memiliki *error* rata-rata terendah dan sejalan dengan kebutuhan perencanaan jangka pendek.
+774: 
+775: 8. ## **Pengujian 5: Peramalan Direct dan Rolling**
+776: 
+777: ##### 	Pada peramalan *direct*, setiap bulan *test* diprediksi memakai nilai *lag* aktual. Pada peramalan *rolling*, hanya *lag* awal yang aktual, dan bulan berikutnya memakai hasil prediksi sebelumnya sebagai *lag*. Hasilnya ditunjukkan pada Tabel 4.15. **Tabel 4.15 Perbandingan Peramalan Direct dan Rolling** 
+778: 
+779: | Tingkat | Jumlah | MAPE *Direct* | MAPE *Rolling* | *Direct* Lebih Rendah | *Rolling* Lebih Rendah | Identik |
+780: | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+781: | Unit | 190 | 11,48% | 13,45% | 81 | 32 | 77 |
+782: | Kriteria | 63 | 16,84% | 18,89% | 33 | 10 | 20 |
+783: 
+784: 	*Rolling* menghasilkan *error* lebih tinggi pada kedua tingkat (selisih rata-rata 1,97 poin persentase pada unit dan 2,04 pada kriteria). Karena peramalan ke depan tidak memiliki nilai aktual untuk bulan mendatang, sistem harus memakai pendekatan *rolling*, sehingga *error* peramalan 12 bulan diperkirakan lebih besar daripada angka evaluasi *direct*.
+785: 
+786: 9. ## **Pengujian 6: Peran Variabel Eksogen** 
+787: 
+788: 	Enam skenario dibandingkan pada 190 unit: ARIMA tanpa eksogen, ARIMAX dengan eksogen bulan yang sama (*t*) dan satu bulan sebelumnya (*t-1*), serta *Gradient Boosting* dengan ketiga pengaturan yang sama. Konfigurasi ARIMA/ARIMAX ditetapkan per varian data dari hasil pencarian global, dan *Gradient Boosting* memakai parameter individual tiap unit, dengan pembagian data yang sama. Hasilnya ditunjukkan pada Tabel 4.16.
+789: 
+790: ##### **Tabel 4.16 Perbandingan Enam Skenario Eksogen (190 Unit)** 
+791: 
+792: | Model dan Skenario | Rata-rata MAPE | Median MAPE | MAPE Maksimum | Rata-rata RMSE |
+793: | ----- | ----- | ----- | ----- | ----- |
+794: | *Gradient Boosting* (eksogen *t*) | 11,48% | 9,59% | 39,87% | 33,66 |
+795: | *Gradient Boosting* (eksogen *t-1*) | 15,67% | 13,21% | 74,98% | 42,14 |
+796: | *Gradient Boosting* (tanpa eksogen) | 14,90% | 12,28% | 81,45% | 39,53 |
+797: | ARIMA (tanpa eksogen) | 18,38% | 13,43% | 126,99% | 43,77 |
+798: | ARIMAX (eksogen *t*) | 19,26% | 15,95% | 89,82% | 47,39 |
+799: | ARIMAX (eksogen *t-1*) | 19,79% | 15,92% | 96,92% | 48,01 |
+800: 
+801: 	*Gradient Boosting* dengan eksogen *t* menghasilkan MAPE terendah, 3,42 poin persentase di bawah *Gradient Boosting* tanpa eksogen. Eksogen *t-1* tidak memberi perbaikan (15,67%, lebih tinggi daripada tanpa eksogen), dan pada ARIMAX penambahan eksogen tidak menurunkan *error*.
+802: 
+803: 10. ## **Pengujian 7: Peramalan ke Depan pada Dashboard** 
+804: 
+805: 	Pengujian ini memastikan sistem menghasilkan proyeksi *operating hours* per unit. Setelah seluruh riwayat data (Januari 2023 sampai Desember 2025\) dipakai untuk melatih ulang model, sistem menghasilkan peramalan 12 bulan ke depan (Januari sampai Desember 2026\) untuk seluruh 190 unit. Pelatihan model final dan peramalan ke depan membutuhkan sekitar 10-15 menit (Tabel 4.3). Seluruh nilai hasil peramalan berada pada rentang 0 sampai 744 jam per bulan. Hasil ditampilkan per unit pada grafik dan dapat diekspor ke Excel (Gambar 4.2 dan Gambar 4.3).  
+806: 	Hasil peramalan 12 bulan ke depan untuk dua unit contoh, yaitu K01\_UNIT\_008 dan K02\_UNIT\_155, ditunjukkan pada Gambar 4.7 dan Gambar 4.8.   
+807: ![][image18]
+808: 
+809: ##### **Gambar 4.7 Hasil Peramalan *Operating Hours* Tahun 2026 untuk Unit K01\_UNIT\_008**
+810: 
+811: 	Gambar 4.7 menunjukkan hasil peramalan K01\_UNIT\_008 untuk Januari sampai Desember 2026\. Nilai peramalan berkisar sekitar 230 sampai 290 jam per bulan, relatif stabil pada enam bulan pertama, kemudian meningkat hingga sekitar 290 jam pada Oktober 2026 sebelum turun kembali. Seluruh nilai berada dalam kisaran data historis unit dan sejalan dengan tingkat *operating hours* tahun 2025\.  
+812: ![][image19]
+813: 
+814: ##### **Gambar 4.8 Hasil Peramalan Operating Hours Tahun 2026 untuk Unit K02\_UNIT\_155**
+815: 
+816: 	Gambar 4.8 menunjukkan hasil peramalan K02\_UNIT\_155. Nilai peramalan relatif datar di sekitar 340 jam per bulan sepanjang 2026, mendekati tingkat *operating hours* beberapa bulan terakhir periode data.
+817: 
+818: 11. ## **Pengujian 8: Evaluasi oleh Pengguna**
+819: 
+820: 	Pengujian ini menilai hasil prediksi dan aplikasi menurut pengguna di PT X. Evaluasi dilakukan melalui wawancara dengan pertanyaan terbuka kepada pengguna di PT X yang mana pengguna mencoba aplikasi secara langsung, mulai dari mengunggah berkas, memilih unit, mengatur horizon peramalan, hingga mengunduh hasil dalam berkas Excel. Pertanyaan mencakup kesan terhadap tampilan aplikasi, waktu proses, pemilihan unit dan horizon, berkas hasil unduhan, bagian aplikasi yang perlu dijelaskan, kesesuaian hasil prediksi dengan kondisi di lapangan, kendala, dan fitur yang diharapkan. Ringkasan tanggapan pengguna ditunjukkan pada Tabel 4.17.
+821: 
+822: ###### **Tabel 4.17 Ringkasan Tanggapan Pengguna terhadap Aplikasi dan Hasil Prediksi**
+823: 
+824: | Aspek | Tanggapan Pengguna |
+825: | ----- | ----- |
+826: | Tampilan dan alur  | Sederhana dan mudah dipahami dengan alur yang jelas dari unggah data, proses, hingga hasil  |
+827: | Waktu proses  | Waktu yang dibutuhkan untuk pemrosesan masih bisa ditolerir dibanding harus rekap manual di Excel, tetapi terasa lama bila hanya ingin melihat satu atau dua unit  |
+828: | Pemilihan unit dan horizon  | Mudah dipahami, pemilihan beberapa unit pada satu grafik membantu dan pilihan 3 sampai 12 bulan sesuai kebutuhan  |
+829: | Berkas Excel | Membantu karena memisahkan hasil peramalan dan daftar unit yang tidak tercakup beserta alasannya, tetapi belum memuat jenis alat dan lokasi  |
+830: | Bagian yang perlu dijelaskan | Format tabel pada berkas yang diunggah  |
+831: | Kesesuaian hasil prediksi | Masuk akal dan sesuai karakter kerja unit di lapangan  |
+832: | Kendala | Proses hanya menampilkan indikator berputar tanpa informasi mengenai proses yang sedang berjalan |
+833: 
+834: 	Pengguna menilai tampilan aplikasi sederhana dan mudah dipahami, dengan alur yang jelas: bagian atas untuk mengunggah data, diikuti tombol proses, lalu tab hasil berupa grafik dan daftar unit yang tidak tercakup. Pemilihan unit dinilai mudah dan kebebasan memilih lebih dari satu unit untuk dibandingkan dalam satu grafik dinilai bermanfaat. Pilihan horizon 3 sampai 12 bulan dinilai sesuai dengan kebutuhan: horizon 3 bulan dipakai untuk rencana operasional rutin dan relokasi jangka pendek, sedangkan horizon 6 sampai 12 bulan dibutuhkan untuk rencana tahunan dan proyeksi anggaran perawatan.  
+835: 	Terkait waktu proses, pengguna menilai waktu yang dibutuhkan (sekitar 10 sampai 15 menit) untuk menghitung 190 unit sekaligus dari data mentah hingga proyeksi satu tahun masih bisa ditolerir dibanding harus melakukan rekap dan perhitungan manual di Excel. Namun, responden menyampaikan bahwa waktu tersebut terasa lama ketika pengguna hanya ingin melihat satu atau dua unit, karena seluruh proses dijalankan ulang dari awal. Berkas Excel hasil unduhan dinilai membantu. Meski demikian, Excel hasil peramalan belum mempunyai data jenis alat dan lokasi, sehingga pengguna biasanya masih memprosesnya dengan tabel pivot di Excel.  
+836: 	Untuk hasil prediksi yang diberikan, pengguna merasa nilainya masuk akal dan sesuai dengan karakter kerja unit di lapangan. Lalu untuk kendala yang disampaikan pengguna adalah tampilan proses yang hanya berupa indikator berputar tanpa informasi tahap atau jumlah unit yang telah selesai, sehingga pengguna kadang ragu apakah proses masih berjalan normal atau tidak.
+837: 
+838: 5. # **PEMBAHASAN**
+839: 
+840:    1. ## **Ringkasan Temuan**
+841: 
+842: 	Pengujian pada 190 unit menunjukkan bahwa *Gradient Boosting* dengan fitur *lag* 1 sampai 3, curah hujan, dan volume *container* bulan yang sama, menghasilkan rata-rata MAPE 11,48% pada horizon *test* 3 bulan, dengan median 9,59% dan 99 unit (52,1%) memiliki MAPE di bawah 10%. *Error* meningkat menjadi 13,45% ketika peramalan dilakukan secara *rolling*, yang merupakan kondisi sebenarnya pada peramalan ke depan. Subbab berikut membahas temuan tersebut terhadap kedua rumusan masalah dan hipotesis.
+843: 
+844: 2. ## **Perbandingan Model dan Hipotesis**
+845: 
+846: 	Hipotesis H1 menyatakan bahwa *Gradient Boosting* memberi *error* lebih rendah daripada ARIMAX dan LSTM berdasarkan MAPE global. Hipotesis ini didukung secara deskriptif oleh hasil pencarian parameter (MAPE global terendah 22,69% pada *Gradient Boosting* dibanding 23,36% pada ARIMAX dan 23,81% pada LSTM) dan oleh rata-rata MAPE per unit (18,93% pada *Gradient Boosting*, 19,24% pada LSTM, dan 20,38% pada ARIMAX), serta oleh banyaknya jumlah unggul pada 46 dari 63 kriteria. Pada tingkat unit, *Gradient Boosting* juga menjadi model terbaik pada jumlah unit terbanyak (78 dari 190 unit, dibanding 74 unit pada ARIMAX dan 38 unit pada LSTM). Dengan demikian, *Gradient Boosting* lebih tepat disimpulkan sebagai model dengan *error* rata-rata terendah dan paling konsisten pada tingkat unit maupun kriteria.  
+847: 	Beberapa alasan yang masuk akal untuk hasil ini berdasarkan literatur, adalah sebagai berikut. Pertama, deret per unit hanya terdiri dari 36 bulan, sedangkan jaringan LSTM membutuhkan data yang banyak untuk dilatih dengan baik; Hewamalage et al. (2021) menyatakan bahwa ukuran data nyata yang kecil menghambat metode *deep learning* pada peramalan deret waktu dan model rekuren bukan solusi universal, meskipun kompetitif pada banyak situasi. Kedua, pada data tabular berukuran sedang, model berbasis pohon sering mengungguli jaringan saraf (Grinsztajn et al., 2022), dan *Gradient Boosting* (Elsayed et al., 2021\) dapat menangkap hubungan non-linier antara fitur *lag* dan variabel eksogen tanpa asumsi kestasioneran. Ketiga, hasil ini sejalan dengan temuan Cortez et al. (2023) yang melaporkan bahwa XGBoost menghasilkan metrik terakurat dibanding ARIMA dan LSTM pada model univariat untuk peramalan fotovoltaik jangka sangat pendek. Perbedaan yang kecil antar model juga menunjukkan bahwa pemilihan model bukan satu-satunya penentu *error*; karakteristik tiap unit juga berpengaruh besar. 
+848: 
+849: 3. ## **Varian Penyesuaian Data dan Pendekatan Per Unit atau Per Kriteria** 
+850: 
+851: 	Perbedaan rata-rata MAPE antar varian penyesuaian data kecil (Tabel 4.9): pada *Gradient Boosting*, selisih terbaik dan terburuk sekitar 1,4 poin persentase. Tidak ada varian yang unggul di semua model. *Savitzky-Golay* terbaik pada ARIMAX dan LSTM, sedangkan *baseline* terbaik pada *Gradient Boosting*. Hal ini menjelaskan mengapa pada tahap penyesuaian konfigurasi, varian yang dipilih tersebar pada seluruh empat varian (*savgol* 56 unit, *yeojohnson* 52, *baseline* 49, *robust* 33), yang mengindikasikan bahwa kebutuhan penyesuaian data memang berbeda antar unit. Penyesuaian *Savitzky-Golay* menghaluskan fluktuasi, sedangkan transformasi *yeojohnson* mengurangi kemiringan distribusi, sehingga keduanya relevan bagi data *operating hours* yang distribusinya miring (Tabel 3.1).  
+852: 	Pendekatan per kriteria menghasilkan *error* lebih tinggi daripada per unit (16,84% dibanding 11,48% pada model akhir). Salah satu penjelasan yang mungkin adalah bahwa satu model per kriteria harus mengakomodasi unit-unit anggota yang pola operasinya berbeda, sedangkan model per unit mempelajari pola masing-masing unit. Penjelasan ini belum diuji lebih lanjut. Perlu dicatat pula bahwa ARIMAX per kriteria hanya berhasil dilatih pada sebagian kriteria (2, 4, 2, dan 34 kriteria untuk empat varian), sehingga perbandingan ARIMAX pada tingkat kriteria tidak sepenuhnya setara dengan model lain. Selain itu, kesimpulan per unit atau per kriteria pernah berbalik pada pembagian data yang berbeda selama eksperimen, sehingga hasil ini sensitif terhadap rentang *training*/*test* dan populasi unit.
+853: 
+854: 4. ## **Penyesuaian Konfigurasi dan Model Tunggal** 
+855: 
+856: 	Penyesuaian varian dan *hyperparameter* secara individual menurunkan rata-rata MAPE dari 11,74% menjadi 11,48% dibandingkan memilih model terbaik per unit dari 12 kombinasi, dengan rata-rata RMSE yang sedikit naik (33,66 dibanding 33,33). Perbaikan ini kecil dan harus dibaca bersama kenyataan bahwa pemilihan konfigurasi dilakukan melalui 576 *model fit* dan dievaluasi pada periode *test* yang sama. Akibatnya angka 11,48% cenderung optimistis, dan kinerja pada data yang sepenuhnya baru kemungkinan lebih rendah. Meski demikian, keputusan memakai satu model tunggal memberi keuntungan praktis: logika pelatihan, penyimpanan konfigurasi, dan peramalan seragam untuk seluruh unit sehingga mudah dipelihara pada *dashboard*.
+857: 
+858: 5. ## **Peran Variabel Eksogen**
+859: 
+860: 	Pada Gradient Boosting, penambahan curah hujan dan volume *container* bulan yang sama, menurunkan MAPE rata-rata dari 14,90% menjadi 11,48% (3,42 poin persentase), sedangkan eksogen satu bulan sebelumnya (*t-1*) tidak memberi perbaikan (15,67%). Pada ARIMA, penambahan eksogen tidak menurunkan *error* (18,38% menjadi 19,26% dan 19,79%). Kemungkinan penyebabnya adalah estimasi koefisien linier pada deret hanya 36 bulan, yang rentan terhadap terlalu banyak parameter dan multikolinearitas, sedangkan pohon keputusan menyeleksi fitur secara otomatis. Hubungan dengan volume *container* juga selaras dengan EDA, yaitu korelasi agregat positif (*r* \= 0,70).
+861: 
+862: 6. ## **Horizon dan Peramalan Rekursif** 
+863: 
+864: 	Horizon *test* 3 bulan menghasilkan MAPE rata-rata lebih rendah daripada 4 bulan (11,48% dibanding 12,72% pada tingkat unit), dan pada tingkat kriteria jumlah kriteria yang lebih baik hampir seimbang (31 berbanding 32), sehingga selisihnya kecil dan tidak konsisten. Peramalan *rolling* menaikkan MAPE dari 11,48% menjadi 13,45% karena *error* tiap bulan terakumulasi menjadi masukan bulan berikutnya; pada 77 unit hasil kedua pendekatan identik, yang dapat terjadi bila prediksi hanya bergantung pada fitur selain *lag*. Konsekuensinya, *error* peramalan 12 bulan di *dashboard* diperkirakan lebih besar daripada 13,45%, dan *dashboard* menampilkan catatan untuk horizon lebih dari 3 bulan. Perlu dicatat bahwa MAPE sensitif terhadap nilai aktual yang kecil, sehingga unit dengan *operating hours* rendah dapat menghasilkan persentase *error* besar meskipun selisih jam absolutnya kecil (Hewamalage et al., 2023), karena itu RMSE tetap digunakan sebagai pendamping.
+865: 
+866: 7. ## **Implikasi bagi PT X**
+867: 
+868: 	Hasil peramalan membantu perencanaan distribusi dan relokasi unit antar lokasi karena memberi proyeksi *operating hours* per unit dalam satuan jam, bukan sekadar catatan kumulatif. Untuk horizon sampai 3 bulan, *error* rata-rata sekitar 11% pada evaluasi dan sekitar 13% pada peramalan *rolling*, dengan lebih dari separuh unit di bawah 10% pada evaluasi, sehingga proyeksi cukup layak sebagai bahan keputusan operasional. Waktu pelatihan model final dan peramalan sekitar 10-15 menit memungkinkan peramalan diperbarui setiap bulan setelah data baru tersedia. *Dashboard* juga menampilkan daftar unit yang tidak tercakup, sehingga pengguna mengetahui unit yang proyeksinya tidak tersedia.  
+869: 	Hasil evaluasi pengguna menunjukkan bahwa aplikasi dinilai sederhana dan mudah dipahami, pilihan horizon 3 sampai 12 bulan sesuai dengan kebutuhan perencanaan, dan hasil prediksi sesuai dengan karakter kerja unit di lapangan. Masukan pengguna berfokus pada kemudahan penggunaan, seperti filter dan rekap per jenis alat atau lokasi, dan indikator proses berjalan.
+870: 
+871: 8. ## **Keterbatasan**
+872: 
+873: 	Proyek ini dikembangkan dalam batasan data dan cakupan tertentu. Keterbatasan berikut perlu diperhatikan agar hasil pengujian dapat dimanfaatkan dengan sesuai:
+874: 
+875: 1. Hasil pengujian berlaku untuk unit yang tercakup dalam populasi analisis dan tidak dapat digeneralisasi pada unit di luar populasi tersebut.  
+876: 2. Evaluasi dilakukan pada satu periode *test* sepanjang tiga bulan, sehingga angka *error* menggambarkan kinerja pada periode tersebut dan dapat berbeda pada periode lain.  
+877: 3. Variabel eksogen bulan yang sama diuji dengan data aktual, sedangkan pada peramalan ke depan nilainya diganti estimasi rata-rata musiman, sehingga akurasi pada kondisi penerapan dapat berbeda dari hasil pengujian.  
+878: 4. Setiap unit memiliki 36 bulan data, sehingga proyeksi jangka panjang sebaiknya dipakai sebagai gambaran tren dan perlu dievaluasi kembali seiring bertambahnya data.
+879: 
+880: 6. # **KESIMPULAN DAN SARAN**
+881: 
+882:      
+883:    
+884: 
+885:    1. ## **Kesimpulan**
+886: 
+887: 	Berdasarkan hasil perancangan, implementasi, dan pengujian yang telah dilakukan pada proyek ini, dapat ditarik kesimpulan sebagai berikut:
+888: 
+889: 1. Sistem peramalan *operating hours* bulanan per unit telah dibangun, terdiri dari *notebook* eksperimen, *shared library*, dan *dashboard* Streamlit untuk PT X. Sistem melakukan *retrain* model seluruh 190 unit dan menghasilkan peramalan 12 bulan dengan waktu proses sekitar 10-15 menit. Hasil ditampilkan per unit dan dapat diekspor ke Excel, dengan nilai prediksi dibatasi pada rentang 0 sampai 744 jam per bulan (rumusan masalah 1).  
+890: 2. Dari perbandingan ARIMAX, *Gradient Boosting*, dan LSTM, *Gradient Boosting* ditetapkan sebagai model tunggal karena MAPE global dan rata-rata MAPE per unit terendah serta dominasi pada 46 dari 63 kriteria. Dengan penyesuaian varian data dan *hyperparameter* per unit serta eksogen bulan yang sama, model akhir mencapai rata-rata MAPE 11,48% (median 9,59%) dan rata-rata RMSE 33,66 jam pada 190 unit dengan horizon *test* 3 bulan. Keunggulan ini bersifat deskriptif dengan selisih antar model yang kecil (rumusan masalah 2).  
+891: 3. Peramalan *rolling*, yang diperlukan untuk peramalan ke depan, menaikkan MAPE menjadi 13,45%, dan *error* diperkirakan membesar pada bulan yang lebih jauh.  
+892: 4. Variabel eksogen bulan yang sama menurunkan MAPE *Gradient Boosting* sebesar 3,42 poin persentase pada pengujian, tetapi manfaat ini belum teruji pada penerapan karena nilai eksogen mendatang berupa estimasi musiman.
+893: 
+894:    2. ## **Saran**
+895: 
+896: 	Agar hasil proyek ini dapat dimanfaatkan secara optimal dan dikembangkan lebih lanjut, beberapa saran yang dapat diberikan adalah sebagai berikut:
+897: 
+898: 1. Ganti estimasi rata-rata musiman untuk curah hujan dan volume *container* dengan prakiraan resmi (misalnya prakiraan cuaca dan rencana volume pelabuhan), lalu uji dampaknya.  
+899: 2. Pelajari efek libur dan musiman bulan April dengan fitur kalender, serta uji model pada periode *test* lebih panjang atau dengan validasi *rolling-origin*.
+900: 
+901: # **DAFTAR REFERENSI**
+902: 
+903: Bischl, B., Binder, M., Lang, M., Pielok, T., Richter, J., Coors, S., Thomas, J., Ullmann, T., Becker, M., Boulesteix, A.-L., Deng, D., & Lindauer, M. (2023). Hyperparameter optimization: Foundations, algorithms, best practices, and open challenges. *WIREs Data Mining and Knowledge Discovery, 13*(2), e1484. [https\://doi.org/10.1002/widm.1484](https://doi.org/10.1002/widm.1484)  
+904: Cortez, J. C., Terada, L. Z., Bandeira, B. V. B., Soares, J., Vale, Z., & Rider, M. J. (2023). Comparative analysis of ARIMA, LSTM, and XGBoost for very short-term photovoltaic forecasting. 2023 15th Seminar on Power Electronics and Control (SEPOC), 1-6. [https\://doi.org/10.1109/SEPOC58810.2023.10322588](https://doi.org/10.1109/SEPOC58810.2023.10322588)  
+905: Elsayed, S., Thyssens, D., Rashed, A., Jomaa, H. S., & Schmidt-Thieme, L. (2021). *Do we really need deep learning models for time series forecasting?* arXiv. [https\://doi.org/10.48550/arXiv.2101.02118](https://doi.org/10.48550/arXiv.2101.02118)  
+906: Grinsztajn, L., Oyallon, E., & Varoquaux, G. (2022). Why do tree-based models still outperform deep learning on typical tabular data? *Advances in Neural Information Processing Systems, 35*. [https\://doi.org/10.48550/arXiv.2207.08815](https://doi.org/10.48550/arXiv.2207.08815)  
+907: Hewamalage, H., Ackermann, K., & Bergmeir, C. (2023). Forecast evaluation for data scientists: Common pitfalls and best practices. *Data Mining and Knowledge Discovery, 37*, 788-832. [https\://doi.org/10.1007/s10618-022-00894-5](https://doi.org/10.1007/s10618-022-00894-5)  
+908: Hewamalage, H., Bergmeir, C., & Bandara, K. (2021). Recurrent neural networks for time series forecasting: Current status and future directions. *International Journal of Forecasting, 37*(1), 388-427. [https\://doi.org/10.1016/j.ijforecast.2020.06.008](https://doi.org/10.1016/j.ijforecast.2020.06.008)  
+909: Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and practice* (3rd ed.). OTexts. [https\://otexts.com/fpp3/](https://otexts.com/fpp3/)  
+910: Kontopoulou, V. I., Panagopoulos, A. D., Kakkos, I., & Matsopoulos, G. K. (2023). A review of ARIMA vs. machine learning approaches for time series forecasting in data driven networks. Future Internet, 15(8), Article 255\. [https\://doi.org/10.3390/fi15080255](https://doi.org/10.3390/fi15080255)  
+911: Le, N., Männel, B., Natras, R., Sakic, P., Deng, Z., & Schuh, H. (2022). *Apply noise filters for better forecast performance in machine learning* \[Conference abstract\]. EGU General Assembly 2022, Vienna, Austria. [https\://doi.org/10.5194/egusphere-egu22-4039](https://doi.org/10.5194/egusphere-egu22-4039)  
+912: Mishra, S., & Shaik, A. G. (2022). Performance evaluation of Prophet and STL-ETS methods for load forecasting. 2022 IEEE India Council International Subsections Conference (INDISCON), 1-6. [https\://doi.org/10.1109/INDISCON54605.2022.9862533](https://doi.org/10.1109/INDISCON54605.2022.9862533)  
+913: Pantopoulou, S., Weathered, M., Lisowski, D., Tsoukalas, L. H., & Heifetz, A. (2025). Temporal forecasting of distributed temperature sensing in a thermal hydraulic system with machine learning and statistical models. *IEEE Access*, *13*, 10252-10264. [https\://doi.org/10.1109/ACCESS.2025.3526438](https://doi.org/10.1109/ACCESS.2025.3526438)  
+914: Petropoulos, F., Apiletti, D., Assimakopoulos, V., Babai, M. Z., Barrow, D. K., Ben Taieb, S., Bergmeir, C., Bessa, R. J., Bijak, J., Boylan, J. E., Browell, J., Carnevale, C., Castle, J. L., Cirillo, P., Clements, M. P., Cordeiro, C., Cyrino Oliveira, F. L., De Baets, S., Dokumentov, A., . . . Ziel, F. (2022). Forecasting: Theory and practice. International Journal of Forecasting, 38(3), 705-871. [https\://doi.org/10.1016/j.ijforecast.2021.11.001](https://doi.org/10.1016/j.ijforecast.2021.11.001)  
+915: Raymaekers, J., & Rousseeuw, P. J. (2024). Transforming variables to central normality. *Machine Learning, 113*, 4953-4975. [https\://doi.org/10.1007/s10994-021-05960-5](https://doi.org/10.1007/s10994-021-05960-5)  
+916: Sirisha, U. M., Belavagi, M. C., & Attigeri, G. (2022). Profit prediction using ARIMA, SARIMA and LSTM models in time series forecasting: A comparison. IEEE Access, 10, 124715-124727. [https\://doi.org/10.1109/ACCESS.2022.3224938](https://doi.org/10.1109/ACCESS.2022.3224938)
+917: 
+918: # **LAMPIRAN**

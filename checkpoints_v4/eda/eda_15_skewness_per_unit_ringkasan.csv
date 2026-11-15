@@ -1,0 +1,6 @@
+KATEGORI_SKEWNESS,JUMLAH_UNIT,PERSENTASE (%)
+Simetris / Normal (-0.5 <= s <= 0.5),101,46.98
+Left-Skewed Ekstrem (s < -1.0),40,18.6
+Left-Skewed Moderat (-1.0 <= s < -0.5),36,16.74
+Right-Skewed Ekstrem (s > 1.0),25,11.63
+Right-Skewed Moderat (0.5 < s <= 1.0),13,6.05

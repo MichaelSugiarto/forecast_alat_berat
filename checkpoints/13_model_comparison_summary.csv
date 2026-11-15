@@ -1,0 +1,9 @@
+MODEL,PENDEKATAN,MAPE_GLOBAL
+Gradient Boosting,per-kriteria (pooled),49.11092422626155
+ARIMAX,per-unit,51.04286110777376
+Gradient Boosting,per-unit,54.85582107785048
+LSTM,per-unit,58.254441255667786
+LSTM,per-kriteria (pooled),63.57693558814938
+ARIMAX,per-kriteria (skewness-based),67.65494831314854
+ARIMAX,per-kriteria (mean),67.66866692537499
+ARIMAX,per-kriteria (median),67.75371500640537

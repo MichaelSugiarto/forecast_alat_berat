@@ -1,0 +1,13 @@
+VARIAN,MODEL,PENDEKATAN,PARAMETER,RMSE_GLOBAL,BIAS_GLOBAL,MAPE_GLOBAL
+baseline,ARIMAX,per-kriteria,"p=4,d=3,q=6,agg=median",44.33866184736504,-18.653741656886123,40.97145832156127
+yeojohnson,ARIMAX,per-kriteria,"p=6,d=3,q=6,agg=mean",49.06958154513769,45.0843977771632,40.26532414276939
+savgol,ARIMAX,per-kriteria,"p=6,d=3,q=6,agg=median",51.999245260144285,-20.82024942534401,190.11737687170287
+baseline,Gradient Boosting,per-kriteria,"learning_rate=0.05, max_iter=100.0, max_depth=3.0, min_samples_leaf=5.0",61.97708527396103,5.103318251250749,22.751588814580764
+robust,Gradient Boosting,per-kriteria,"learning_rate=0.01, max_iter=300.0, max_depth=5.0, min_samples_leaf=5.0",64.24262996510058,6.394562354580873,24.236905148117387
+savgol,Gradient Boosting,per-kriteria,"learning_rate=0.01, max_iter=200.0, max_depth=3.0, min_samples_leaf=5.0",64.86258738015137,7.191991500191774,24.2473817006064
+robust,ARIMAX,per-kriteria,"p=6,d=0,q=7,agg=median",66.48419538926207,29.75782082576126,35.73762400187647
+yeojohnson,Gradient Boosting,per-kriteria,"learning_rate=0.01, max_iter=300.0, max_depth=nan, min_samples_leaf=5.0",66.50752448242946,3.350902129048634,24.35531428801935
+robust,LSTM,per-kriteria,"seq_len=3,units=32,epochs=50",66.96440819436052,8.25753499856532,25.153310156884057
+baseline,LSTM,per-kriteria,"seq_len=3,units=32,epochs=50",67.74887414374494,9.480096377223914,26.53588734093538
+savgol,LSTM,per-kriteria,"seq_len=6,units=32,epochs=50",68.75419688670797,9.244674483769908,25.683483986059645
+yeojohnson,LSTM,per-kriteria,"seq_len=3,units=32,epochs=50",71.03746195610293,6.958601575053456,25.06740190705904

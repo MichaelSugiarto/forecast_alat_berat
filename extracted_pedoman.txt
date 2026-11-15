@@ -1,0 +1,494 @@
+
+--- PAGE 1 ---
+1 
+ 
+Panduan Proposal Tugas Akhir / TA (Mahasiswa DSA) 
+• Secara umum ada 3 skema untuk mengerjakan Tugas Akhir / TA: 
+▪ Riset: Memberikan kontribusi ke pengetahuan, ada kebaruan / novelty dari hasil 
+penelitian yang dilakukan. Kata Kunci: eksplorasi, penemuan, uji hipotesis. 
+▪ Proyek: Menyelesaikan masalah yang dihadapi mitra perusahaan / komunitas 
+masyarakat dengan mengaplikasikan teknologi dan keilmuan. Kata Kunci: solusi praktis, 
+implementasi, produk/prototipe. 
+▪ Publikasi Jurnal: Melakukan penelitian dan mempublikasikan hasilnya di jurnal nasional 
+terakreditasi / internasional bereputasi. Dalam hal ini, jurnal yang berhasil dipublikasikan 
+dapat menggantikan laporan tugas akhir. 
+• Penyusunan proposal TA diperlukan untuk memastikan bahwa penelitian / proyek yang 
+diusulkan akan memenuhi standar kualitas (orisinalitas, kedalaman analisis, dan relevansi) yang 
+ditetapkan Program Studi. 
+• Penggunaan dataset publik/terbuka yang tidak dapat dipastikan validitasnya, misal: Kaggle, 
+sangat tidak disarankan. Analisis mendalam terhadap dataset tersebut tidak memberikan 
+kontribusi ataupun manfaat berarti. Perkecualian dapat diberikan bila dataset tersebut hanya 
+digunakan untuk menguji metode / model baru yang diusulkan. 
+• Beberapa topik proposal TA yang sesuai untuk mahasiswa DSA: 
+▪ Menganalisis data secara deskriptif (apa yang terjadi), diagnostik (mengapa itu terjadi), 
+prediktif (apa yang akan terjadi), atau preskriptif (apa yang harus dilakukan) untuk 
+mendukung pengambilan keputusan strategis berbasis data (data-driven decision 
+making). 
+▪ Mengembangkan model analitik menggunakan pendekatan machine learning 
+(supervised atau unsupervised) atau statistik untuk menghasilkan prediksi, peramalan, 
+maupun rekomendasi. Model analitik ini bisa diimplementasikan di beragam sektor: 
+bisnis, keuangan, kesehatan, pendidikan, pemerintahan, dan lain-lain. 
+▪ Menerapkan teknik visualisasi data untuk mengeksplorasi tren atau pola tersembunyi, 
+mengidentifikasi anomali atau pencilan (outlier), ataupun mentransformasikan wawasan 
+(insights) dari big data menjadi narasi visual yang komprehensif. Contoh: Heatmap 
+untuk analisis korelasi antar atribut, Boxplot untuk identifikasi distribusi pencilan, dan 
+Interactive Dashboard untuk menyajikan informasi strategis secara dinamis. 
+▪ Membangun platform pengolahan data (data pipeline) atau bahkan MLOps (machine 
+learning pipeline) untuk mengotomasi dan mempercepat analisis data secara 
+berkelanjutan. 
+▪ Topik-topik lain terkait penyimpanan, pencarian, pengolahan, dan/atau analisis data-
+data dari beragam sumber dan untuk beragam tujuan. Topik-topik tersebut perlu 
+dikonsultasikan dulu dengan dosen pembimbing atau Kepala Bidang (Kabid) DSA. 
+• Beberapa contoh judul Tugas Akhir yang sesuai untuk mahasiswa DSA (diambil dari Laporan 
+Tugas Akhir mahasiswa-mahasiswa yang sudah lulus): 
+--- PAGE 2 ---
+2 
+ 
+▪ Feature Selection pada Phishing Detection dengan menggunakan Parallel Genetic 
+Algorithm dan Ensemble Learning (Alles Sandro Oktavio Gandadireja) 
+▪ Pengaruh Sampling Method dan Feature Extraction untuk Meningkatkan Detection Rate 
+pada Minority Class pada Intrusion Detection System yang disusun dari Support Vector 
+Machine, Decision Tree, dan Naïve Bayes (Janthake Decuellar) 
+▪ Automatic Playlist Continuation Menggunakan Hybrid Recommender System (Martin 
+Andersen Linggajaya) 
+▪ Platform Big Data Analytic Berbasis Apache Spark bagi Pemula dalam Menyusun Data 
+Analysis Workflow (Daniel Jeremia) 
+▪ Hybrid Recommendation System untuk Peminjaman Buku Perpustakaan dengan 
+Collaborative dan Content-Based Filtering (Adrianus Aditya Widjaja) 
+▪ Sales Forecasting pada Dealer Motor X dengan LSTM, ARIMA dan Holt-Winters 
+Exponential Smoothing (Jennifer Soeryawinata) 
+▪ Pengaruh Feature Selection terhadap Kinerja C5.0, XGBoost, dan Random Forest dalam 
+Mengklasifikasikan Website Phishing (Michael Jonathan) 
+▪ Penerapan Metode Hybrid untuk Permasalahan Cold Start dalam Sistem Rekomendasi 
+Automatic Playlist Continuation (Christoffel Cleon Tanoyo) 
+▪ Analisis Sentimen Review Berbasis Aspek terkait Perkembangan NFT Games pada 
+Youtube menggunakan Metode Latent Dirichlet Allocation dan Support Vector Machine 
+(Christ Aditya Wijaya) 
+▪ Hybrid Recommender System untuk Produk Interior dan Jasa Pembuatannya 
+Menggunakan Data Implicit Feedback (Michael Halim Senatra) 
+▪ Pengujian Performa Metode Sistem Rekomendasi Terbaik untuk Merekomendasikan 
+Produk Menggunakan MRR dan MAP@K (Albertus Farrel Juanda) 
+▪ Penerapan Visualisasi Data Berbasis Web untuk Membantu Analisis Progres Akademik 
+Mahasiswa dan Kinerja Program Studi di Universitas Kristen Petra (Daniel Marthin 
+Parinussa) 
+▪ Penerapan Metode Market Basket Analysis Menggunakan Algoritma Apriori untuk 
+Menentukan Produk Bundling Cafe Cuta House Surabaya (Veronika Appeperis Mareta 
+Tiatira) 
+▪ Demand Forecasting dengan SARIMAX untuk Stock Optimization pada PT. Tirtakencana 
+Tatawarna (Gichelle Aurelia) 
+▪ Analisis Customer Journey Menggunakan Process Mining pada PT. X untuk Memahami 
+Pola Perilaku Pelanggan (Andrew Christoper Hartono) 
+▪ Optimasi Rekomendasi Produk Snack PT MAD dengan Market Basket Analysis dan 
+Prediksi Demand Produk untuk Pengambilan Keputusan (Ferdinand Marco Aloei) 
+▪ Komparasi Kinerja Metode Blocking dan Distance Metrics dalam Pembuatan Single ID 
+untuk Identifikasi Pelanggan di PT XYZ (Karen Eloise Sunaryo) 
+▪ Pembuatan Dashboard Interaktif dengan Visualisasi Data untuk Analisis Penjualan Tiket 
+Penerbangan dan Pola Perilaku Pelanggan pada Rodex Tours & Travel (Mario 
+Christopher) 
+--- PAGE 3 ---
+3 
+ 
+▪ Penjadwalan Kinerja Mesin dengan Metode Mixed-Integer Linear Programming di PT 
+Kerta Rajasa Raya untuk Efisiensi Biaya Operasional (Evelyn Eleonora) 
+▪ Optimalisasi Stok Produk Kemasan Plastik di Distributor XYZ Berdasarkan Demand 
+Forecasting dan Fluktuasi Harga Bahan Baku (John Clifton) 
+▪ Optimasi Algoritma Search Engine pada Website Perpustakaan Universitas Kristen Petra 
+Menggunakan Knowledge Graph (Pricillia Silfany Margo) 
+▪ Aspect Based Sentiment Analysis terhadap Produk Brand Mixue untuk Strategi 
+Pengembangan Produk Menggunakan Metode Lexicon Based dan BERT (Cahyadi 
+Widyanto Sandhy) 
+▪ Modul Market Basket Analysis dan Clustering dengan Visualisasi Geographic Information 
+System Berbasis Odoo untuk Membantu Strategi Pemasaran Perusahaan Agrikultur 
+(Annette Naomi) 
+▪ Perbandingan Metode Sharding, Replication, dan NoSQL Cassandra untuk Optimasi 
+Komputasi Rapor CPL (Stanley Hadikusuma) 
+▪ Segmentasi dan Analisis Perilaku Pembelian Pelanggan dengan K-Means dan Frequent 
+Pattern Growth pada Klinik Kecantikan X (Steven Bryan Christanto Tan) 
+ 
+  
+--- PAGE 4 ---
+4 
+ 
+Format Proposal Tugas Akhir (Riset) 
+Data Science and Analytics 
+ 
+• Judul 
+▪ Maksimal 15 kata. 
+▪ Sebaiknya mengandung Masalah, Objek Penelitian, dan Metode/Solusi yang Ditawarkan. 
+• Latar Belakang Masalah 
+▪ Diawali dengan pemaparan konteks masalah (termasuk objek penelitian) dengan 
+justifikasi yang jelas dan urgensi penelitian. Tekankan pada masalah-masalah yang akan 
+diselesaikan. 
+▪ Dilanjutkan dengan ulasan singkat (1-2 paragraf) justifikasi solusi yang ditawarkan (bisa 
+merujuk penelitian terdahulu yang relevan) untuk menunjukkan posisi penelitian.  
+▪ Diakhiri dengan penegasan celah penelitian (research gap). Contoh kebaruan (novelty): 
+masalah yang belum terselesaikan penelitian sebelumnya / objek penelitian baru 
+(domain yang baru, bisa didekati dengan perbandingan beberapa metode yang 
+diusulkan) / pengembangan metode untuk objek penelitian yang sudah ada / dan lain-
+lain. Menegaskan apa yang akan dikerjakan. 
+• Rumusan Masalah 
+▪ Ringkasan dari masalah-masalah yang ditulis di latar belakang. Disarankan ada 2-3 poin 
+rumusan masalah. 
+▪ Setiap poin masalah harus jelas (tidak ambigu), relevan (penting dan sesuai untuk topik 
+DSA), dan terukur (ada indikator ketercapaiannya). Nantinya dapat dicek dalam 
+pengujian, seberapa jauh solusi yang ditawarkan berhasil menyelesaikan masalah-
+masalah tersebut. 
+• Tujuan Penelitian 
+▪ Dikaitkan dengan poin-poin rumusan masalah, karena pada prinsipnya tujuan penelitian 
+adalah menyelesaikan masalah-masalah tersebut. 
+▪ Merupakan penjelasan lebih detail dari judul, tapi tetap ringkas (tidak terlalu panjang). 
+• Ruang Lingkup 
+▪ Ditujukan untuk membatasi tugas akhir yang dikerjakan (batasan minimal). 
+▪ Bisa menggunakan pola input–proses–output. 
+▪ Menjelaskan dataset yang digunakan atau dibuat (bila ada). 
+▪ Menjelaskan parameter input lain (selain dataset) yang digunakan. 
+▪ Menjelaskan fitur-fitur pemrosesan data yang digunakan: pre-processing, pemodelan 
+data (dengan teknik machine learning atau statistik), visualisasi, metrik pengukuran. 
+▪ Menjelaskan data atau parameter output yang akan dihasilkan. 
+• Manfaat Penelitian 
+▪ Manfaat hasil penelitian (bila diaplikasikan lebih luas) bagi masyarakat, perusahaan, atau 
+pengguna umum lain. 
+--- PAGE 5 ---
+5 
+ 
+▪ Harapan atau potensi dampak (biasanya secara tak langsung) dari penerapan hasil 
+penelitian. 
+• Studi Literatur 
+▪ Landasan Teori: Penjelasan singkat tentang konsep dan model/metode/algoritma yang 
+digunakan dalam penelitian. Tidak perlu menjelaskan hal-hal yang terlalu umum atau 
+mudah dicari oleh pembaca awam. 
+▪ Penelitian Terdahulu (State of the Art): Ulasan mendalam terhadap penelitian-penelitian 
+sebelumnya. Analisis perbedaan metode, hasil, kelebihan dan kekurangan masing-
+masing. 
+• Metodologi Penelitian 
+▪ Tahapan Penelitian 
+o Gambaran umum langkah-langkah penelitian, seringkali disajikan dalam bentuk 
+diagram blok / alir (block diagram / flowchart). Secara umum, alurnya mencakup 
+Hipotesis Penelitian, Pengumpulan dan Pemahaman Data, Penyiapan Data, 
+Pemodelan, serta Pengujian dan Pembahasan. 
+▪ Hipotesis Penelitian 
+o Dugaan sementara yang logis terhadap solusi atau hasil penelitian. 
+o Biasanya meliputi hipotesis kerja (H1) dan hipotesis nol (H0). Contoh: 
+⬧ Hipotesis Kerja (H1): Penggunaan algoritma XGBoost menghasilkan 
+akurasi lebih tinggi secara signifikan dibandingkan Regresi Logistik pada 
+dataset … 
+⬧ Hipotesis Nol (H0): Tidak terdapat perbedaan signifikan dalam akurasi 
+antara algoritma XGBoost dan Regresi Logistik pada dataset … 
+▪ Pengumpulan dan Pemahaman Data 
+o Menjelaskan cara data atau informasi didapatkan (misal: wawancara, survei, 
+studi literatur, scraping, dll) atau menjelaskan asal dataset (misal: dataset publik 
+atau terbuka dari Kaggle/Tableau/World Bank/WHO/dll).  
+Peringatan: Dataset publik/terbuka umumnya sudah banyak dianalisis 
+penelitian-penelitian sebelumnya, sehingga sulit untuk klaim 
+kebaruan terhadap hasil analisis datanya. Biasanya dataset ini dapat 
+digunakan untuk menguji metode baru yang diusulkan. 
+o Untuk data yang dikoleksi sendiri, sebaiknya tambahkan kriteria validitas data 
+(misal: jumlah responden / data dan persebarannya, validasi oleh expert, analisis 
+kualitas data, dll). 
+o Analisis dataset (exploratory data analysis / EDA), misal: statistik deskriptif, 
+detail karakteristik data, ketidakseimbangan kelas, visualisasi data, dll. 
+▪ Penyiapan Data 
+o Menjelaskan beragam pemrosesan (pre-processing) yang akan dilakukan 
+terhadap dataset, misal: cleaning, transformation, feature engineering, data 
+splitting, dll. 
+--- PAGE 6 ---
+6 
+ 
+▪ Pemodelan 
+o Menjelaskan model/metode/algoritma (baik berbasis machine learning maupun 
+statistik) yang akan di-train / di-fit dengan dataset. Lebih dari satu model 
+mungkin digunakan dalam penelitian, untuk mencari solusi terbaik. 
+o Bila (hyper-parameter) tuning dilakukan terhadap model, uraikan parameter apa 
+saja yang di-tune dan bagaimana melakukannya. 
+▪ Pengujian dan Pembahasan 
+o Perlu dikaitkan dengan rumusan masalah dan tujuan penelitian. Misalnya, bila 
+tujuan penelitian menguji kinerja model, maka metode pengujian harus 
+menyertakan metrik evaluasinya (contoh: accuracy/precision/recall/F1-score, 
+MAE/MAPE/RMSE, MRR/NDCG/Precision@K/Recall@K, silhouette score/DBI/ 
+DBCV, dll). 
+o Hasil pengujian harus dijelaskan / diinterpretasikan agar dapat dipahami oleh 
+pembaca awam. 
+• Jadwal Kegiatan 
+▪ Hal-hal yang dikerjakan dalam 1 semester (4 bulan) ke depan. 
+▪ Dituliskan dalam Gantt chart. 
+• Daftar Pustaka 
+▪ Minimal 10 referensi, sangat diutamakan yang dipublikasikan dalam 5 tahun terakhir 
+(diutamakan dari jurnal / konferensi bereputasi atau publikasi ber-DOI atau buku teks). 
+ 
+  
+--- PAGE 7 ---
+7 
+ 
+Format Proposal Tugas Akhir (Proyek) 
+Data Science and Analytics 
+ 
+• Judul 
+▪ Maksimal 15 kata. 
+▪ Sebaiknya mengandung Masalah, Objek Penelitian, dan Metode/Solusi yang Ditawarkan. 
+• Latar Belakang Masalah 
+▪ Diawali dengan pemaparan konteks masalah di dunia nyata (misal: masalah yang 
+dihadapi mitra perusahaan) dengan justifikasi yang jelas dan urgensi penyelesaian 
+masalahnya. Tekankan pada masalah-masalah yang akan diselesaikan. 
+▪ Dilanjutkan dengan ulasan singkat (1-2 paragraf) justifikasi solusi yang diadopsi (bisa 
+merujuk penelitian terdahulu yang relevan).  
+▪ Diakhiri dengan penjelasan inovasi / aplikasi yang diusulkan sebagai solusi. Menegaskan 
+apa yang akan dikerjakan. 
+• Rumusan Masalah 
+▪ Ringkasan dari masalah-masalah yang ditulis di latar belakang. Disarankan ada 2-3 poin 
+rumusan masalah. 
+▪ Setiap poin masalah harus jelas (tidak ambigu), relevan (penting dan sesuai untuk topik 
+DSA), dan terukur (ada indikator ketercapaiannya). Nantinya dapat dicek dalam 
+pengujian, seberapa jauh solusi yang ditawarkan berhasil menyelesaikan masalah-
+masalah tersebut. 
+• Tujuan Proyek 
+▪ Dikaitkan dengan poin-poin rumusan masalah, karena pada prinsipnya tujuan proyek 
+adalah menyelesaikan masalah-masalah tersebut. 
+▪ Merupakan penjelasan lebih detail dari judul, tapi tetap ringkas (tidak terlalu panjang). 
+• Ruang Lingkup 
+▪ Ditujukan untuk membatasi proyek yang dikerjakan (dijelaskan hal-hal yang masuk 
+dalam cakupan atau boleh juga dinyatakan hal-hal yang diluar cakupan). 
+▪ Bisa menggunakan pola input–proses–output. 
+▪ Menjelaskan dataset yang digunakan atau dibuat (bila ada). 
+▪ Menjelaskan parameter input lain (selain dataset) yang digunakan. 
+▪ Menjelaskan fitur-fitur pemrosesan data yang digunakan: pre-processing, pemodelan 
+data (dengan teknik machine learning atau statistik), visualisasi, metrik pengukuran. 
+▪ Menjelaskan data atau parameter output yang akan dihasilkan. 
+• Manfaat Solusi 
+▪ Manfaat solusi yang dihasilkan bagi mitra perusahaan, masyarakat, atau pengguna 
+umum lain. 
+▪ Harapan atau potensi dampak (biasanya secara tak langsung) dari penerapan solusi. 
+• Studi Literatur 
+--- PAGE 8 ---
+8 
+ 
+▪ Landasan Teori (opsional): Penjelasan singkat tentang konsep dan model/metode/ 
+algoritma/library/framework/platform yang digunakan dalam proyek. Tidak perlu 
+menjelaskan hal-hal yang terlalu umum atau mudah dicari oleh pembaca awam. 
+▪ Penelitian Terdahulu (State of the Art) / Aplikasi Sejenis: Ulasan mendalam terhadap 
+penelitian-penelitian sebelumnya atau aplikasi-aplikasi yang serupa dengan solusi yang 
+diusulkan. Analisis perbedaan metode, hasil, kelebihan dan kekurangan masing-masing. 
+• Kerangka Kerja 
+▪ Tahapan Proyek 
+o Gambaran umum langkah-langkah pengerjaan proyek, seringkali disajikan dalam 
+bentuk diagram blok / alir (block diagram / flowchart). Secara umum, alurnya 
+mencakup Hipotesis Solusi, Pengumpulan dan Pemahaman Data, Penyiapan 
+Data, Pemodelan, serta Pengujian dan Pembahasan. 
+▪ Hipotesis Solusi 
+o Dugaan sementara yang logis terhadap solusi yang diusulkan. 
+o Biasanya meliputi hipotesis kerja (H1) dan hipotesis nol (H0). Contoh: 
+⬧ Hipotesis Kerja (H1): Penggunaan ARIMA menghasilkan bias / kesalahan 
+yang secara signifikan lebih kecil dibandingkan prediksi penjualan secara 
+manual di PT … 
+⬧ Hipotesis Nol (H0): Tidak terdapat perbedaan signifikan dalam hasil 
+prediksi penjualan di PT … antara metode ARIMA dan cara manual. 
+▪ Pengumpulan dan Pemahaman Data 
+o Menjelaskan cara data atau informasi didapatkan (misal: wawancara, survei, 
+studi literatur, scraping, dll) atau menjelaskan asal dataset (misal: dataset publik 
+atau terbuka dari Kaggle/Tableau/World Bank/WHO/dll).  
+Peringatan: Penggunaan dataset publik/terbuka dalam proyek akhir biasanya 
+sebatas untuk input tambahan, misal: sebagai data exogenous 
+(faktor eksternal) dalam analisis time-series. 
+o Untuk data yang dikoleksi sendiri, sebaiknya tambahkan kriteria validitas data 
+(misal: jumlah responden / data dan persebarannya, validasi oleh expert, analisis 
+kualitas data, dll). 
+o Analisis dataset (exploratory data analysis / EDA), misal: statistik deskriptif, 
+detail karakteristik data, ketidakseimbangan kelas, visualisasi data, dll. 
+▪ Penyiapan Data 
+o Menjelaskan beragam pemrosesan (pre-processing) yang akan dilakukan 
+terhadap dataset, misal: cleaning, transformation, feature engineering, data 
+splitting, dll. 
+▪ Pemodelan 
+o Menjelaskan model/metode/algoritma (baik berbasis machine learning maupun 
+statistik) yang akan di-train / di-fit dengan dataset. Lebih dari satu model 
+mungkin digunakan dalam proyek, untuk mencari solusi terbaik. 
+--- PAGE 9 ---
+9 
+ 
+o Bila (hyper-parameter) tuning dilakukan terhadap model, uraikan parameter apa 
+saja yang di-tune dan bagaimana melakukannya. 
+▪ Pengujian dan Pembahasan 
+o Perlu dikaitkan dengan rumusan masalah dan tujuan proyek. Misalnya, bila 
+tujuan proyek menguji kinerja model, maka metode pengujian harus 
+menyertakan metrik evaluasinya (contoh: accuracy/precision/recall/F1-score, 
+MAE/MAPE/RMSE, MRR/NDCG/Precision@K/Recall@K, silhouette score/DBI/ 
+DBCV, dll). 
+o Hasil pengujian harus dijelaskan / diinterpretasikan agar dapat dipahami oleh 
+pembaca awam. 
+• Jadwal Kegiatan 
+▪ Hal-hal yang dikerjakan dalam 1 semester (4 bulan) ke depan. 
+▪ Dituliskan dalam Gantt chart. 
+• Daftar Pustaka 
+▪ Minimal 5 referensi, sangat diutamakan yang dipublikasikan dalam 5 tahun terakhir 
+(diutamakan dari jurnal / konferensi bereputasi atau publikasi ber-DOI atau buku teks). 
+ 
+  
+--- PAGE 10 ---
+10 
+ 
+Panduan Laporan Tugas Akhir / TA (Mahasiswa DSA) 
+• Wajib membaca dan mengikuti “Pedoman Tata Tulis Tugas Akhir Mahasiswa Universitas Kristen 
+Petra” (terbitan 2025) yang dikeluarkan Perpustakaan UK Petra. 
+• Sesuai pedoman, diusahakan memenuhi batas maksimal 12.000 kata (dituliskan dengan jelas, 
+ringkas, ada kesinambungan antar bab, dan tidak banyak pengulangan). 
+ 
+• Penekanan utama dari Laporan TA mahasiswa DSA adalah kelugasan dalam menganalisis data. 
+Solusi yang diusulkan harus dapat menjawab masalah dengan berbasiskan data (atau 
+interpretasi terhadap data). Keluaran (output) yang dihasilkan juga harus dijelaskan dan 
+dibahasakan agar mudah dipahami pembaca awam. 
+• Perbedaan antara Laporan TA mahasiswa DSA dengan Laporan TA mahasiswa konsentrasi 
+Artificial Intelligence (AI): 
+▪ Keduanya sama-sama membangun model (Machine Learning atau statistik) yang di-train 
+atau di-fit dengan data. 
+▪ Mahasiswa DSA umumnya sebatas menganalisis data tekstual, sementara mahasiswa AI 
+bisa menganalisis data image, video, maupun audio. 
+▪ Pembahasan mahasiswa AI umumnya menekankan pada kinerja model, sementara 
+pembahasan mahasiswa DSA lebih menekankan pada interpretasi keluaran yang 
+dihasilkan model. 
+• Perbedaan antara Laporan TA mahasiswa DSA dengan Laporan TA mahasiswa konsentrasi 
+Business Intelligence (BI): 
+▪ Keduanya sama-sama menganalisis data untuk mendukung pengambilan keputusan 
+dalam perusahaan / organisasi. 
+▪ Tujuan analisisnya berbeda: 
+▪ BI umumnya berfokus pada Descriptive Analytics, yaitu berusaha memahami 
+atau menjelaskan apa yang terjadi di masa lampau atau masa sekarang. 
+• Sifatnya lebih retrospective, hindsight, dan explanatory. 
+• Keluaran berbentuk dashboard (pemantauan) dan/atau laporan. 
+▪ DSA umumnya berfokus pada Predictive and Prescriptive Analytics, yaitu 
+berusaha mencari pola / tren dalam data yang dapat digunakan untuk 
+memprediksi atau meramalkan apa yang akan terjadi di masa depan. 
+• Sifatnya lebih prospective, foresight, dan exploratory. 
+• Keluaran berbentuk insight (pemahaman baru) dan/atau prediksi. 
+
+--- PAGE 11 ---
+11 
+ 
+ 
+Sumber: EMC Education Services, “Data Science & Big Data Analytics: Discovering, Analyzing, 
+Visualizing and Presenting Data”, John Wiley & Sons, 2015. 
+ 
+  
+
+--- PAGE 12 ---
+12 
+ 
+Format Buku Laporan Tugas Akhir (Riset) 
+Data Science and Analytics 
+ 
+• Bab 1. Pendahuluan (susunannya seperti bagian awal proposal) 
+▪ Latar Belakang Masalah 
+▪ Rumusan Masalah 
+▪ Tujuan Penelitian 
+▪ Ruang Lingkup 
+▪ Manfaat Penelitian 
+▪ Sistematika Penulisan: Ringkasan masing-masing bab dalam Laporan TA ini.  
+• Bab 2. Studi Literatur dan Metodologi Penelitian (penggabungan dan elaborasi dari proposal) 
+▪ Studi Literatur (bisa terdiri dari Landasan Teori dan Penelitian Terdahulu) 
+▪ Metodologi Penelitian (diawali dengan Tahapan Penelitian, diikuti dengan penjelasan 
+masing-masing tahapan – Hipotesis Penelitian, Pengumpulan dan Pemahaman Data, 
+Penyiapan Data, Pemodelan, Pengujian dan Pembahasan) 
+• Bab 3. Analisis dan Perancangan 
+▪ Analisis Masalah: Uraian yang lebih detail dan teknis dibandingkan “Latar Belakang 
+Masalah”. 
+▪ Analisis Data 
+o Kalau sebelumnya di “Metodologi Penelitian” dijelaskan hal-hal yang akan 
+dilakukan terkait “Pengumpulan dan Pemahaman Data”, di sini diuraikan hasil 
+analisis terhadap data. Misal: EDA per atribut (univariat) dan antar atribut 
+(multivariat), statistik deskriptif, distribusi data, visualisasi data, dll. 
+o Kalau di “Metodologi Penelitian” dijelaskan proses-proses yang akan dikerjakan 
+untuk “Penyiapan Data”, di sini diuraikan secara spesifik (bila perlu, dengan 
+ilustrasi) proses cleaning, transformation, feature engineering, data splitting, dll. 
+▪ Desain Solusi 
+o Usulan model/metode/algoritma dijabarkan di bagian ini. Untuk model yang 
+kompleks (terdiri dari beberapa komponen/proses), perlu disertakan dan 
+dijelaskan diagram blok / alir yang menggambarkan interaksi antar komponen. 
+o Diagram yang disertakan, secara tidak langsung, menjelaskan aliran data (data 
+pipeline) dari satu proses ke proses yang lain. 
+• Bab 4. Pengujian dan Pembahasan 
+▪ Lingkungan Pengujian: Penjelasan tentang perangkat keras dan perangkat lunak yang 
+digunakan untuk pengujian (Catatan: Ini bisa menjadi referensi bagi peneliti-peneliti 
+berikutnya). 
+▪ Skenario Pengujian: Penjelasan umum (garis besar) tentang pengujian-pengujian yang 
+dilakukan, dikaitkan dengan poin-poin rumusan masalah. Bila perlu, dijelaskan pula 
+keterkaitan antar pengujian. 
+--- PAGE 13 ---
+13 
+ 
+▪ Masing-masing pengujian biasanya dijelaskan dalam satu subbab tersendiri. Hasil 
+pengujian harus dibahas dan dijelaskan sehingga mudah dipahami pembaca awam. 
+• Bab 5. Kesimpulan dan Saran 
+▪ Kesimpulan: Simpulan / ringkasan poin-poin penting dari “Pengujian dan Pembahasan”. 
+▪ Saran: Usulan / rekomendasi pengembangan penelitian ke depan (harus relevan, 
+spesifik, dan logis). 
+• Daftar Pustaka 
+▪ Minimal 20 referensi, sangat diutamakan yang dipublikasikan dalam 5 tahun terakhir 
+(diutamakan dari jurnal / konferensi bereputasi atau publikasi ber-DOI atau buku teks). 
+• Lampiran (opsional) 
+ 
+  
+--- PAGE 14 ---
+14 
+ 
+Format Buku Laporan Tugas Akhir (Proyek) 
+Data Science and Analytics 
+ 
+• Bab 1. Pendahuluan (susunannya seperti bagian awal proposal) 
+▪ Latar Belakang Masalah 
+▪ Rumusan Masalah 
+▪ Tujuan Proyek 
+▪ Ruang Lingkup 
+▪ Manfaat Solusi 
+▪ Sistematika Penulisan: Ringkasan masing-masing bab dalam Laporan TA ini.  
+• Bab 2. Studi Literatur dan Kerangka Kerja (penggabungan dan elaborasi dari proposal) 
+▪ Studi Literatur (bisa terdiri dari Landasan Teori dan Penelitian Terdahulu) 
+▪ Kerangka Kerja (diawali dengan Tahapan Proyek, diikuti dengan penjelasan masing-
+masing tahapan – Hipotesis Solusi, Pengumpulan dan Pemahaman Data, Penyiapan 
+Data, Pemodelan, Pengujian dan Pembahasan) 
+• Bab 3. Analisis dan Perancangan 
+▪ Analisis Masalah: Uraian yang lebih detail dan teknis dibandingkan “Latar Belakang 
+Masalah”. 
+▪ Analisis Kebutuhan (opsional): Hal-hal spesifik yang dibutuhkan dan harus 
+dipertimbangkan saat menyusun solusi nantinya. 
+▪ Analisis Data 
+o Kalau sebelumnya di “Kerangka Kerja” dijelaskan hal-hal yang akan dilakukan 
+terkait “Pengumpulan dan Pemahaman Data”, di sini diuraikan hasil analisis 
+terhadap data. Misal: EDA per atribut (univariat) dan antar atribut (multivariat), 
+statistik deskriptif, distribusi data, visualisasi data, dll. 
+o Kalau di “Kerangka Kerja” dijelaskan proses-proses yang akan dikerjakan untuk 
+“Penyiapan Data”, di sini diuraikan secara spesifik (bila perlu, dengan ilustrasi) 
+proses cleaning, transformation, feature engineering, data splitting, dll. 
+▪ Desain Solusi 
+o Usulan model/metode/algoritma dijabarkan di bagian ini. Untuk model yang 
+kompleks (terdiri dari beberapa komponen/proses), perlu disertakan dan 
+dijelaskan diagram blok / alir yang menggambarkan interaksi antar komponen. 
+o Diagram yang disertakan, secara tidak langsung, menjelaskan aliran data (data 
+pipeline) dari satu proses ke proses yang lain. 
+• Bab 4. Implementasi dan Pengujian 
+▪ Implementasi Solusi: Berisi hal-hal yang dikerjakan untuk merealisasikan desain solusi. 
+Dijelaskan secara ringkas, kode program disajikan seperlunya saja. 
+▪ Lingkungan Pengujian: Penjelasan tentang perangkat keras dan perangkat lunak yang 
+digunakan untuk pengujian (Catatan: Ini bisa menjadi referensi bagi peneliti-peneliti 
+berikutnya). 
+--- PAGE 15 ---
+15 
+ 
+▪ Skenario Pengujian: Penjelasan umum (garis besar) tentang pengujian-pengujian yang 
+dilakukan, dikaitkan dengan poin-poin rumusan masalah. Bila perlu, dijelaskan pula 
+keterkaitan antar pengujian. 
+▪ Masing-masing pengujian biasanya dijelaskan dalam satu subbab tersendiri. Hasil 
+pengujian perlu diulas atau dikomentari secara singkat (bila perlu, dirujukkan ke bagian 
+“Pembahasan” yang terkait).  
+• Bab 5. Pembahasan 
+▪ Membahas secara menyeluruh (komprehensif) hasil-hasil dari pengujian. 
+▪ Pada intinya, pembahasan ini untuk “membahasakan” hasil-hasil tersebut agar mudah 
+dipahami oleh mitra perusahaan / komunitas masyarakat / pembaca awam. 
+• Bab 6. Kesimpulan dan Saran 
+▪ Kesimpulan: Simpulan / ringkasan poin-poin penting dari “Pengujian dan Pembahasan”. 
+▪ Saran: Usulan / rekomendasi pengembangan solusi ke depan (harus relevan, spesifik, 
+dan logis). 
+• Daftar Pustaka 
+▪ Minimal 10 referensi, sangat diutamakan yang dipublikasikan dalam 5 tahun terakhir 
+(diutamakan dari jurnal / konferensi bereputasi atau publikasi ber-DOI atau buku teks). 
+• Lampiran (opsional) 
+ 
+ 
+ 

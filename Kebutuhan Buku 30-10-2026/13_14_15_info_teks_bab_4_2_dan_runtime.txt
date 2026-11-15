@@ -1,0 +1,109 @@
+=== INFO TEKS UNTUK BAB 4.2 & PENGUJIAN SKRIPSI ===
+Tanggal Pembaruan: 30 Oktober 2026
+
+--------------------------------------------------------------------------------
+13. ISI [ISI] DI BAB 4.2 (LINGKUNGAN PENGUJIAN: SOFTWARE & HARDWARE)
+--------------------------------------------------------------------------------
+
+A. Perangkat Lunak (Software Environment):
+- Bahasa Pemrograman: Python 3.11.9 (64-bit)
+- Pustaka Utama (pip list):
+  * pandas        : 2.2.3
+  * numpy         : 2.0.2
+  * scipy         : 1.14.1
+  * scikit-learn  : 1.7.2
+  * statsmodels   : 0.14.6
+  * openpyxl      : 3.1.5
+  * plotly        : 6.5.0
+  * streamlit     : 1.60.0
+  * keras         : 3.15.1 (Framework Deep Learning untuk eksplorasi LSTM)
+  * tensorflow    : 2.15.0 (Backend Deep Learning yang digunakan pada eksperimen Tahap 2)
+  * pmdarima      : 2.0.4 (Referensi eksplorasi grid search baseline; evaluasi skrip akhir berbasis statsmodels.tsa.arima.model.ARIMA)
+
+B. Spesifikasi Perangkat Keras PC Pengujian (Hardware):
+- Sistem Operasi : Microsoft Windows 11 Home Single Language 64-bit (Build 26300)
+- Prosesor (CPU) : 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz (4 Physical Cores, 8 Logical Processors / Threads)
+- Memori (RAM)   : 16 GB DDR4 (15.78 GB usable)
+- Penyimpanan    : SSD NVMe 512 GB (Partisi C: ~280 GB, D: ~195 GB)
+- GPU            : Intel(R) Iris(R) Xe Graphics (proses komputasi CPU-based)
+
+--------------------------------------------------------------------------------
+14. WAKTU EKSEKUSI TIAP TAHAPAN PENGUJIAN & MODELING (DURASI KOMPUTASI LAPTOP)
+--------------------------------------------------------------------------------
+1. Tahap 1: Ekstraksi, Pembersihan, dan Transformasi Data Mentah (ETL)
+   - Deskripsi: Penggabungan data telemetri jam kerja alat berat, curah hujan BMKG, dan volume peti kemas dari berkas mentah menjadi dataset bulanan siap latih.
+   - Durasi Awal (baca file ZIP/Excel multi-sheet terpisah): ~3–5 menit
+   - Durasi Pasca-optimasi memori (pd.ExcelFile tunggal di pipeline_lib): ~30–50 detik
+
+2. Tahap 2: Eksplorasi Arsitektur Global (Grid Search 24 Kombinasi: ARIMAX, GB, LSTM)
+   - Deskripsi: Pelatihan dan perbandingan makro 3 algoritma (ARIMAX, Gradient Boosting, Deep Learning LSTM) di bawah 4 teknik pra-pemrosesan data dan 2 tingkat agregasi armada.
+   - Durasi: ~1,5 s/d 2,5 jam pada komputasi paralel multiprocessing.
+
+3. Tahap 2b: Benchmark Komparatif Massal Multi-Model (Pelatihan 3.036 Model ARIMAX, LSTM, & GB)
+   - Deskripsi: Menguji performa 12 kombinasi model langsung pada masing-masing dari 190 unit dan 63 kriteria. Melibatkan pelatihan masif 760 model deep learning LSTM dan 760 model statistik ARIMAX.
+   - Durasi: ~20–30 menit (lama karena beban iterasi backpropagation LSTM dan konvergensi MLE ARIMAX).
+
+4. Tahap Optimasi: Tuning Hyperparameter Otomatis Gradient Boosting per Unit Target
+   - Deskripsi: Pencarian parameter matematis optimal (max depth, learning rate, leaf nodes) khusus model Gradient Boosting per unit target (144 kombinasi hyperparameter × 4 varian = 576 fit per target unit).
+   - Durasi: ~35–45 menit.
+
+5. Tahap 3 (Final Deployment): Pelatihan Model Produksi Terpilih (1 Model GB per Unit) & Peramalan 12 Bulan ke Depan
+   - Deskripsi: Eksekusi fase operasional; sistem tidak lagi menguji multi-model, melainkan langsung melatih 1 model pemenang (Gradient Boosting) pada 190 unit menggunakan riwayat 36 bulan dan memproyeksikan peramalan rolling 12 bulan ke depan.
+   - Durasi: 35,04 detik (TERUKUR AKTUAL / BENCHMARK RESMI LAPTOP PENGUJIAN).
+   - Alasan Sangat Cepat: Hanya melatih 190 model Gradient Boosting murni berbasis C/Cython (~0,058 detik/unit) tanpa beban iterasi Deep Learning LSTM maupun ARIMAX.
+
+--------------------------------------------------------------------------------
+15. WAKTU DARI UNGGAH BERKAS SAMPAI HASIL TAMPIL DI appPerusahaan.py
+--------------------------------------------------------------------------------
+- Langkah 1 (Parsing & Ekstraksi 4 Berkas Excel Unggahan): ~30–50 detik
+- Langkah 2 (Retrain Model GB & Multi-Step Rolling Forecast 3–12 Bulan): ~35 detik (35,04 s)
+- Langkah 3 (Rendering Visualisasi Plotly & File Unduhan Excel): ~5–10 detik
+- TOTAL DURASI END-TO-END: ~1 menit 15 detik s/d 1,5 menit (sekitar 75–95 detik).
+
+--------------------------------------------------------------------------------
+16. RINGKASAN HASIL EVALUASI 6 SKENARIO EKSOGEN (TABEL 4.11)
+--------------------------------------------------------------------------------
+Populasi 190 Unit Valid (Resmi dari 07_perbandingan_eksogen_dan_model.xlsx):
+1. Gradient Boosting (Eksogen t)          : Mean MAPE = 11.48%, Median =  9.59%, Max = 39.87%, Mean RMSE = 33.66 jam
+2. Gradient Boosting (Eksogen Lag-1 / t-1): Mean MAPE = 15.67%, Median = 13.21%, Max = 74.98%, Mean RMSE = 42.14 jam
+3. Gradient Boosting (Tanpa Eksogen)      : Mean MAPE = 14.90%, Median = 12.28%, Max = 81.45%, Mean RMSE = 39.53 jam
+4. ARIMA Murni (Tanpa Eksogen)            : Mean MAPE = 18.38%, Median = 13.43%, Max = 126.99%, Mean RMSE = 43.77 jam
+5. ARIMAX (Eksogen t)                     : Mean MAPE = 19.26%, Median = 15.95%, Max = 89.82%, Mean RMSE = 47.39 jam
+6. ARIMAX (Eksogen Lag-1 / t-1)           : Mean MAPE = 19.79%, Median = 15.92%, Max = 96.92%, Mean RMSE = 48.01 jam
+
+--------------------------------------------------------------------------------
+TABEL RESMI PERBANDINGAN HORIZON 3 vs 4 BULAN (TABEL 4.9 - 190 UNIT & 63 KRITERIA)
+--------------------------------------------------------------------------------
+Berdasarkan file resmi 06a_v4_PERBANDINGAN_4BULAN_vs_3BULAN.xlsx (Sheet Ringkasan):
+1. Tingkat Per Unit (190 Unit Valid):
+   - Rata-rata MAPE 4 Bulan : 12.72% (Mean RMSE: 36.35 jam)
+   - Rata-rata MAPE 3 Bulan : 11.48% (Mean RMSE: 33.66 jam)
+   - 3 Bulan Lebih Rendah   : 111 unit
+   - 4 Bulan Lebih Rendah   : 79 unit
+   - Nilai Sama             : 0 unit
+   - Total Unit Valid       : 190 unit
+2. Tingkat Per Kriteria (63 Kriteria Aktif):
+   - Rata-rata MAPE 4 Bulan : 18.01% (Mean RMSE: 34.76 jam)
+   - Rata-rata MAPE 3 Bulan : 16.84% (Mean RMSE: 33.53 jam)
+   - 3 Bulan Lebih Rendah   : 33 kriteria
+   - 4 Bulan Lebih Rendah   : 30 kriteria
+   - Total Kriteria Aktif   : 63 kriteria
+
+--------------------------------------------------------------------------------
+TABEL RESMI EVALUASI DIRECT vs ROLLING (TABEL 4.10 - 190 UNIT & 63 KRITERIA)
+--------------------------------------------------------------------------------
+Berdasarkan file resmi 05_v4_rolling_vs_direct.xlsx (Sheet Ringkasan):
+1. Tingkat Per Unit (190 Unit Valid):
+   - Direct Lebih Rendah    : 81 unit
+   - Rolling Lebih Rendah   : 32 unit
+   - Nilai Identik (SAMA)   : 77 unit
+   - Total Unit Valid       : 190 unit (81 + 32 + 77 = 190)
+   - Rata-rata MAPE Direct  : 11.48%
+   - Rata-rata MAPE Rolling : 13.45%
+2. Tingkat Per Kriteria (63 Kriteria Aktif):
+   - Direct Lebih Rendah    : 33 kriteria
+   - Rolling Lebih Rendah   : 10 kriteria
+   - Nilai Identik (SAMA)   : 20 kriteria
+   - Total Kriteria Aktif   : 63 kriteria (33 + 10 + 20 = 63)
+   - Rata-rata MAPE Direct  : 16.84%
+   - Rata-rata MAPE Rolling : 18.89%

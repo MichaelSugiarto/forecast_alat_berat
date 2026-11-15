@@ -1,0 +1,8 @@
+MODEL,PENDEKATAN,MAPE_BASELINE (auto-ARIMA / default),MAPE_TUNED (grid search terbaik),PARAMETER_TERBAIK,SELISIH_MAPE (poin persen),PERBAIKAN (%),LEBIH_BAIK
+Gradient Boosting,per-kriteria (pooled),49.11,44.33,"lr=0.01, iter=300, depth=7.0, leaf=5",4.78,9.74,TUNED
+Gradient Boosting,per-unit,54.86,45.76,"lr=0.01, iter=200, depth=7.0, leaf=5",9.09,16.57,TUNED
+ARIMAX,per-unit,51.04,46.21,"PDQ=(1,0,0)",4.83,9.47,TUNED
+LSTM,per-unit,59.46,49.68,"seq_len=3, units=16, epochs=50",9.77,16.44,TUNED
+LSTM,per-kriteria (pooled),63.59,52.92,"seq_len=3, units=16, epochs=50",10.67,16.78,TUNED
+ARIMAX,per-kriteria (mean),67.67,59.44,"PDQ=(4,0,3)",8.23,12.16,TUNED
+ARIMAX,per-kriteria (median),67.75,59.62,"PDQ=(4,0,3)",8.14,12.01,TUNED

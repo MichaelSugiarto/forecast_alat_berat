@@ -1,0 +1,277 @@
+VARIAN,KRITERIA_ID,STATUS,ERROR
+baseline,FORKLIFT|HELI|7.0|125,GAGAL,Input contains NaN.
+baseline,TRAILER|PK260|40.0|265,GAGAL,Input contains NaN.
+baseline,TRONTON|CK12|40.0|185,GAGAL,Input contains NaN.
+baseline,TRAILER|PKC311|40.0|311,GAGAL,Input contains NaN.
+baseline,FORKLIFT|ITSUBISHI|3.0|55,GAGAL,Input contains NaN.
+baseline,FORKLIFT|MITSUBISHI|2.5|55,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TOYOTA|3.0|55,GAGAL,Input contains NaN.
+baseline,FORKLIFT|HECHA|5.0|70,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TOYOTA|5.0|70,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TCM|3.0|55,GAGAL,Input contains NaN.
+baseline,CRANE|SHORE CRANE|75.0|240,GAGAL,Input contains NaN.
+baseline,CRANE|SHORE CRANE|80.0|240,GAGAL,Input contains NaN.
+baseline,FORKLIFT|MITSUBISHI|7.0|85,GAGAL,Input contains NaN.
+baseline,FORKLIFT|FL KALMAR|32.0|275,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TCM|4.5|85,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TOYOTA|5.0|85,GAGAL,Input contains NaN.
+baseline,FORKLIFT|KOMATSU|7.0|120,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TCM|5.0|85,GAGAL,Input contains NaN.
+baseline,FORKLIFT|MITSUBISHI|4.0|85,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KALMAR DRD 420|42.0|346,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KALMAR DRF 450|45.0|422,GAGAL,Input contains NaN.
+baseline,FORKLIFT|FL KALMAR|32.0|238,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KALMAR DC 410|42.0|346,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KALMAR DRF 450|45.0|346,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KALMAR DRD 450|45.0|346,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KALMAR DRF 450|45.0|336,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KALMAR DRT 450|45.0|346,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KALMAR DRT 450|45.0|290,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TOYOTA|10.0|170,GAGAL,Input contains NaN.
+baseline,FORKLIFT|DAEWO|5.0|125,GAGAL,Input contains NaN.
+baseline,FORKLIFT|KOMATSU|2.5|55,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KONE 450|45.0|375,GAGAL,Input contains NaN.
+baseline,REACH STACKER|KONE 450|45.0|346,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TOYOTA|3.5|125,GAGAL,Input contains NaN.
+baseline,TRAILER|QUESTER|40.0|280,GAGAL,Input contains NaN.
+baseline,TRONTON|CW12|40.0|185,GAGAL,Input contains NaN.
+baseline,TRONTON|CD12|40.0|185,GAGAL,Input contains NaN.
+baseline,TRONTON|PW260|40.0|260,GAGAL,Input contains NaN.
+baseline,TRONTON|PK215|40.0|220,GAGAL,Input contains NaN.
+baseline,TRONTON|FV416|40.0|330,GAGAL,Input contains NaN.
+baseline,TRONTON|FU416|40.0|330,GAGAL,Input contains NaN.
+baseline,TRAILER|PKC311|4.2|311,GAGAL,Input contains NaN.
+baseline,TRAILER|PKD211|40.0|220,GAGAL,Input contains NaN.
+baseline,TRAILER|CK12|0.0|180,GAGAL,Input contains NaN.
+baseline,REACH STACKER|LINDE 450|45.0|346,GAGAL,Input contains NaN.
+baseline,FORKLIFT|FL KONE|32.0|255,GAGAL,Input contains NaN.
+baseline,FORKLIFT|MITSUBHISI|5.0|85,GAGAL,Input contains NaN.
+baseline,FORKLIFT|KOMATSU|7.0|140,GAGAL,Input contains NaN.
+baseline,FORKLIFT|KOMATSU|7.0|170,GAGAL,Input contains NaN.
+baseline,FORKLIFT|MITSUBISHI|3.0|55,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TOYOTA|6.0|85,GAGAL,Input contains NaN.
+baseline,FORKLIFT|KOMATSU|3.0|140,GAGAL,Input contains NaN.
+baseline,FORKLIFT|FL KALMAR|28.0|280,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TOYOTA|3.5|60,GAGAL,Input contains NaN.
+baseline,FORKLIFT|TCM|10.0|125,GAGAL,Input contains NaN.
+baseline,CRANE|RTG|40.6|268,GAGAL,Input contains NaN.
+baseline,FORKLIFT|BOMAC|5.0|70,OK,
+baseline,FORKLIFT|KOMATSU|0.0|55,GAGAL,Input contains NaN.
+baseline,REACH STACKER|SANY 450|45.0|348,OK,
+baseline,FORKLIFT|FL KALMAR|32.0|280,GAGAL,Input contains NaN.
+baseline,SIDE LOADER|SL KALMAR|8.0|218,GAGAL,Input contains NaN.
+baseline,SIDE LOADER|SL KALMAR|8.0|238,GAGAL,Input contains NaN.
+baseline,SIDE LOADER|SL KALMAR|8.0|237,GAGAL,Input contains NaN.
+baseline,REACH STACKER|SMV 450|45.0|346,GAGAL,Input contains NaN.
+baseline,TOP LOADER|TL MITS|42.0|304,GAGAL,Input contains NaN.
+baseline,FORKLIFT|KOMATSU|7.5|170,OK,
+baseline,TOP LOADER|TL KOMATSU|42.0|235,GAGAL,Input contains NaN.
+baseline,FORKLIFT|DAEWO|5.0|110,GAGAL,Input contains NaN.
+baseline,TOP LOADER|TL BOSS|42.0|304,GAGAL,Input contains NaN.
+savgol,FORKLIFT|HELI|7.0|125,GAGAL,Input contains NaN.
+savgol,TRAILER|PK260|40.0|265,GAGAL,Input contains NaN.
+savgol,TRONTON|CK12|40.0|185,GAGAL,Input contains NaN.
+savgol,TRAILER|PKC311|40.0|311,GAGAL,Input contains NaN.
+savgol,FORKLIFT|ITSUBISHI|3.0|55,GAGAL,Input contains NaN.
+savgol,FORKLIFT|MITSUBISHI|2.5|55,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TOYOTA|3.0|55,GAGAL,Input contains NaN.
+savgol,FORKLIFT|HECHA|5.0|70,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TOYOTA|5.0|70,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TCM|3.0|55,OK,
+savgol,CRANE|SHORE CRANE|75.0|240,GAGAL,Input contains NaN.
+savgol,CRANE|SHORE CRANE|80.0|240,GAGAL,Input contains NaN.
+savgol,FORKLIFT|MITSUBISHI|7.0|85,GAGAL,Input contains NaN.
+savgol,FORKLIFT|FL KALMAR|32.0|275,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TCM|4.5|85,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TOYOTA|5.0|85,GAGAL,Input contains NaN.
+savgol,FORKLIFT|KOMATSU|7.0|120,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TCM|5.0|85,GAGAL,Input contains NaN.
+savgol,FORKLIFT|MITSUBISHI|4.0|85,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KALMAR DRD 420|42.0|346,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KALMAR DRF 450|45.0|422,GAGAL,Input contains NaN.
+savgol,FORKLIFT|FL KALMAR|32.0|238,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KALMAR DC 410|42.0|346,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KALMAR DRF 450|45.0|346,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KALMAR DRD 450|45.0|346,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KALMAR DRF 450|45.0|336,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KALMAR DRT 450|45.0|346,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KALMAR DRT 450|45.0|290,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TOYOTA|10.0|170,GAGAL,Input contains NaN.
+savgol,FORKLIFT|DAEWO|5.0|125,GAGAL,Input contains NaN.
+savgol,FORKLIFT|KOMATSU|2.5|55,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KONE 450|45.0|375,GAGAL,Input contains NaN.
+savgol,REACH STACKER|KONE 450|45.0|346,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TOYOTA|3.5|125,GAGAL,Input contains NaN.
+savgol,TRAILER|QUESTER|40.0|280,GAGAL,Input contains NaN.
+savgol,TRONTON|CW12|40.0|185,GAGAL,Input contains NaN.
+savgol,TRONTON|CD12|40.0|185,GAGAL,Input contains NaN.
+savgol,TRONTON|PW260|40.0|260,GAGAL,Input contains NaN.
+savgol,TRONTON|PK215|40.0|220,GAGAL,Input contains NaN.
+savgol,TRONTON|FV416|40.0|330,GAGAL,Input contains NaN.
+savgol,TRONTON|FU416|40.0|330,GAGAL,Input contains NaN.
+savgol,TRAILER|PKC311|4.2|311,GAGAL,Input contains NaN.
+savgol,TRAILER|PKD211|40.0|220,GAGAL,Input contains NaN.
+savgol,TRAILER|CK12|0.0|180,OK,
+savgol,REACH STACKER|LINDE 450|45.0|346,GAGAL,Input contains NaN.
+savgol,FORKLIFT|FL KONE|32.0|255,GAGAL,Input contains NaN.
+savgol,FORKLIFT|MITSUBHISI|5.0|85,GAGAL,Input contains NaN.
+savgol,FORKLIFT|KOMATSU|7.0|140,GAGAL,Input contains NaN.
+savgol,FORKLIFT|KOMATSU|7.0|170,GAGAL,Input contains NaN.
+savgol,FORKLIFT|MITSUBISHI|3.0|55,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TOYOTA|6.0|85,GAGAL,Input contains NaN.
+savgol,FORKLIFT|KOMATSU|3.0|140,GAGAL,Input contains NaN.
+savgol,FORKLIFT|FL KALMAR|28.0|280,OK,
+savgol,FORKLIFT|TOYOTA|3.5|60,GAGAL,Input contains NaN.
+savgol,FORKLIFT|TCM|10.0|125,GAGAL,Input contains NaN.
+savgol,CRANE|RTG|40.6|268,GAGAL,Input contains NaN.
+savgol,FORKLIFT|BOMAC|5.0|70,GAGAL,Input contains NaN.
+savgol,FORKLIFT|KOMATSU|0.0|55,GAGAL,Input contains NaN.
+savgol,REACH STACKER|SANY 450|45.0|348,GAGAL,Input contains NaN.
+savgol,FORKLIFT|FL KALMAR|32.0|280,GAGAL,Input contains NaN.
+savgol,SIDE LOADER|SL KALMAR|8.0|218,GAGAL,Input contains NaN.
+savgol,SIDE LOADER|SL KALMAR|8.0|238,GAGAL,Input contains NaN.
+savgol,SIDE LOADER|SL KALMAR|8.0|237,GAGAL,Input contains NaN.
+savgol,REACH STACKER|SMV 450|45.0|346,GAGAL,Input contains NaN.
+savgol,TOP LOADER|TL MITS|42.0|304,GAGAL,Input contains NaN.
+savgol,FORKLIFT|KOMATSU|7.5|170,GAGAL,Input contains NaN.
+savgol,TOP LOADER|TL KOMATSU|42.0|235,GAGAL,Input contains NaN.
+savgol,FORKLIFT|DAEWO|5.0|110,GAGAL,Input contains NaN.
+savgol,TOP LOADER|TL BOSS|42.0|304,GAGAL,Input contains NaN.
+robust,FORKLIFT|HELI|7.0|125,GAGAL,Schur decomposition solver error.
+robust,TRAILER|PK260|40.0|265,GAGAL,LU decomposition error.
+robust,TRONTON|CK12|40.0|185,OK,
+robust,TRAILER|PKC311|40.0|311,OK,
+robust,FORKLIFT|ITSUBISHI|3.0|55,OK,
+robust,FORKLIFT|MITSUBISHI|2.5|55,OK,
+robust,FORKLIFT|TOYOTA|3.0|55,OK,
+robust,FORKLIFT|HECHA|5.0|70,OK,
+robust,FORKLIFT|TOYOTA|5.0|70,OK,
+robust,FORKLIFT|TCM|3.0|55,OK,
+robust,CRANE|SHORE CRANE|75.0|240,OK,
+robust,CRANE|SHORE CRANE|80.0|240,OK,
+robust,FORKLIFT|MITSUBISHI|7.0|85,OK,
+robust,FORKLIFT|FL KALMAR|32.0|275,GAGAL,LU decomposition error.
+robust,FORKLIFT|TCM|4.5|85,OK,
+robust,FORKLIFT|TOYOTA|5.0|85,OK,
+robust,FORKLIFT|KOMATSU|7.0|120,OK,
+robust,FORKLIFT|TCM|5.0|85,GAGAL,Schur decomposition solver error.
+robust,FORKLIFT|MITSUBISHI|4.0|85,OK,
+robust,REACH STACKER|KALMAR DRD 420|42.0|346,OK,
+robust,REACH STACKER|KALMAR DRF 450|45.0|422,OK,
+robust,FORKLIFT|FL KALMAR|32.0|238,OK,
+robust,REACH STACKER|KALMAR DC 410|42.0|346,OK,
+robust,REACH STACKER|KALMAR DRF 450|45.0|346,OK,
+robust,REACH STACKER|KALMAR DRD 450|45.0|346,OK,
+robust,REACH STACKER|KALMAR DRF 450|45.0|336,OK,
+robust,REACH STACKER|KALMAR DRT 450|45.0|346,GAGAL,LU decomposition error.
+robust,REACH STACKER|KALMAR DRT 450|45.0|290,GAGAL,LU decomposition error.
+robust,FORKLIFT|TOYOTA|10.0|170,OK,
+robust,FORKLIFT|DAEWO|5.0|125,OK,
+robust,FORKLIFT|KOMATSU|2.5|55,OK,
+robust,REACH STACKER|KONE 450|45.0|375,OK,
+robust,REACH STACKER|KONE 450|45.0|346,GAGAL,LU decomposition error.
+robust,FORKLIFT|TOYOTA|3.5|125,OK,
+robust,TRAILER|QUESTER|40.0|280,OK,
+robust,TRONTON|CW12|40.0|185,OK,
+robust,TRONTON|CD12|40.0|185,OK,
+robust,TRONTON|PW260|40.0|260,OK,
+robust,TRONTON|PK215|40.0|220,GAGAL,LU decomposition error.
+robust,TRONTON|FV416|40.0|330,OK,
+robust,TRONTON|FU416|40.0|330,GAGAL,LU decomposition error.
+robust,TRAILER|PKC311|4.2|311,GAGAL,Schur decomposition solver error.
+robust,TRAILER|PKD211|40.0|220,GAGAL,LU decomposition error.
+robust,TRAILER|CK12|0.0|180,OK,
+robust,REACH STACKER|LINDE 450|45.0|346,OK,
+robust,FORKLIFT|FL KONE|32.0|255,OK,
+robust,FORKLIFT|MITSUBHISI|5.0|85,OK,
+robust,FORKLIFT|KOMATSU|7.0|140,OK,
+robust,FORKLIFT|KOMATSU|7.0|170,OK,
+robust,FORKLIFT|MITSUBISHI|3.0|55,OK,
+robust,FORKLIFT|TOYOTA|6.0|85,GAGAL,LU decomposition error.
+robust,FORKLIFT|KOMATSU|3.0|140,OK,
+robust,FORKLIFT|FL KALMAR|28.0|280,GAGAL,LU decomposition error.
+robust,FORKLIFT|TOYOTA|3.5|60,OK,
+robust,FORKLIFT|TCM|10.0|125,GAGAL,LU decomposition error.
+robust,CRANE|RTG|40.6|268,GAGAL,LU decomposition error.
+robust,FORKLIFT|BOMAC|5.0|70,OK,
+robust,FORKLIFT|KOMATSU|0.0|55,GAGAL,LU decomposition error.
+robust,REACH STACKER|SANY 450|45.0|348,OK,
+robust,FORKLIFT|FL KALMAR|32.0|280,OK,
+robust,SIDE LOADER|SL KALMAR|8.0|218,OK,
+robust,SIDE LOADER|SL KALMAR|8.0|238,GAGAL,LU decomposition error.
+robust,SIDE LOADER|SL KALMAR|8.0|237,OK,
+robust,REACH STACKER|SMV 450|45.0|346,OK,
+robust,TOP LOADER|TL MITS|42.0|304,OK,
+robust,FORKLIFT|KOMATSU|7.5|170,GAGAL,LU decomposition error.
+robust,TOP LOADER|TL KOMATSU|42.0|235,OK,
+robust,FORKLIFT|DAEWO|5.0|110,OK,
+robust,TOP LOADER|TL BOSS|42.0|304,OK,
+yeojohnson,FORKLIFT|HELI|7.0|125,GAGAL,Input contains NaN.
+yeojohnson,TRAILER|PK260|40.0|265,GAGAL,Input contains NaN.
+yeojohnson,TRONTON|CK12|40.0|185,GAGAL,Input contains NaN.
+yeojohnson,TRAILER|PKC311|40.0|311,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|ITSUBISHI|3.0|55,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|MITSUBISHI|2.5|55,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TOYOTA|3.0|55,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|HECHA|5.0|70,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TOYOTA|5.0|70,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TCM|3.0|55,GAGAL,Input contains NaN.
+yeojohnson,CRANE|SHORE CRANE|75.0|240,GAGAL,Input contains NaN.
+yeojohnson,CRANE|SHORE CRANE|80.0|240,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|MITSUBISHI|7.0|85,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|FL KALMAR|32.0|275,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TCM|4.5|85,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TOYOTA|5.0|85,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|KOMATSU|7.0|120,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TCM|5.0|85,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|MITSUBISHI|4.0|85,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KALMAR DRD 420|42.0|346,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KALMAR DRF 450|45.0|422,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|FL KALMAR|32.0|238,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KALMAR DC 410|42.0|346,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KALMAR DRF 450|45.0|346,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KALMAR DRD 450|45.0|346,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KALMAR DRF 450|45.0|336,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KALMAR DRT 450|45.0|346,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KALMAR DRT 450|45.0|290,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TOYOTA|10.0|170,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|DAEWO|5.0|125,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|KOMATSU|2.5|55,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KONE 450|45.0|375,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|KONE 450|45.0|346,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TOYOTA|3.5|125,GAGAL,Input contains NaN.
+yeojohnson,TRAILER|QUESTER|40.0|280,GAGAL,Input contains NaN.
+yeojohnson,TRONTON|CW12|40.0|185,GAGAL,Input contains NaN.
+yeojohnson,TRONTON|CD12|40.0|185,GAGAL,Input contains NaN.
+yeojohnson,TRONTON|PW260|40.0|260,GAGAL,Input contains NaN.
+yeojohnson,TRONTON|PK215|40.0|220,GAGAL,Input contains NaN.
+yeojohnson,TRONTON|FV416|40.0|330,GAGAL,Input contains NaN.
+yeojohnson,TRONTON|FU416|40.0|330,GAGAL,Input contains NaN.
+yeojohnson,TRAILER|PKC311|4.2|311,GAGAL,Input contains NaN.
+yeojohnson,TRAILER|PKD211|40.0|220,GAGAL,Input contains NaN.
+yeojohnson,TRAILER|CK12|0.0|180,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|LINDE 450|45.0|346,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|FL KONE|32.0|255,OK,
+yeojohnson,FORKLIFT|MITSUBHISI|5.0|85,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|KOMATSU|7.0|140,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|KOMATSU|7.0|170,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|MITSUBISHI|3.0|55,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TOYOTA|6.0|85,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|KOMATSU|3.0|140,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|FL KALMAR|28.0|280,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TOYOTA|3.5|60,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|TCM|10.0|125,GAGAL,Input contains NaN.
+yeojohnson,CRANE|RTG|40.6|268,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|BOMAC|5.0|70,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|KOMATSU|0.0|55,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|SANY 450|45.0|348,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|FL KALMAR|32.0|280,GAGAL,Input contains NaN.
+yeojohnson,SIDE LOADER|SL KALMAR|8.0|218,GAGAL,Input contains NaN.
+yeojohnson,SIDE LOADER|SL KALMAR|8.0|238,GAGAL,Input contains NaN.
+yeojohnson,SIDE LOADER|SL KALMAR|8.0|237,GAGAL,Input contains NaN.
+yeojohnson,REACH STACKER|SMV 450|45.0|346,GAGAL,Input contains NaN.
+yeojohnson,TOP LOADER|TL MITS|42.0|304,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|KOMATSU|7.5|170,GAGAL,Input contains NaN.
+yeojohnson,TOP LOADER|TL KOMATSU|42.0|235,GAGAL,Input contains NaN.
+yeojohnson,FORKLIFT|DAEWO|5.0|110,GAGAL,Input contains NaN.
+yeojohnson,TOP LOADER|TL BOSS|42.0|304,GAGAL,Input contains NaN.
