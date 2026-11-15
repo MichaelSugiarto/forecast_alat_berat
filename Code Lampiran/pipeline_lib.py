@@ -235,11 +235,10 @@ def build_monthly_full(bbm_files, container_files, cost_file, rainfall_file, out
     rain = pd.read_excel(rainfall_file, header=3)
     rain = rain.rename(columns={"precipitation_sum (mm)": "precipitation_sum"})
     rain["time"] = pd.to_datetime(rain["time"])
-    rain = rain.set_index("time")
-    monthly_rain = rain["precipitation_sum"].resample("M").sum().round(1).reset_index()
-    monthly_rain["TAHUN_BULAN"] = monthly_rain["time"].dt.to_period("M")
-    monthly_rain = monthly_rain[["TAHUN_BULAN", "precipitation_sum"]].rename(
-        columns={"precipitation_sum": "CURAH_HUJAN"}
+    rain["TAHUN_BULAN"] = rain["time"].dt.to_period("M")
+    monthly_rain = (
+        rain.groupby("TAHUN_BULAN")["precipitation_sum"]
+        .sum().round(1).reset_index().rename(columns={"precipitation_sum": "CURAH_HUJAN"})
     )
 
     monthly_full = monthly_hm.merge(monthly_rain, on="TAHUN_BULAN", how="left")
