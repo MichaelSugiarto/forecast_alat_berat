@@ -392,13 +392,8 @@ def build_monthly_full(bbm_files, container_files, cost_file, rainfall_file, out
 # ============================================================================
 def _cap_smooth(df, value_col="UTILITAS", group_col="EQUIP NAME", upper_q=0.95, window=2):
     df = df.sort_values([group_col, "TAHUN_BULAN"]).copy()
-
-    def _cap(g):
-        cap = g[value_col].quantile(upper_q)
-        g[value_col + "_CAPPED"] = g[value_col].clip(upper=cap).round(2)
-        return g
-
-    df = df.groupby(group_col, group_keys=False).apply(_cap)
+    caps = df.groupby(group_col)[value_col].transform(lambda s: s.quantile(upper_q))
+    df[value_col + "_CAPPED"] = df[value_col].clip(upper=caps).round(2)
     df[value_col + "_SMOOTH"] = (
         df.groupby(group_col)[value_col + "_CAPPED"]
         .transform(lambda s: s.rolling(window, min_periods=1).mean())
@@ -421,17 +416,16 @@ def prep_savgol(train_df, test_df, value_col="UTILITAS", group_col="EQUIP NAME",
     def _smooth(df):
         df = df.sort_values([group_col, "TAHUN_BULAN"]).copy()
 
-        def _sg(g):
-            y = g[value_col].values.astype(float)
+        def _calc_sg(series):
+            y = series.values.astype(float)
             n = len(y)
             wl = min(window, n if n % 2 == 1 else n - 1)
             if wl < polyorder + 2 or wl < 3:
-                g[value_col + "_SMOOTH"] = y
-            else:
-                g[value_col + "_SMOOTH"] = np.round(savgol_filter(y, window_length=wl, polyorder=polyorder), 2)
-            return g
+                return y
+            return np.round(savgol_filter(y, window_length=wl, polyorder=polyorder), 2)
 
-        return df.groupby(group_col, group_keys=False).apply(_sg)
+        df[value_col + "_SMOOTH"] = df.groupby(group_col)[value_col].transform(_calc_sg)
+        return df
 
     return _smooth(train_df), _smooth(test_df), {}
 
